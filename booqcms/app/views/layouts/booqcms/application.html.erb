@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booqcms</title>
+  <%= favicon_link_tag 'booqcms/book.png' %>
+  <%= stylesheet_link_tag    "booqcms/application", media: "all" %>
+  <%= javascript_include_tag "booqcms/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="type-system-rounded">
+<%= render 'layouts/booqcms/navbar' %>
+<%= render 'layouts/booqcms/paralax' %>
+<%= yield %>
+
+<%= render 'layouts/booqcms/footer' %>
+</body>
+</html>
