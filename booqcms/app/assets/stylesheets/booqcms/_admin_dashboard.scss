@@ -50,4 +50,11 @@
   margin:10px 0;
   padding:10px;
   width:90%;
+  &[type="submit"] {
+    padding:10px;
+    border-radius:0;
+    border:1px solid #41A1F0;
+    color:#41A1F0;
+    background:#fff;
+  }
 }
