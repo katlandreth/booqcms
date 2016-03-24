@@ -1,0 +1,161 @@
+<section>
+  <aside>
+    <h2>Content Options</h2>
+    <ul>
+      <li class="expander">
+        <a href="javascript:void(0)" class="expander-trigger expander-hidden">Blog Post</a>
+        <div class="expander-content">
+          <div class="content-component">
+            <h4>Embed a Video</h4>
+            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+            <input type="text" placeholder="video url:"/>
+            <span class="content-component-text">or</span>
+            <label for="modal-1">
+              <div class="modal-trigger">Video Library</div>
+            </label>
+
+          </div>
+        </div>
+      </li>
+      <li class="expander">
+        <a href="javascript:void(0)" class="expander-trigger expander-hidden">Video Tutorial</a>
+        <div class="expander-content">
+          <div class="content-component">
+            <h4>Embed a Video</h4>
+            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+            <input type="text" placeholder="video url:"/>
+
+            <span class="content-component-text">or</span>
+          <button>Video Library</button>
+            <!-- <form>
+              <input type="file" name="video" />
+              <input type="submit"/>
+            </form> -->
+          </div>
+        </div>
+      </li>
+      <li class="expander">
+        <a href="javascript:void(0)" class="expander-trigger expander-hidden">Text Tutorial</a>
+        <div class="expander-content">
+          <div class="content-component">
+            <h4>Embed a Video</h4>
+            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+            <input type="text" placeholder="video url:"/>
+
+            <span class="content-component-text">or</span>
+          <button>Video Library</button>
+            <!-- <form>
+              <input type="file" name="video" />
+              <input type="submit"/>
+            </form> -->
+          </div>
+        </div>
+      </li>
+      <li class="expander">
+        <a href="javascript:void(0)" class="expander-trigger expander-hidden">Marketing Page</a>
+        <div class="expander-content">
+          <div class="content-component">
+            <h4>Embed a Video</h4>
+            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+            <input type="text" placeholder="video url:"/>
+
+            <span class="content-component-text">or</span>
+          <button>Video Library</button>
+            <!-- <form>
+              <input type="file" name="video" />
+              <input type="submit"/>
+            </form> -->
+          </div>
+        </div>
+      </li>
+    </ul>
+  </aside>
+  <article>
+    <ul class="accordion-tabs-minimal">
+      <li class="tab-header-and-content">
+        <a href="#" class="tab-link is-active">MarkDown</a>
+        <div class="tab-content">
+          ##Some Jazz
+        </br>
+        </br>
+            Schlitz messenger bag roof party, single-origin coffee beard polaroid small
+            batch kitsch intelligentsia next level. Single-origin coffee plaid neutra keytar
+            bespoke taxidermy chambray craft beer, gentrify bitters asymmetrical vice locavore
+            raw denim biodiesel.
+          </br>
+          </br>
+            YOLO kickstarter art party jean shorts, affogato +1 biodiesel
+            kogi tumblr ethical typewriter. Plaid before they sold out trust fund brooklyn
+            craft beer whatever. Wolf bicycle rights meh raw denim keytar, ennui brunch
+            gastropub XOXO poutine hella. Crucifix locavore art party, knausgaard selvage
+            messenger bag kickstarter fixie poutine chambray everyday carry church-key. Blue bottle
+            fixie next level VHS.
+        </div>
+      </li>
+      <li class="tab-header-and-content">
+        <a href="#" class="tab-link">Visual</a>
+        <div class="tab-content">
+          <h1>Some Jazz</h1>
+          <p>Schlitz messenger bag roof party, single-origin coffee beard polaroid small
+            batch kitsch intelligentsia next level. Single-origin coffee plaid neutra keytar
+            bespoke taxidermy chambray craft beer, gentrify bitters asymmetrical vice locavore
+            raw denim biodiesel. </p>
+            <p>YOLO kickstarter art party jean shorts, affogato +1 biodiesel
+            kogi tumblr ethical typewriter. Plaid before they sold out trust fund brooklyn
+            craft beer whatever. Wolf bicycle rights meh raw denim keytar, ennui brunch
+            gastropub XOXO poutine hella. Crucifix locavore art party, knausgaard selvage
+            messenger bag kickstarter fixie poutine chambray everyday carry church-key. Blue bottle
+            fixie next level VHS.</p>
+        </div>
+      </li>
+    </ul>
+  </article>
+</section>
+
+<div class="modal">
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-fade-screen">
+    <div class="modal-inner">
+      <div class="modal-close" for="modal-1"></div>
+      <h2>Video Library</h2>
+      <ul class="accordion-tabs-minimal">
+        <li class="tab-header-and-content">
+          <a href="#" class="tab-link is-active">Your Videos</a>
+          <div class="tab-content">#stub for video gallery
+            <div class="pagination">
+              <ul>
+                <li class="page-prev"><a href="javascript:void(0)">Prev</a></li>
+                <li>
+                  <ul>
+                    <li><a href="javascript:void(0)">1</a></li>
+                    <li><a href="javascript:void(0)">2</a></li>
+                    <li><a href="javascript:void(0)">3</a></li>
+                    <li><a href="javascript:void(0)">4</a></li>
+                    <li><a href="javascript:void(0)">5</a></li>
+                    <li><a href="javascript:void(0)">6</a></li>
+                    <li><a href="javascript:void(0)">7</a></li>
+                  </ul>
+                </li>
+                <li class="page-next"><a href="javascript:void(0)">Next</a></li>
+              </ul>
+            </div>
+            <input type="text" name="caption" placeholder="caption" />
+            <input type="text" name="alt" placeholder="alt text (for SEO and screen readers)" />
+            <input type="text" name="title" placeholder="title- will be used in a tooltip" />
+            <input type="text-box" name="description" placeholder="describe the image (for SEO and screen readers)" />
+            <input type="submit" value ="Embed Selected Video"/>
+          </div>
+        </li>
+        <li class="tab-header-and-content">
+          <a href="#" class="tab-link">Upload a Video</a>
+          <div class="tab-content">
+            <form>
+              <input type="file" name="video" />
+              <input type="submit" value="Upload"/>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
