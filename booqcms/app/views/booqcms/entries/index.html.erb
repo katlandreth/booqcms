@@ -5,12 +5,69 @@
       <li class="expander">
         <a href="javascript:void(0)" class="expander-trigger expander-hidden">Blog Post</a>
         <div class="expander-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+          <div class="content-component">
+            <h4>Embed a Video</h4>
+            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+            <input type="text" placeholder="video url:"/>
+            <span class="content-component-text">or</span>
+            <label for="modal-1">
+              <div class="modal-trigger">Video Library</div>
+            </label>
+
+          </div>
         </div>
       </li>
-      <li>Video Tutorial</li>
-      <li>Text Tutorial</li>
-      <li>Marketing Page</li>
+      <li class="expander">
+        <a href="javascript:void(0)" class="expander-trigger expander-hidden">Video Tutorial</a>
+        <div class="expander-content">
+          <div class="content-component">
+            <h4>Embed a Video</h4>
+            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+            <input type="text" placeholder="video url:"/>
+
+            <span class="content-component-text">or</span>
+          <button>Video Library</button>
+            <!-- <form>
+              <input type="file" name="video" />
+              <input type="submit"/>
+            </form> -->
+          </div>
+        </div>
+      </li>
+      <li class="expander">
+        <a href="javascript:void(0)" class="expander-trigger expander-hidden">Text Tutorial</a>
+        <div class="expander-content">
+          <div class="content-component">
+            <h4>Embed a Video</h4>
+            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+            <input type="text" placeholder="video url:"/>
+
+            <span class="content-component-text">or</span>
+          <button>Video Library</button>
+            <!-- <form>
+              <input type="file" name="video" />
+              <input type="submit"/>
+            </form> -->
+          </div>
+        </div>
+      </li>
+      <li class="expander">
+        <a href="javascript:void(0)" class="expander-trigger expander-hidden">Marketing Page</a>
+        <div class="expander-content">
+          <div class="content-component">
+            <h4>Embed a Video</h4>
+            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+            <input type="text" placeholder="video url:"/>
+
+            <span class="content-component-text">or</span>
+          <button>Video Library</button>
+            <!-- <form>
+              <input type="file" name="video" />
+              <input type="submit"/>
+            </form> -->
+          </div>
+        </div>
+      </li>
     </ul>
   </aside>
   <article>
@@ -54,3 +111,38 @@
     </ul>
   </article>
 </section>
+
+<div class="modal">
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-fade-screen">
+    <div class="modal-inner">
+      <div class="modal-close" for="modal-1"></div>
+      <h2>Video Library</h2>
+      <ul class="accordion-tabs-minimal">
+        <li class="tab-header-and-content">
+          <a href="#" class="tab-link is-active">Your Videos</a>
+          <div class="tab-content">#stub for video gallery
+            <input type="text" name="caption" placeholder="caption" />
+            <input type="text" name="alt" placeholder="alt text (for SEO and screen readers)" />
+            <input type="text" name="title" placeholder="title- will be used in a tooltip" />
+            <input type="text-box" name="description" placeholder="describe the image (for SEO and screen readers)" />
+            <input type="submit"/>
+          </div>
+        </li>
+        <li class="tab-header-and-content">
+          <a href="#" class="tab-link">Upload a Video</a>
+          <div class="tab-content">
+            <form>
+              <input type="file" name="video" />
+              <input type="text" name="caption" placeholder="caption" />
+              <input type="text" name="alt" placeholder="alt text (for SEO and screen readers)" />
+              <input type="text" name="title" placeholder="title- will be used in a tooltip" />
+              <input type="text-box" name="description" placeholder="describe the image (for SEO and screen readers)" />
+              <input type="submit"/>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

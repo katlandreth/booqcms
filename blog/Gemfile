@@ -12,6 +12,7 @@ gem 'booqcms', path: '../booqcms/'
 gem 'bourbon'
 gem 'neat'
 gem 'turbolinks'
+gem 'inline_svg'
 
 group :development, :test do
   gem 'byebug'
