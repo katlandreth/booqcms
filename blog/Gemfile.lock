@@ -1,5 +1,13 @@
+GIT
+  remote: git://github.com/sbeam/best_in_place.git
+  revision: bf72f8f3f863fb3cb435a3789a8a3001e42fe28b
+  specs:
+    best_in_place (3.1.0)
+      actionpack (>= 3.2)
+      railties (>= 3.2)
+
 PATH
-  remote: ../booqcms/
+  remote: ../booqcms
   specs:
     booqcms (0.0.1)
       rails (~> 4.2.6)
@@ -158,6 +166,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  best_in_place!
   booqcms!
   bourbon
   byebug

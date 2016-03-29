@@ -8,11 +8,13 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'booqcms', path: '../booqcms/'
+gem 'booqcms', path: '../booqcms'
 gem 'bourbon'
 gem 'neat'
 gem 'turbolinks'
 gem 'inline_svg'
+gem 'best_in_place', github: 'sbeam/best_in_place'
+
 
 group :development, :test do
   gem 'byebug'

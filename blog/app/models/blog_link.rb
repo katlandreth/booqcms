@@ -1,4 +1,4 @@
-class BlogLink < Wellspring::Entry
+class BlogLink < Booqcms::Entry
   content_attr :url, :string
   content_attr :quote, :text
   content_attr :comment, :text
