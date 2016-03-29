@@ -13,7 +13,10 @@ gem 'bourbon'
 gem 'neat'
 gem 'turbolinks'
 gem 'inline_svg'
-gem 'best_in_place', github: 'sbeam/best_in_place'
+gem 'best_in_place', github: 'bernat/best_in_place'
+gem 'simple_form'
+gem 'responders'
+
 
 
 group :development, :test do

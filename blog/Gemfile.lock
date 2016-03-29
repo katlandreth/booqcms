@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/sbeam/best_in_place.git
-  revision: bf72f8f3f863fb3cb435a3789a8a3001e42fe28b
+  remote: git://github.com/bernat/best_in_place.git
+  revision: 57b525e487cd6ba10467b47d8bf8907c645f6917
   specs:
     best_in_place (3.1.0)
       actionpack (>= 3.2)
@@ -130,6 +130,8 @@ GEM
     rake (11.1.1)
     rdoc (4.2.2)
       json (~> 1.4)
+    responders (2.1.2)
+      railties (>= 4.2.0, < 5.1)
     sass (3.4.21)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -140,6 +142,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_form (3.2.1)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -177,8 +182,10 @@ DEPENDENCIES
   neat
   pg (~> 0.15)
   rails (= 4.2.6)
+  responders
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  simple_form
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
