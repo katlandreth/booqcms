@@ -1,5 +1,6 @@
 module Booqcms
   class ApplicationController < ActionController::Base
+    
     protect_from_forgery with: :exception
 
     def content_entries_path

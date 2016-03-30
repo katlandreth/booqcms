@@ -45,6 +45,16 @@
   height: 5em;
 }
 
+.grid-item .content-component-svg {
+  @include transition (all 0.2s ease-in-out);
+  margin-top:30px;
+  opacity:0.8;
+  &:hover {
+    opacity:1;
+  }
+}
+
+
 .modal input{
   display:block;
   margin:10px 0;
@@ -102,11 +112,6 @@
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
     }
-
-    &:focus,
-    &:hover {
-      background: transparentize($grid-item-color, 0.95);
-    }
   }
 
   .grid-item img {
@@ -145,6 +150,15 @@
 
 .post-preview {
   position:relative;
+  .status {
+    bottom:auto;
+    top:-20px;
+    padding:5px 0;
+  }
+}
+
+.preview-content {
+  padding-top: 45px;
 }
 
 .status {
@@ -187,10 +201,10 @@
   font-family: "Open Sans";
   font-size: 28px;
 }
-
-.preview-content {
-  min-height: 100px;
-}
+//
+// .preview-content {
+//   min-height: 100px;
+// }
 
 body.type-system-rounded a[class*=' badge'],
 body.type-system-rounded a[class^='badge'] {
