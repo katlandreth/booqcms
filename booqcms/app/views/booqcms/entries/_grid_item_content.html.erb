@@ -6,7 +6,7 @@
   <div class="status">
     <span class=<%= "#{post_status_class(entry)}" %>> <%= "#{post_status(entry)}" %> </span>
     <%= link_to "edit", edit_entry_path(content_class, entry.id), :class => "badge-notice" %>
-    <%= link_to "preview", entry_preview_path(content_class, entry.id), :class => "badge", remote: true %>
+    <%= link_to "preview", entry_preview_path(content_class, entry.id), :class => "badge preview-button", remote: true %>
   </div>
 </div>
 <% end %>
