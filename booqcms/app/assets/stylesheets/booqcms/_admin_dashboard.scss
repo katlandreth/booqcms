@@ -210,3 +210,23 @@ body.type-system-rounded a[class*=' badge'],
 body.type-system-rounded a[class^='badge'] {
   color: #ffffff;
 }
+
+span[id*= best_in_place_] {
+  white-space: pre-wrap;
+}
+
+.mkdwn-title {
+  font-size: 25px;
+  font-family: "Open Sans";
+}
+
+.input-title {
+  font-size: 25px;
+  font-family: "Open Sans";
+}
+
+.textarea-body {
+  font-family: "PT Sans";
+  font-size:16px;
+  line-height: 1.5;
+}

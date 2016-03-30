@@ -31,6 +31,10 @@ body.type-system-rounded {
     line-height: $base-line-height;
   }
 
+  p strong {
+    font-weight: 600;
+  }
+
   a {
     color: $action-color;
     text-decoration: none;

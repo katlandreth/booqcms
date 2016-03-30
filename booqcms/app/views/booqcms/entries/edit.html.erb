@@ -5,13 +5,17 @@
       <li class="tab-header-and-content">
         <a href="#" class="tab-link is-active">MarkDown</a>
         <div class="tab-content">
-          <%= best_in_place @entry, :title, :as => :input, :param => :entry, :place_holder => "If no Title, Add One Here!", :url => entry_path %>
+          <%= link_to "Need help with MarkDown formatting?",
+          "http://markdown-guide.readthedocs.org/en/latest/basics.html", :target => '_blank' %></br>
+          <%= best_in_place @entry, :title, :as => :input, :param => :entry,
+          :place_holder => "If no Title, Add One Here!", :url => entry_path,
+          :class => "mkdwn-title", :inner_class => "input-title" %>
         </br></br>
           <% @entry.class.content_attributes.each do |attr_name, attr_type| %>
-            <%= best_in_place @entry, attr_name, :param => :entry, :place_holder => "#{body_placeholder}", :url => entry_path  %>
+            <%= best_in_place @entry, attr_name, :as => attr_type_to_input(attr_type), :param => :entry,
+             :place_holder => attr_placeholder(attr_name, attr_type), :url => entry_path, :inner_class => "textarea-body"  %>
+           </br></br>
           <% end %>
-          </br>
-          </br>
         </div>
       </li>
       <li class="tab-header-and-content">

@@ -21,11 +21,17 @@ module Booqcms
       end
     end
 
-    def body_placeholder
-      "Add body text here.....Schlitz messenger bag roof party, single-origin coffee beard polaroid small
-        batch kitsch intelligentsia next level. Single-origin coffee plaid neutra keytar
-        bespoke taxidermy chambray craft beer, gentrify bitters asymmetrical vice locavore
-        raw denim biodiesel."
+    def attr_placeholder(attr_name, attr_type)
+      placeholder_map = { :string => "Should be about one line.",
+        :text => "This can be a lot more text like this: Schlitz messenger bag roof party, single-origin coffee beard polaroid small batch kitsch intelligentsia next level. ",
+        :date => "It should be a date", :boolean => "It should be a checkbox" }
+
+      "Add <strong>#{attr_name}</strong> content here. #{placeholder_map[attr_type]}"
+    end
+
+    def attr_type_to_input(attr_type)
+      input_map = {:string => :input, :text => :textarea, :date => :date, :boolean => :checkbox}
+      input_map[attr_type]
     end
   end
 end
