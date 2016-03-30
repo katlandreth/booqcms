@@ -7,7 +7,7 @@
   $light-gray: #DDD !default;
   $base-font-color: $dark-gray !default;
   $expander-arrow-width: 0.7em;
-  $expander-toggle-size: 1em;
+  $expander-toggle-size: .8em;
   $expander-toggle-arrow-size: $expander-toggle-size;
   $expander-toggle-margin: 1em;
 
@@ -15,7 +15,7 @@
 
   .expander-trigger {
     @include user-select(none);
-    border-bottom: 1px solid $light-gray;
+    border-top: 1px solid $light-gray;
     color: $action-color;
     cursor: pointer;
     display: block;
@@ -23,10 +23,11 @@
     margin-bottom: $expander-toggle-size;
     padding-bottom: $expander-toggle-size / 4;
     text-decoration: none;
+    font-weight:200;
 
     &:before {
       font-size: $expander-arrow-width;
-      content: "\25BC";
+      content: "\25BD";
       margin-right: 0.5em;
     }
   }
@@ -39,7 +40,7 @@
   .expander-hidden {
     &:before {
       font-size: $expander-arrow-width;
-      content: "\25BA";
+      content: "\25B7";
     }
   }
 

@@ -30,15 +30,17 @@ module Booqcms
     def create
       @entry = Entry.new(entry_params)
       if @entry.save
-        redirect_to edit_entry_path(content_class, @entry[:id]), :notice => "Saved new entry", :format => :json
+        redirect_to edit_entry_path(content_class, @entry[:id]), :notice => "The Entry was Saved!", :format => :json
       else
         render :action => "new", :notice => "didn't save"
       end
     end
 
     def update
-      @entry.update(entry_params)
-      respond_with @entry
+      if @entry.update(entry_params)
+        flash[:notice] = "The Entry was updated!!"
+        respond_with @entry
+      end
     end
 
     def destroy
