@@ -1,0 +1,46 @@
+<aside>
+  <h2>Content Options</h2>
+  <ul>
+    <% Booqcms.configuration.content_classes.each do |class_name| %>
+      <li class="expander">
+        <%= link_to class_name.tableize.titleize, "#expand",
+         :class => "expander-trigger expander-hidden" %>
+        <div class="expander-content">
+          <div class="content-component">
+            <h4>Embed a Video</h4>
+            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+            <input type="text" placeholder="video url:"/>
+            <span class="content-component-text">or</span>
+            <label for="modal-1">
+              <div class="modal-trigger">Video Library</div>
+            </label>
+          </div>
+        </div>
+      </li>
+    <% end %>
+    <li class="expander">
+      <a href="javascript:void(0)" class="expander-trigger expander-hidden">Video Tutorial</a>
+      <div class="expander-content">
+        <div class="content-component">
+          <h4>Template Components</h4>
+        </div>
+      </div>
+    </li>
+    <li class="expander">
+      <a href="javascript:void(0)" class="expander-trigger expander-hidden">Text Tutorial</a>
+      <div class="expander-content">
+        <div class="content-component">
+          <h4>Template Components</h4>
+        </div>
+      </div>
+    </li>
+    <li class="expander">
+      <a href="javascript:void(0)" class="expander-trigger expander-hidden">Marketing Page</a>
+      <div class="expander-content">
+        <div class="content-component">
+          <h4>Template Components</h4>
+        </div>
+      </div>
+    </li>
+  </ul>
+</aside>

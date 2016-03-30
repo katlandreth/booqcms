@@ -1,0 +1,12 @@
+<%= label_tag "entry_ids_#{entry.id}", :name => "entry_ids[]" do %>
+<div class="grid-item">
+  <h1><%= entry.title %></h1>
+  <%= check_box_tag "entry_ids[]", entry.id, false, :id => "entry_ids_#{entry.id}", :class => "multi-delete-checkbox" %>
+  <p><%= entry.body.to_s.truncate(20) %></p>
+  <div class="status">
+    <span class=<%= "#{post_status_class(entry)}" %>> <%= "#{post_status(entry)}" %> </span>
+    <%= link_to "edit post", edit_entry_path(content_class, entry.id), :class => "badge-notice" %>
+    <%= link_to "preview", entry_preview_path(content_class, entry.id), :class => "badge", remote: true %>
+  </div>
+</div>
+<% end %>

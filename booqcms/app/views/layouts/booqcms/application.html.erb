@@ -10,6 +10,11 @@
 <body class="type-system-rounded">
 <%= render 'layouts/booqcms/navbar' %>
 <%= render 'layouts/booqcms/paralax' %>
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <%= content_tag :div, msg, :class => "flash_#{name}" %>
+  <% end %>
+<% end %>
 <%= yield %>
 
 <%= render 'layouts/booqcms/footer' %>

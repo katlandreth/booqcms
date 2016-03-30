@@ -5,26 +5,12 @@
       <li class="tab-header-and-content">
         <a href="#" class="tab-link is-active">MarkDown</a>
         <div class="tab-content">
-          <%= simple_form_for(@entry, as: :entry, url: entries_path) do |f| %>
-            <%= f.hidden_field :type, value: @entry.type %>
-
-            <%= f.input :title %>
-            <%= f.submit "Save" %>
+          <%= best_in_place @entry, :title, :as => :input, :param => :entry, :place_holder => "If no Title, Add One Here!", :url => entry_path %>
+          <% @entry.class.content_attributes.each do |attr_name, attr_type| %>
+            <%= best_in_place @entry, attr_name, :param => :entry, :place_holder => "If no body, Add One Here!", :url => entry_path  %>
           <% end %>
-        </br>
-        </br>
-            Schlitz messenger bag roof party, single-origin coffee beard polaroid small
-            batch kitsch intelligentsia next level. Single-origin coffee plaid neutra keytar
-            bespoke taxidermy chambray craft beer, gentrify bitters asymmetrical vice locavore
-            raw denim biodiesel.
           </br>
           </br>
-            YOLO kickstarter art party jean shorts, affogato +1 biodiesel
-            kogi tumblr ethical typewriter. Plaid before they sold out trust fund brooklyn
-            craft beer whatever. Wolf bicycle rights meh raw denim keytar, ennui brunch
-            gastropub XOXO poutine hella. Crucifix locavore art party, knausgaard selvage
-            messenger bag kickstarter fixie poutine chambray everyday carry church-key. Blue bottle
-            fixie next level VHS.
         </div>
       </li>
       <li class="tab-header-and-content">

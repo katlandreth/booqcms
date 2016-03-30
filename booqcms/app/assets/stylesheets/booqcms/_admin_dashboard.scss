@@ -56,6 +56,9 @@
     border:1px solid #41A1F0;
     color:#41A1F0;
     background:#fff;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -138,23 +141,6 @@
       }
     }
   }
-
-  // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
-  .bottom-cover {
-    background: $grid-items-background;
-    bottom: 0px;
-    height: 3px;
-    position: absolute;
-    width: 100%;
-  }
-
-  .right-cover {
-    background: $grid-items-background;
-    height: 100%;
-    position: absolute;
-    right: 0px;
-    width: 4px;
-  }
 }
 
 .post-preview {
@@ -168,4 +154,29 @@
   width:100%;
   background:#fff;
   padding: 10px;
+}
+
+.upload-preview img{
+  width:150px;
+  height:auto;
+}
+
+.multi-delete-checkbox {
+  position: absolute;
+  top:5px;
+  left:10px;
+}
+
+.multi-delete-submit {
+  position: absolute;
+  top:-65px;
+  right:10px;
+  padding:10px;
+  border-radius:0;
+  border:1px solid #D24D57;
+  color:#D24D57;
+  background:#fff;
+  &:hover {
+    cursor: pointer;
+  }
 }
