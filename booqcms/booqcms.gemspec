@@ -10,14 +10,15 @@ Gem::Specification.new do |s|
   s.authors     = ["Kat Landreth"]
   s.email       = ["katlandreth@gmail.com"]
   s.homepage    = "http://howtogimp.com"
-  s.summary     = "Summary of Booqcms."
-  s.description = "Description of Booqcms."
+  s.summary     = "Create, convert, publish, track, and market digital content."
+  s.description = "Booqcms is an all in one solution for digital publishing."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.6"
+  s.add_dependency "redcarpet"
 
   s.add_development_dependency "pg"
 end

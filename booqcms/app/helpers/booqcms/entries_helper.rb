@@ -20,5 +20,12 @@ module Booqcms
         "draft"
       end
     end
+
+    def body_placeholder
+      "Add body text here.....Schlitz messenger bag roof party, single-origin coffee beard polaroid small
+        batch kitsch intelligentsia next level. Single-origin coffee plaid neutra keytar
+        bespoke taxidermy chambray craft beer, gentrify bitters asymmetrical vice locavore
+        raw denim biodiesel."
+    end
   end
 end

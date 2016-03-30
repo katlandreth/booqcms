@@ -6,8 +6,9 @@
         <a href="#" class="tab-link is-active">MarkDown</a>
         <div class="tab-content">
           <%= best_in_place @entry, :title, :as => :input, :param => :entry, :place_holder => "If no Title, Add One Here!", :url => entry_path %>
+        </br></br>
           <% @entry.class.content_attributes.each do |attr_name, attr_type| %>
-            <%= best_in_place @entry, attr_name, :param => :entry, :place_holder => "If no body, Add One Here!", :url => entry_path  %>
+            <%= best_in_place @entry, attr_name, :param => :entry, :place_holder => "#{body_placeholder}", :url => entry_path  %>
           <% end %>
           </br>
           </br>
