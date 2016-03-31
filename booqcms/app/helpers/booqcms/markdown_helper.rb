@@ -1,15 +1,15 @@
 module Booqcms
   module MarkdownHelper
-    class HTMLwithPygments < ::Redcarpet::Render::HTML
+    class HTMLwithCoderay < ::Redcarpet::Render::HTML
       include ::Redcarpet::Render::SmartyPants
 
       def block_code(code, language)
-        Pygments.highlight(code, lexer: language)
+        CodeRay.scan(code, language).div
       end
     end
 
     def markdown(text)
-      renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: false)
+      renderer = HTMLwithCoderay.new(hard_wrap: true, filter_html: false)
       options = {
         filter_html: false,
         autolink: true,

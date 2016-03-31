@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.6"
-  s.add_dependency "pygments.rb"
+  s.add_dependency "coderay"
   s.add_dependency "redcarpet"
 
   s.add_development_dependency "pg"
