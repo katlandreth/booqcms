@@ -33,5 +33,13 @@ module Booqcms
       input_map = {:string => :input, :text => :textarea, :date => :date, :boolean => :checkbox}
       input_map[attr_type]
     end
+
+    def tooltip_message(attr_name)
+      tooltip_message = {:url => "The plain url for the post you're talking about. No Markdown, please.",
+         :body => "As much body text with MarkDown as you like.",
+         :title => "A one line title for your post. Defaults to h1, no MarkDown necessary.",
+         :comment => "A brief comment about the post you're linking to.", :quote => "A quote from the post you're linking to."}
+     tooltip_message[attr_name]
+    end
   end
 end
