@@ -11,7 +11,10 @@
           <div class="content-component">
             <h4>Embed a Video</h4>
             <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
-            <input type="text" placeholder="video url:"/>
+            <form class="video_embed_form">
+              <input type="text" placeholder="video url:" id="video_url_field" value=""/>
+              <button type="submit" class="submit">submit</button>
+            </form>
             <span class="content-component-text">or</span>
             <label for="modal-1">
               <div class="modal-trigger">Video Library</div>

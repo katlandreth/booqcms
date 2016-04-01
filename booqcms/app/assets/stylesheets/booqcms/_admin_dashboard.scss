@@ -213,6 +213,21 @@ body.type-system-rounded a[class^='badge'] {
 
 span[id*= best_in_place_] {
   white-space: pre-wrap;
+  display: block;
+  padding-left:20px;
+  border-left: 1px dotted #41A1F0;
+}
+
+.bip-label {
+  position:relative;
+  @include transform(rotate(-90deg));
+  @include transform-origin(right bottom);
+  color: #41a1f0;
+  float:right;
+  display: inline-block;
+  left: -101%;
+  top: -17px;
+  font-size: 12px;
 }
 
 .mkdwn-title {
@@ -235,4 +250,12 @@ small.need-help-link {
   position: relative;
   top:-15px;
 
+}
+.bip-placeholder {
+  color: #888;
+}
+
+form.form_in_place {
+  display: inline-block;
+  height:0;
 }
