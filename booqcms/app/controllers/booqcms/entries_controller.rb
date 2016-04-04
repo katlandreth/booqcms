@@ -39,7 +39,7 @@ module Booqcms
     def update
       if @entry.update(entry_params)
         flash[:notice] = "The Entry was updated!!"
-        respond_with @entry
+        respond_with(@entry, :location => edit_entry_path(content_class, @entry.id))
       end
     end
 

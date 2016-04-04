@@ -8,44 +8,17 @@
          <%= link_to "#{class_name.tableize.titleize.singularize} Options", "#expand",
          :class => "expander-trigger expander-hidden" %>
         <div class="expander-content">
-          <div class="content-component">
-            <h4>Embed a Video</h4>
-            <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
-            <form class="video_embed_form">
-              <input type="text" placeholder="video url:" id="video_url_field" value=""/>
-              <button type="submit" class="submit">submit</button>
-            </form>
-            <span class="content-component-text">or</span>
-            <label for="modal-1">
-              <div class="modal-trigger">Video Library</div>
-            </label>
-          </div>
+          <span class="bip-label">slug</span>
+            <%= best_in_place @entry, :slug, :as => :input, :param => :entry,
+            :place_holder => "the_page_slug", :url => entry_path,
+            :class => "", :inner_class => "" %>
+          </br></br>
+          <%= simple_form_for(@entry, as: :entry, url: content_entry_path(@entry)) do |f| %>
+            <%= f.hidden_field :published_at, value: Time.now -%>
+            <%= f.submit 'publish now' -%>
+          <%- end -%>
         </div>
       </li>
     <% end %>
-    <li class="expander">
-      <a href="javascript:void(0)" class="expander-trigger expander-hidden">Video Tutorial</a>
-      <div class="expander-content">
-        <div class="content-component">
-          <h4>Template Components</h4>
-        </div>
-      </div>
-    </li>
-    <li class="expander">
-      <a href="javascript:void(0)" class="expander-trigger expander-hidden">Text Tutorial</a>
-      <div class="expander-content">
-        <div class="content-component">
-          <h4>Template Components</h4>
-        </div>
-      </div>
-    </li>
-    <li class="expander">
-      <a href="javascript:void(0)" class="expander-trigger expander-hidden">Marketing Page</a>
-      <div class="expander-content">
-        <div class="content-component">
-          <h4>Template Components</h4>
-        </div>
-      </div>
-    </li>
   </ul>
 </aside>

@@ -11,4 +11,5 @@ class PostsController < ApplicationController
 
   def blog_posts_with_links
     Booqcms::Entry.where(type: %w(BlogPost BlogLink)).published
+  end
 end

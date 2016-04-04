@@ -1,2 +1,6 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<ul class="posts">
+  <% @posts.each do |post| %>
+    <h2><%= link_to post.title, post.slug %></h2>
+    <p><%= markdown(post.body.to_s.truncate(100)) %></p>
+  <% end %>
+</ul>

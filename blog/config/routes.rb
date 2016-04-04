@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   # get 'posts/show'
 
   mount Booqcms::Engine, at: '/admin'
-  get '/:slug', to: 'blog_posts#show'
-  root to: 'blog_posts#index'
+  get '/:slug', to: 'posts#show'
+  root to: 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
