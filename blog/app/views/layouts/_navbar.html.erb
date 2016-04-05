@@ -1,0 +1,28 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+
+  <%= link_to root_path, class: "logo" do %>
+    <%= image_tag 'edit_image.svg', class: "nav-logo" %>
+    <h1 id="nav-title">HOW TO GIMP</h1>
+  <% end %>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <div class="navigation-tools">
+      <div class="search-bar">
+        <form role="search">
+          <input type="search" placeholder="Enter Search" />
+          <button type="submit">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+          </button>
+        </form>
+      </div>
+    </div>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link"><a href="javascript:void(0)">Book</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Blog</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Tutorials</a></li>
+        </ul>
+      </ul>
+    </nav>
+  </div>
+</header>

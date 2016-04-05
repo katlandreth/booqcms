@@ -1,6 +1,9 @@
-<ul class="posts">
+<%= render 'layouts/paralax' %>
+<div class="posts">
   <% @posts.each do |post| %>
-    <h2><%= link_to post.title, post.slug %></h2>
-    <p><%= markdown(post.body.to_s.truncate(100)) %></p>
+    <div class="post-exerpt">
+      <h2><%= link_to post.title, post.slug %></h2>
+      <%= markdown(post.body).truncate(500) %>
+    </div>
   <% end %>
-</ul>
+</div>

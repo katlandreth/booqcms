@@ -1,3 +1,3 @@
 Booqcms.configure do |config|
-  config.content_classes = %w(BlogPost BlogLink)
+  config.content_classes = %w(BlogPost Marketing)
 end
