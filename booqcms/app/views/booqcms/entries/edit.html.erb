@@ -1,5 +1,5 @@
 <section>
-  <%= render "admin_newpost_nav" %>
+  <%= render "admin_editpost_nav" %>
   <article>
     <ul class="accordion-tabs-minimal">
       <li class="tab-header-and-content">
@@ -11,7 +11,7 @@
           :place_holder => "If no Title, Add One Here!", :url => entry_path,
           :class => "mkdwn-title", :inner_class => "input-title" %>
           </br></br>
-          
+
           <% @entry.class.content_attributes.each do |attr_name, attr_type| %>
           <span class="bip-label"><%= "#{attr_name}" %></span>
           <%= best_in_place @entry, attr_name, :as => attr_type_to_input(attr_type),
