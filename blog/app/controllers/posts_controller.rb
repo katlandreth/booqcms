@@ -4,12 +4,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = all_post_types.published.find_by_slug!(params[:slug])
+    @post = all_post_types.published.find(params[:id])
+  end
+
+  def slug
+     @post = all_post_types.published.find_by_slug!(params[:slug])
+     render 'show'
   end
 
   private
 
   def all_post_types
-    Booqcms::Entry.where(type: %w(BlogPost Marketing)).published
+    Booqcms::Entry.all.published
   end
 end

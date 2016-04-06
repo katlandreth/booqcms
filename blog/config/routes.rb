@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   # get 'posts/index'
-  #
-  # get 'posts/show'
+   resources :posts, only: [:show]
 
   mount Booqcms::Engine, at: '/admin'
-  get '/:slug', to: 'posts#show'
+  Post.where.not(slug: nil).all.each do |blogpost|
+     get '/:slug', to: 'posts#slug'
+    # get "/#{post.slug}", controller: "posts", action: "show", id: post.id
+  end
   root to: 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

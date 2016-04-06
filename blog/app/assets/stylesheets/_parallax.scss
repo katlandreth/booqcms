@@ -21,11 +21,10 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 .parallax-content-box {
-  height:140px;
-  background: rgba(0,0,0,0.9);
-  width: 589px;
+  background: rgba(0,0,0,0.5);
+  max-width: 70%;
   margin:0 auto;
-  line-height:140px;
+  padding:40px;
 }
 
 .parallax-background {

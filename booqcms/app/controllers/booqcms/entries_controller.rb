@@ -6,7 +6,7 @@ module Booqcms
     before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
     def index
-      @entries = Entry.where(type: content_class)
+      @entries = Entry.all
     end
 
     def show
@@ -20,7 +20,7 @@ module Booqcms
     end
 
     def new
-      @entry = Entry.new(type: content_class)
+      @entry = Entry.new
     end
 
     def edit
@@ -30,7 +30,7 @@ module Booqcms
     def create
       @entry = Entry.new(entry_params)
       if @entry.save
-        redirect_to edit_entry_path(content_class, @entry[:id]), :notice => "The Entry was Saved!", :format => :json
+        redirect_to edit_entry_path(@entry[:id]), :notice => "The Entry was Saved!", :format => :json
       else
         render :action => "new", :notice => "didn't save"
       end
@@ -38,8 +38,11 @@ module Booqcms
 
     def update
       if @entry.update(entry_params)
-        flash[:notice] = "The Entry was updated!!"
-        respond_with(@entry, :location => edit_entry_path(content_class, @entry.id))
+        #flash[:notice] = "The Entry was updated!!"
+        respond_with(@entry, :location => edit_entry_path(@entry.id))
+      else
+        flash[:notice] = "Sad Trombone."
+        # render :action => "edit", :notice => "sad trombone"
       end
     end
 
@@ -59,16 +62,17 @@ module Booqcms
       @entry = Entry.find(params[:id])
     end
 
+
     def entry_params
-      allowed_attrs = %i(id type title slug published_at)
-        .concat(content_class.constantize.content_attributes.keys)
+      allowed_attrs = %i(id category title slug published_at payload)
+        # .concat(content_class.constantize.content_attributes.keys)
 
       params.require(:entry).permit(*allowed_attrs)
     end
 
-    def content_class
-      @content_class ||= params[:content_class].classify
-    end
-    helper_method :content_class
+    # def content_class
+    #   @content_class ||= params[:content_class].classify
+    # end
+    # helper_method :content_class
   end
 end

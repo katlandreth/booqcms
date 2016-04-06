@@ -25,12 +25,16 @@ img.nav-logo {
 }
 
 .show-post {
-  max-width: 600px;
+  max-width: 680px;
   width:80%;
   margin:40px auto;
+  img {
+    width:100%;
+  }
 }
 
 .teaser {
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
-  font-style: italic;
+  margin-bottom:20px;
 }
