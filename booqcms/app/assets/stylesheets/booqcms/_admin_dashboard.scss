@@ -253,6 +253,7 @@ small.need-help-link {
 }
 
 form.form_in_place {
-  display: inline-block;
-  height:0;
+  position:relative;
+  top:-20px;
+  left:-2px;
 }

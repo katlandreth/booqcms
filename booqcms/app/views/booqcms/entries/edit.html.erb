@@ -11,9 +11,10 @@
           :place_holder => "If no Title, Add One Here!", :url => entry_path,
           :class => "mkdwn-title", :inner_class => "input-title" %>
           </br></br>
+          <span class="bip-label">body</span>
           <%= best_in_place @entry, :payload, :as => :textarea, :param => :entry,
           :place_holder => "Start adding your body copy here.", :url => entry_path,
-          :class => "mkdwn-title", :inner_class => "input-title" %>
+          :class => "textarea-body", :inner_class => "textarea-body" %>
         </br></br>
         </div>
       </li>
