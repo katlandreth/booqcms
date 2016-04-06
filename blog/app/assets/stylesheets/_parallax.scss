@@ -28,10 +28,10 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 .parallax-background {
-  background: url("blackandwhite_desk_image.jpg") repeat;
+  background: url("coffee.jpg") repeat;
   background-position: center -250px;
   background-size: cover;
-  background-color: beige;
+  background-color: white;
   height: $parallax-background-height;
   left: 0;
   position: absolute;
