@@ -21,6 +21,23 @@ module Booqcms
       end
     end
 
+    def publish_status(entry)
+      if entry.published_at != nil
+        render 'published_notice'
+      else
+        render 'publish_button'
+      end
+    end
+
+    def edit_post_content(entry)
+      if entry.published_at != nil
+        render 'edit_post_disabled'
+      else
+        render 'edit_post_enabled'
+      end
+    end
+
+
     def attr_placeholder(attr_name, attr_type)
       placeholder_map = { :string => "Should be about one line.",
         :text => "This can be a lot more text like this: Schlitz messenger bag roof party, single-origin coffee beard polaroid small batch kitsch intelligentsia next level. ",

@@ -7,7 +7,7 @@
   $light-gray: #DDD !default;
   $base-font-color: $dark-gray !default;
   $expander-arrow-width: 0.7em;
-  $expander-toggle-size: .8em;
+  $expander-toggle-size: 1em;
   $expander-toggle-arrow-size: $expander-toggle-size;
   $expander-toggle-margin: 1em;
 
@@ -20,7 +20,7 @@
     cursor: pointer;
     display: block;
     font-size: $expander-toggle-size;
-    margin-bottom: $expander-toggle-size;
+    margin-bottom: 25px;
     padding-bottom: $expander-toggle-size / 4;
     text-decoration: none;
     font-weight:200;
@@ -32,9 +32,11 @@
     }
   }
 
-  .expander-content p {
+  .expander-content {
+    p {
     color: $base-font-color;
     line-height: $base-line-height;
+    }
   }
 
   .expander-hidden {

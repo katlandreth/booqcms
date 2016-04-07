@@ -5,17 +5,8 @@
       <li class="tab-header-and-content">
         <a href="#" class="tab-link is-active">MarkDown</a>
         <div class="tab-content">
+          <%= edit_post_content(@entry) %>
 
-          <span class="bip-label">title</span>
-          <%= best_in_place @entry, :title, :as => :input, :param => :entry,
-          :place_holder => "If no Title, Add One Here!", :url => entry_path,
-          :class => "mkdwn-title", :inner_class => "input-title" %>
-          </br></br>
-          <span class="bip-label">body</span>
-          <%= best_in_place @entry, :payload, :as => :textarea, :param => :entry,
-          :place_holder => "Start adding your body copy here.", :url => entry_path,
-          :class => "textarea-body", :inner_class => "textarea-body" %>
-        </br></br>
         </div>
       </li>
       <li class="tab-header-and-content">

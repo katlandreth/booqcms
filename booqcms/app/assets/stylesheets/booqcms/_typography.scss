@@ -159,8 +159,6 @@ aside {
   @include reset-display;
   ul {
     list-style:none;
-    font-weight:bold;
-    text-transform: uppercase;
     padding-left:5px;
     li {
       margin:5px 0;

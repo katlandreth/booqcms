@@ -1,24 +1,17 @@
 <aside>
   <h2>Content Options</h2>
   <ul>
-    <% Booqcms.configuration.content_classes.each do |class_name| %>
-      <li class="expander">
-        <%= link_to class_name.tableize.titleize.singularize, new_entry_path(content_class: class_name) %>
-
-         <%= link_to "#{class_name.tableize.titleize.singularize} Options", "#expand",
-         :class => "expander-trigger expander-hidden" %>
-        <div class="expander-content">
-          <span class="bip-label">slug</span>
-            <%= best_in_place @entry, :slug, :as => :input, :param => :entry,
-            :place_holder => "the_page_slug", :url => entry_path,
-            :class => "", :inner_class => "" %>
-          </br></br>
-          <%= simple_form_for(@entry, as: :entry, url: content_entry_path(@entry)) do |f| %>
-            <%= f.hidden_field :published_at, value: Time.now -%>
-            <%= f.submit 'publish now' -%>
-          <%- end -%>
-        </div>
-      </li>
-    <% end %>
+    <li class="expander">
+       <%= link_to "Publishing Options", "#expand",
+       :class => "expander-trigger expander-hidden" %>
+      <div class="expander-content">
+        <span class="bip-label">slug</span>
+          <%= best_in_place @entry, :slug, :as => :input, :param => :entry,
+          :place_holder => "the_page_slug", :url => entry_path,
+          :class => "textarea-body", :inner_class => "textarea-body" %>
+        </br></br>
+        <%= publish_status(@entry) %>
+      </div>
+    </li>
   </ul>
 </aside>
