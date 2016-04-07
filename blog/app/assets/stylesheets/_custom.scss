@@ -38,3 +38,35 @@ img.nav-logo {
   font-size: 24px;
   margin-bottom:20px;
 }
+
+.login-form {
+  width:33%;
+  margin: 20px auto;
+  border: 1px solid black;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  h2 {
+    text-transform: uppercase;
+  }
+  label {
+    // display:block;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="submit"] {
+    width:100%;
+    display: block;
+    margin-bottom: 20px;;
+    font-size: 1em;
+    line-height:2;
+  }
+  input[type="submit"] {
+    background: white;
+    border: 1px solid #41A1F0;
+    color: #41A1F0;
+    margin-top: 20px;
+  }
+  .recover-links {
+    font-size: 0.75em;
+  }
+}
