@@ -1,8 +1,15 @@
 <%= render 'layouts/paralax' %>
-<div class="posts">
-  <% @posts.each do |post| %>
-    <div class="post-exerpt">
-      <h2><%= link_to post.title, path_to_post(post) %></h2>
-    </div>
+<div class="featured-posts">
+  <% @posts[0..2].each do |post| %>
+  <div class="post-excerpt">
+    <%= link_to path_to_post(post) do %>
+      <div class="post-excerpt-title">
+        <h2><%= post.title %></h2>
+      </div>
+      <div class="post-excerpt-image">
+        <img src="http://brixton.premiumcoding.com/wp-content/uploads/2015/02/featured-image-2.jpg"/>
+      </div>
+    <% end %>
+  </div>
   <% end %>
 </div>
