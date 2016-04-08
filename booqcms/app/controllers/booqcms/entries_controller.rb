@@ -42,7 +42,6 @@ module Booqcms
         respond_with(@entry, :location => edit_entry_path(@entry.id))
       else
         flash[:notice] = "Sad Trombone."
-        # render :action => "edit", :notice => "sad trombone"
       end
     end
 

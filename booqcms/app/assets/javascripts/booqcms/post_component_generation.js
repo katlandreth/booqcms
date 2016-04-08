@@ -15,47 +15,14 @@ $(document).ready(function() {
     alert(video_embed_markup);
   });
 
-function setCaretPosition(e, elemId, text) {
-  var elem = document.getElementById(elemId);
-  var range = document.createRange();
-  var sel = window.getSelection();
-  var caretPosition = document.caretPositionFromPoint(e.clientX, e.clientY);
-  var textNode = caretPosition.offsetNode
-  var offset = caretPosition.offset
-  console.log(caretPosition);
-  if(elem != null) {
-    if (textNode.nodeType == 3) {
-        var replacement = textNode.splitText(offset);
-        var br = document.createElement('br');
-        range.setStart(textNode, offset);
-        $('.droppable').droppable({
-          drop: function() {
-            textNode.parentNode.insertBefore(br, replacement);
-            range.insertNode( document.createTextNode(text) );
-          }
-        });
-      }
-      else{
-        $('.droppable').droppable({
-          drop: function() {
-            elem.appendChild( document.createTextNode(text) );
-          }
-        });
-      }
-    }
-  }
+var dragComponent = document.getElementById('content-component-video');
 
+dragComponent.ondragstart = function(evt) {
+    evt.dataTransfer.setData("text/plain", video_embed_markup);
+};
 
-  $(function() {
-    $( "#Capa_1" ).draggable({ revert: "valid" });
-    //  $('.droppable').droppable({
-    //   over: function( event, ui ) {
-    //     setCaretPosition(event, 'droppable-body', video_embed_markup);
-    //   }
-    // });
-    $('.droppable').mousemove(function( event ) {
-      setCaretPosition(event, 'droppable-body', video_embed_markup);
-    });
-  });
+dragComponent.onclick = function(evt) {
+    evt.preventDefault();
+};
 
 });
