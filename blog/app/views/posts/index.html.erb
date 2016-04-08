@@ -3,7 +3,6 @@
   <% @posts.each do |post| %>
     <div class="post-exerpt">
       <h2><%= link_to post.title, path_to_post(post) %></h2>
-      <%= markdown(post.payload).truncate(500) %>
     </div>
   <% end %>
 </div>
