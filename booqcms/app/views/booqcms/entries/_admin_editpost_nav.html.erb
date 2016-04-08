@@ -20,7 +20,9 @@
         <div class="content-component">
             <h4>Embed a Video</h4>
             <a id="content-component-video" href="#" draggable="true">
-              <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+              <div class="youtube-component-thumb">
+                <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
+              </div>
             </a>
             <form class="video_embed_form">
               <input type="text" placeholder="youtube video id:" id="video_id_field" value=""/>
