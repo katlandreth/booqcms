@@ -5,11 +5,15 @@
        <%= link_to "Publishing Options", "#expand",
        :class => "expander-trigger expander-hidden" %>
       <div class="expander-content">
-        <span class="bip-label">slug</span>
-          <%= best_in_place @entry, :slug, :as => :input, :param => :entry,
-          :place_holder => "the_page_slug", :url => entry_path,
-          :class => "textarea-body", :inner_class => "textarea-body" %>
-        </br></br>
+
+        <%= simple_form_for @entry do |f| %>
+          <div class="input-group">
+            <span class="bip-label sidebar">slug</span>
+            <%= f.input :slug, label: false, input_html: {class: 'slug-input'} %>
+          </div>
+          <%= f.button :submit %>
+        <% end %>
+        <hr>
         <%= publish_status(@entry) %>
       </div>
     </li>

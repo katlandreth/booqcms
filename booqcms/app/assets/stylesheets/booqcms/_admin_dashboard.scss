@@ -225,6 +225,9 @@ span[id*= best_in_place_] {
   left: -101%;
   top: -17px;
   font-size: 12px;
+  &.sidebar {
+    left: -104%;
+  }
 }
 
 .mkdwn-title {
@@ -239,7 +242,16 @@ span[id*= best_in_place_] {
 .input-title {
   font-size: 25px;
   font-family: "Open Sans";
+}
 
+.slug-input {
+  font-family: "PT Sans";
+  font-size:16px;
+  line-height: 1.5;
+  width: 100%;
+  border: 1px solid #eee;
+  display:block;
+  vertical-align:top;
 }
 
 .textarea-body {
@@ -256,17 +268,17 @@ span[id*= best_in_place_] {
 
 .input-group {
   margin-bottom:20px;
- position:relative;
- display: inline-block;
- width:97%;
- border-left: 1px dotted #41A1F0;
- padding-left:5px;
+  position:relative;
+  display: inline-block;
+  width:97%;
+  border-left: 1px dotted #41A1F0;
+  padding-left:5px;
 }
 
 div.input {
   display: inline-block;
   vertical-align: top;
-  width: 90%;
+  width: 86%;
 }
 
 small.need-help-link {
@@ -277,12 +289,6 @@ small.need-help-link {
 .bip-placeholder {
   color: #888;
 }
-
-// form.form_in_place .textarea-body {
-//   position:relative;
-//   left:-2px;
-//   top:-20px;
-// }
 
 form#edit_entry input[type= submit] {
   width: 100%;
