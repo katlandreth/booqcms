@@ -6,7 +6,7 @@ module Booqcms
     before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
     def index
-      @entries = Entry.all
+      @entries = Entry.all.reverse_order!
     end
 
     def show
