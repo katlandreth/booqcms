@@ -1,5 +1,5 @@
 module Booqcms
   class Medium < ActiveRecord::Base
-    mount_uploader :image, ImageUploader
+    mount_uploader :file, ImageUploader
   end
 end

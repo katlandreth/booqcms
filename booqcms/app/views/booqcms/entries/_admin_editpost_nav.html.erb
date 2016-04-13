@@ -37,6 +37,22 @@
               <div class="modal-trigger">Video Library</div>
             </label>
           </div>
+          <div class="content-component">
+              <h4>Embed an Image</h4>
+              <a id="content-component-image" href="#" draggable="true">
+                <div class="youtube-component-thumb">
+                  <%= inline_svg("booqcms/photo.svg", class: 'content-component-svg') %>
+                </div>
+              </a>
+              <form class="image_embed_form">
+                <input type="text" placeholder="image url:" id="image_url_field" value=""/>
+                <button type="submit" class="submit">submit</button>
+              </form>
+              <span class="content-component-text">or</span>
+              <label for="modal-2">
+                <div class="modal-trigger">Media Library</div>
+              </label>
+            </div>
       </div>
     </li>
   </ul>

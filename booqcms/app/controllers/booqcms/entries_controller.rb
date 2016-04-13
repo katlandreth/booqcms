@@ -7,6 +7,7 @@ module Booqcms
 
     def index
       @entries = Entry.all.reverse_order!
+      @uploads = Medium.all
     end
 
     def show
@@ -25,6 +26,8 @@ module Booqcms
 
     def edit
       @entry = Entry.find(params[:id])
+      @uploads = Medium.all
+      @upload = Medium.new
     end
 
     def create
@@ -38,7 +41,6 @@ module Booqcms
 
     def update
       if @entry.update(entry_params)
-        #flash[:notice] = "The Entry was updated!!"
         respond_with(@entry, :location => edit_entry_path(@entry.id))
       else
         flash[:notice] = "Sad Trombone."

@@ -6,9 +6,6 @@
         <a href="#" class="tab-link is-active">MarkDown</a>
         <div class="tab-content">
           <%= edit_post_content(@entry) %>
-          <%= form_for @medium, :html => {:multipart => true} do |f| %>
-              <%= f.file_field :image %>
-          <% end %>
         </div>
       </li>
       <li class="tab-header-and-content">
@@ -23,3 +20,4 @@
 </section>
 
 <%= render "media_library_modal" %>
+<%= render "image_library_modal" %>

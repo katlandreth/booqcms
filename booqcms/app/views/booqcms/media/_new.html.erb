@@ -1,0 +1,15 @@
+<h1>New Upload</h1>
+
+<div class="upload-preview">
+  <img />
+</div>
+
+<%= form_for(@upload, format: :js) do |f| %>
+  <div>
+    <%= f.label :file %><br>
+    <%= f.file_field :file, class: "file" %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
