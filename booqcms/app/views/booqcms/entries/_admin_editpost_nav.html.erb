@@ -50,7 +50,10 @@
               </form>
               <span class="content-component-text">or</span>
               <label for="modal-2">
-                <div class="modal-trigger">Media Library</div>
+                <div class="modal-trigger">
+                  <%= link_to "Media Library", {controller: "media"},
+                 remote: true  %>
+               </div>
               </label>
             </div>
       </div>

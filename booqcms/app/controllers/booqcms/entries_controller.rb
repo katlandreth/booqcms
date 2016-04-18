@@ -7,7 +7,7 @@ module Booqcms
 
     def index
       @entries = Entry.all.reverse_order!
-      @uploads = Medium.all
+      # @uploads = Medium.all
     end
 
     def show
@@ -26,8 +26,8 @@ module Booqcms
 
     def edit
       @entry = Entry.find(params[:id])
-      @uploads = Medium.all
-      @upload = Medium.new
+      # @uploads = Medium.all
+      # @upload = Medium.new
     end
 
     def create
@@ -66,14 +66,7 @@ module Booqcms
 
     def entry_params
       allowed_attrs = %i(id category title slug published_at payload)
-        # .concat(content_class.constantize.content_attributes.keys)
-
       params.require(:entry).permit(*allowed_attrs)
     end
-
-    # def content_class
-    #   @content_class ||= params[:content_class].classify
-    # end
-    # helper_method :content_class
   end
 end

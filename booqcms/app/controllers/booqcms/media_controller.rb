@@ -2,7 +2,7 @@ require_dependency "booqcms/application_controller"
 
 module Booqcms
   class MediaController < ApplicationController
-    respond_to :html, :json
+    respond_to :html, :json, :js
     before_action :set_image, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -21,15 +21,14 @@ module Booqcms
 
   def create
     @upload = Medium.new(media_upload_params)
-    respond_to do |format|
-      format.js
+    if @upload.save
+      respond_with @upload
+      # respond_to do |format|
+      #   format.js
+      # end
+    else
+      render :new
     end
-
-    # if @upload.save
-    #    redirect_to @upload, notice: 'Upload was successfully created.'
-    # else
-    #   render :new
-    # end
   end
 
   def update
