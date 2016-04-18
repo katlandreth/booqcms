@@ -1,10 +1,7 @@
 $(document).ready(function(){
-  console.log("loaded script");
   var preview = $(".upload-preview img");
 
   $(".modal").on('change', '.file', function(event){
-  // $(".file").change(function(event){
-    console.log("file change");
    var input = $(event.currentTarget);
    var file = input[0].files[0];
    var reader = new FileReader();

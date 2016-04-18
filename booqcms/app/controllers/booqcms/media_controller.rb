@@ -10,6 +10,7 @@ module Booqcms
   end
 
   def show
+    respond_with @upload
   end
 
   def new
@@ -20,15 +21,8 @@ module Booqcms
   end
 
   def create
-    @upload = Medium.new(media_upload_params)
-    if @upload.save
-      respond_with @upload
-      # respond_to do |format|
-      #   format.js
-      # end
-    else
-      render :new
-    end
+    @upload = Medium.create(media_upload_params)
+      render :show
   end
 
   def update
