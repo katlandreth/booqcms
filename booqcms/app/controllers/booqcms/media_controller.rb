@@ -23,7 +23,7 @@ module Booqcms
 
   def create
     @upload = Medium.create(media_upload_params)
-      render :show
+    render :show
   end
 
   def update
@@ -38,6 +38,11 @@ module Booqcms
   def destroy
     @upload.destroy
     redirect_to media_url, notice: 'Upload was successfully destroyed.'
+  end
+
+  def destroy_multiple
+    Medium.destroy(params[:medium_ids])
+    redirect_to media_url, notice: 'Media was successfully destroyed.'
   end
 
   private
