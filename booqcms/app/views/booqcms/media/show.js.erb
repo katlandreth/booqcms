@@ -1,1 +1,2 @@
-$(".upload-preview").html("<%= escape_javascript(render partial: '/booqcms/media/show') %>");
+$(".uploaded-image").html("<%= escape_javascript(render partial: '/booqcms/media/show') %>");
+$(".upload-preview img").removeAttr("src");

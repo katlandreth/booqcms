@@ -25,6 +25,7 @@ gem 'fog'
 gem 'mini_magick'
 gem 'figaro'
 gem 'remotipart', '~> 1.2'
+gem 'jquery-fileupload-rails'
 
 
 

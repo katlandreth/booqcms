@@ -4,6 +4,7 @@ $(function() {
       $("body").addClass("modal-open");
     } else {
       $("body").removeClass("modal-open");
+      $(".uploaded-image").html("");
     }
   });
 

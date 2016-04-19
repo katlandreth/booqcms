@@ -34,19 +34,11 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
    version :thumb do
-     process :resize_to_fit => [150, 150]
+     process :resize_to_fit => [1000, 1000]
    end
 
    version :pinterest_image do
      process :resize_to_fit => [735, 1120]
-   end
-
-   version :facebook_image do
-     process :resize_to_fit => [1200, 628]
-   end
-
-   version :instagram_image do
-     process :resize_to_fit => [1080, 1080]
    end
 
   # Add a white list of extensions which are allowed to be uploaded.

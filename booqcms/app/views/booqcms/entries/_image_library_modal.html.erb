@@ -20,8 +20,12 @@
         <li class="tab-header-and-content">
           <%= link_to "Upload an Image", {controller: "media", action: "new"}, class: "tab-link", remote: true %>
           <div class="tab-content">
+            <div class="uploaded-image"></div>
             <div class="upload-preview">
               <img />
+              <div class="progress-bar">
+                <span class="meter"></span>
+              </div>
             </div>
             <div class="upload_form">
             </div>
