@@ -6,7 +6,8 @@ module Booqcms
     before_action :set_image, only: [:show, :edit, :update, :destroy]
 
   def index
-    @uploads = Medium.all
+    @uploads = Medium.paginate(per_page: 9, page: params[:page])
+    @media = Medium.paginate(page: params[:page])
   end
 
   def show

@@ -16,5 +16,4 @@
 //= require jquery-ui
 //= require best_in_place
 //= require best_in_place.jquery-ui
-//= require jquery-fileupload/basic
 //= require_tree .
