@@ -1,7 +1,8 @@
-<div class="modal">
+<div class="modal" id="image-library-modal">
   <input class="modal-state" id="modal-2" type="checkbox" />
   <div class="modal-fade-screen">
     <div class="modal-inner">
+      <div class="progress-bar"></div>
       <div class="modal-close" for="modal-2"></div>
       <h2>Image Library</h2>
       <ul class="accordion-tabs-minimal">
@@ -24,18 +25,9 @@
           </div>
         </li>
         <li class="tab-header-and-content">
-          <!-- <%= link_to "Image Details", {controller: "media", action: "show"}, class: "tab-link", remote: true %> -->
           <a href="#" id="image-details-tab" class="tab-link">Image Details</a>
           <div class="tab-content">
             <div class="uploaded-image"></div>
-            <!-- <div class="image_embed_form">
-              <input type="hidden" id="image-src-field" value=""/>
-              <input type="text" id="image-caption-field" name="caption" placeholder="caption" />
-              <input type="text" id="image-alt-field" name="alt" placeholder="alt text (for SEO and screen readers)" />
-              <input type="text" id="image-title-field" name="title" placeholder="title- will be used in a tooltip" />
-              <input type="text-box" id="image-description-field" name="description" placeholder="describe the image (for SEO and screen readers)" />
-              <input type="submit" class="submit" value ="Generate Markup for Image" return="false"/>
-            </div> -->
           </div>
         </li>
       </ul>

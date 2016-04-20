@@ -16,4 +16,14 @@
 //= require jquery-ui
 //= require best_in_place
 //= require best_in_place.jquery-ui
+//= require nprogress
+//= require nprogress-turbolinks
 //= require_tree .
+
+
+NProgress.configure({
+  showSpinner: false,
+  ease: 'ease',
+  speed: 500,
+  parent: '.progress-bar'
+});

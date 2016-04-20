@@ -26,6 +26,7 @@ gem 'mini_magick'
 gem 'figaro'
 gem 'remotipart', '~> 1.2'
 gem 'will_paginate'
+gem 'nprogress-rails'
 
 
 
