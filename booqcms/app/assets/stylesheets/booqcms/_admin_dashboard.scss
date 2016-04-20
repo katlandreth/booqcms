@@ -1,3 +1,5 @@
+@import "_textures";
+
 .content-component {
   border: 1px dotted #41A1F0;
   padding:10px;
@@ -43,6 +45,10 @@
   fill: #41A1F0;
   width: 5em;
   height: 5em;
+}
+
+.content-component img {
+  width:150px;
 }
 
 .grid-item .content-component-svg {
@@ -314,6 +320,23 @@ form#edit_entry input[type= submit] {
     position:relative;
     left:-5px;
 
+  }
+}
+
+figure {
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  width:100%;
+  padding:5px;
+  img {
+    width:100%;
+  }
+  figcaption {
+    width:100%;
+    text-align:center;
+    font-size: 12px;
+    font-family: monospace;
+    color:#555;
+    padding:10px;
   }
 }
 

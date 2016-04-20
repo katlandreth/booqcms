@@ -8,13 +8,16 @@ module Booqcms
   def index
     @uploads = Medium.paginate(per_page: 8, page: params[:page]).order('id DESC')
     respond_to do |format|
-      format.html { redirect_to media_url }
+      format.html
       format.js { respond_with @uploads }
     end
   end
 
   def show
     respond_with @upload
+    # respond_to do |format|
+    #   format.js { render :json => @upload }
+    # end
   end
 
   def new

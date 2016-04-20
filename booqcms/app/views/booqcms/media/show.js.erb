@@ -1,2 +1,3 @@
-$(".uploaded-image").html("<h3>Great Success!</h3> <%= escape_javascript(render partial: '/booqcms/media/show') %>");
+$(".uploaded-image").html('<%= escape_javascript(render partial: "/booqcms/media/show", locals: { upload: @upload } ) %>');
 $(".upload-preview img").removeAttr("src");
+// $("#image-src-field").attr("name", "patty");

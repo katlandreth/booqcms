@@ -1,41 +1,94 @@
 $(document).ready(function() {
-  if ($.contains(document, ".video_embed_form")) {
+  //Video Embed
+  if ($("body").has(".video_embed_form").length) {
     var video_embed_markup;
     var video_thumbnail;
     var dragComponent = document.getElementById('content-component-video');
-  $(".video_embed_form .submit").on("click", function() {
-    create_video_markup();
-    get_video_thumbnail();
-    $(this).addClass("component-created").text("drag the video into place");
-    $(".youtube-component-thumb").replaceWith(video_thumbnail);
-  });
+    $(".video_embed_form .submit").on("click", function() {
+      create_video_markup();
+      get_video_thumbnail();
+      $(this).addClass("component-created").text("drag the video into place");
+      $(".youtube-component-thumb").replaceWith(video_thumbnail);
+    });
 
-  function create_video_markup(){
-    var video_id = $("#video_id_field").val();
-    video_embed_markup = $.trim('<div class="video">\n \
-  <div class="video-wrapper">\n \
-    <iframe src="https://www.youtube.com/embed/'+ video_id +
-    ' "frameborder="0" allowfullscreen></iframe>\n \
-  </div>\n \
-</div>');
-  };
+    function create_video_markup(){
+      var video_id = $("#video_id_field").val();
+      video_embed_markup = $.trim('<div class="video">\n \
+    <div class="video-wrapper">\n \
+      <iframe src="https://www.youtube.com/embed/'+ video_id +
+      ' "frameborder="0" allowfullscreen></iframe>\n \
+    </div>\n \
+  </div>');
+    };
 
-  function get_video_thumbnail() {
-    var video_id = $("#video_id_field").val().trim();
-    video_thumbnail = $.trim('<img src="http://img.youtube.com/vi/'+ video_id +
-    '/mqdefault.jpg" class="youtube-component-thumb"/>');
-  };
+    function get_video_thumbnail() {
+      var video_id = $("#video_id_field").val().trim();
+      video_thumbnail = $.trim('<img src="http://img.youtube.com/vi/'+ video_id +
+      '/mqdefault.jpg" class="youtube-component-thumb"/>');
+    };
 
-  dragComponent.ondragstart = function(evt) {
-    evt.dataTransfer.setData("text/plain", video_embed_markup);
-  };
+    dragComponent.ondragstart = function(evt) {
+      evt.dataTransfer.setData("text/plain", video_embed_markup);
+    };
 
-  dragComponent.onclick = function(evt) {
-    evt.preventDefault();
-  };
+    dragComponent.onclick = function(evt) {
+      evt.preventDefault();
+    };
 
-  $(".textarea-body").on("drop", function(evt) {
-    $(".video_embed_form .submit").removeClass("component-created").text("submit");
-  });
-}
+    $(".textarea-body").on("drop", function(evt) {
+      $(".video_embed_form .submit").removeClass("component-created").text("submit");
+    });
+  }
+});
+
+  //Image Embed
+$(document).on("click", "#image-details-tab", function(){
+  console.log("tab clicked");
+  if ($(".modal").has(".image_embed_form").length) {
+    console.log("has image embed form");
+    var image_embed_markup;
+    var image_thumbnail;
+    var dragComponent = document.getElementById('content-component-image');
+    $(".image_embed_form").on("click", ".submit", function() {
+      create_image_markup();
+      get_image_thumbnail();
+      $(this).addClass("component-created").text("drag the image into place");
+      $(".image-component-thumb").replaceWith(image_thumbnail);
+      $(".modal-state:checked").prop("checked", false).change();
+    });
+
+    function create_image_markup(){
+      console.log("in create markup func");
+      var image_src = $(".uploaded-image img").attr("src");
+      var alt = $("#image-alt-field").val();
+      var title = $("#image-title-field").val();
+      var caption = $("#image-caption-field").val();
+      var description = $("#image-description-field").val();
+      image_embed_markup = $.trim('<figure>\n \
+    <img src="'+image_src+'" class="inline-image" alt="' +alt+ '"\
+  title="'+title+'" description="'+description+'"/>\n \
+    <figcaption>'+caption+'</figcaption>\n \
+</figure> ');
+    };
+
+    function get_image_thumbnail() {
+      console.log("in img thumb func");
+      var image_src = $("#image-src-field").val();
+      console.log(image_src);
+      image_thumbnail = $.trim('<img src="'+ image_src +
+      '" class="image-component-thumb"/>');
+    };
+
+    dragComponent.ondragstart = function(evt) {
+      evt.dataTransfer.setData("text/plain", image_embed_markup);
+    };
+
+    dragComponent.onclick = function(evt) {
+      evt.preventDefault();
+    };
+
+    $(".textarea-body").on("drop", function(evt) {
+      $(".image_embed_form .submit").removeClass("component-created").text("submit");
+    });
+  }
 });

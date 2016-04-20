@@ -8,10 +8,10 @@
         <li class="tab-header-and-content">
           <a href="#" class="tab-link is-active">Your Images</a>
           <div class="tab-content">
-            <div class="upload_form">
-            </div>
             <div class="upload-preview">
               <img />
+            </div>
+            <div class="upload_form">
             </div>
             <div class="gallery-thumb-wrapper button-card">
               <%= link_to new_medium_path, format: :js, remote: true, class: "primary-button", id: "new-image-button" do %>
@@ -24,21 +24,18 @@
           </div>
         </li>
         <li class="tab-header-and-content">
-          <%= link_to "Image Details", {controller: "media", action: "new"}, class: "tab-link", remote: true %>
+          <!-- <%= link_to "Image Details", {controller: "media", action: "show"}, class: "tab-link", remote: true %> -->
+          <a href="#" id="image-details-tab" class="tab-link">Image Details</a>
           <div class="tab-content">
-            <!-- <span>upload an image</span>
-            <div class="upload-preview">
-              <img />
-            </div>
-            <div class="upload_form">
-            </div> -->
             <div class="uploaded-image"></div>
-            <hr>
-            <input type="text" name="caption" placeholder="caption" />
-            <input type="text" name="alt" placeholder="alt text (for SEO and screen readers)" />
-            <input type="text" name="title" placeholder="title- will be used in a tooltip" />
-            <input type="text-box" name="description" placeholder="describe the image (for SEO and screen readers)" />
-            <input type="submit" value ="Generate Markup for Image"/>
+            <!-- <div class="image_embed_form">
+              <input type="hidden" id="image-src-field" value=""/>
+              <input type="text" id="image-caption-field" name="caption" placeholder="caption" />
+              <input type="text" id="image-alt-field" name="alt" placeholder="alt text (for SEO and screen readers)" />
+              <input type="text" id="image-title-field" name="title" placeholder="title- will be used in a tooltip" />
+              <input type="text-box" id="image-description-field" name="description" placeholder="describe the image (for SEO and screen readers)" />
+              <input type="submit" class="submit" value ="Generate Markup for Image" return="false"/>
+            </div> -->
           </div>
         </li>
       </ul>

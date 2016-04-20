@@ -1,2 +1,20 @@
 <span>use this image</span>
 <img src="<%= @upload.file.thumb %>" /><br/>
+<hr>
+<!-- <%= form_tag({controller: "media", action: "show", format: :js}, method: "get", class: "image_embed_form", remote: true) do %>
+  <%= hidden_field_tag "img-src-field", @upload.file %>
+  <%= text_field_tag "image-caption-field", nil, placeholder: "caption"%>
+  <%= text_field_tag "image-alt-field", nil, placeholder: "alt" %>
+  <%= text_field_tag "image-title-field", nil, placeholder: "title"%>
+  <%= text_area_tag "image-description-field", nil, placeholder: "description"%>
+  <%= submit_tag "submit", class: "submit"%>
+<% end %> -->
+
+<div class="image_embed_form">
+  <input type="hidden" id="image-src-field" value="<%= @upload.file %>"/>
+  <input type="text" id="image-caption-field" name="caption" placeholder="caption" />
+  <input type="text" id="image-alt-field" name="alt" placeholder="alt text (for SEO and screen readers)" />
+  <input type="text" id="image-title-field" name="title" placeholder="title- will be used in a tooltip" />
+  <input type="text-box" id="image-description-field" name="description" placeholder="describe the image (for SEO and screen readers)" />
+  <input type="submit" class="submit" value ="Generate Markup for Image" return="false"/>
+</div>
