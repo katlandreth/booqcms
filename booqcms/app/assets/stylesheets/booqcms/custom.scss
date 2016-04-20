@@ -18,19 +18,26 @@ section.media-library {
   height:auto;
 }
 
+.image-gallery {
+  display: inline;
+}
+
 .image-gallery img,
 .media-library img {
-  width:150px;
+  // width:130px;
+  width: 100%;
   height:auto;
   vertical-align:top;
+  // margin:5px;
 }
 
 .gallery-thumb-wrapper {
   height:200px;
+  width: 170px;
   padding:20px;
   overflow:hidden;
   display:inline-block;
-  margin:10px;
+  margin:10px 10px 10px 0;
   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
   position:relative;
   .gallery-thumb-name {
@@ -54,5 +61,18 @@ section.media-library {
 
 #new-image-button {
   display:block;
-  width:150px;
+  width:120px;
+  text-align: center;
+}
+
+.upload-form {
+  padding:40px;
+  width:50%;
+  margin:10px auto;
+  box-shadow:0 1px 3px rgba(0,0,0,0.4);
+}
+
+.selected {
+  
+  border: 3px solid #41a1f0;
 }

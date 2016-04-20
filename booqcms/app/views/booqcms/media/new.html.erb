@@ -1,0 +1,17 @@
+<section class="media-library">
+  <div class="upload-form">
+    <div class="uploaded-image"></div>
+    <div class="upload-preview">
+      <img />
+    </div>
+    <%= form_for(@upload, url: {controller: "media", action: "create", :format => :html}, remote: false, authenticity_token: true) do |f| %>
+      <div>
+        <%= f.label :file %><br>
+        <%= f.file_field :file, class: "file" %>
+      </div>
+      <div>
+        <%= f.submit %>
+      </div>
+    <% end %>
+  </div>
+</section>

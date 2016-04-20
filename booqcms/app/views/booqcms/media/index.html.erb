@@ -13,7 +13,7 @@
           <%= link_to upload do %>
             <img src="<%= upload.file.thumb %>">
             <div class="gallery-thumb-name">
-              <%= upload.file.file.filename %>
+              <%= truncate(upload.file.file.filename, length:20) %>
             </div>
           <% end %>
         </div>

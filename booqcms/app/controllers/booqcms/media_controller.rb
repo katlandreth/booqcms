@@ -6,8 +6,11 @@ module Booqcms
     before_action :set_image, only: [:show, :edit, :update, :destroy]
 
   def index
-    @uploads = Medium.paginate(per_page: 9, page: params[:page])
-    @media = Medium.paginate(page: params[:page])
+    @uploads = Medium.paginate(per_page: 8, page: params[:page]).order('id DESC')
+    respond_to do |format|
+      format.html { redirect_to media_url }
+      format.js { respond_with @uploads }
+    end
   end
 
   def show
@@ -22,8 +25,16 @@ module Booqcms
   end
 
   def create
-    @upload = Medium.create(media_upload_params)
-    render :show
+  @upload = Medium.create(media_upload_params)
+     if @upload.save
+      @uploads = Medium.paginate(per_page: 8, page: params[:page]).order('id DESC')
+      respond_to do |format|
+        format.html { redirect_to media_url }
+        format.js { render :index }
+      end
+    # else
+    #   redirect_to media_url
+     end
   end
 
   def update

@@ -8,27 +8,37 @@
         <li class="tab-header-and-content">
           <a href="#" class="tab-link is-active">Your Images</a>
           <div class="tab-content">
+            <div class="upload_form">
+            </div>
+            <div class="upload-preview">
+              <img />
+            </div>
+            <div class="gallery-thumb-wrapper button-card">
+              <%= link_to new_medium_path, format: :js, remote: true, class: "primary-button", id: "new-image-button" do %>
+                <h3>Upload Image</h3> <br>
+                <%= inline_svg("booqcms/plusicon.svg", class: 'content-component-svg') %>
+              <% end %>
+            </div>
             <div class="image-gallery">
             </div>
+          </div>
+        </li>
+        <li class="tab-header-and-content">
+          <%= link_to "Image Details", {controller: "media", action: "new"}, class: "tab-link", remote: true %>
+          <div class="tab-content">
+            <!-- <span>upload an image</span>
+            <div class="upload-preview">
+              <img />
+            </div>
+            <div class="upload_form">
+            </div> -->
+            <div class="uploaded-image"></div>
+            <hr>
             <input type="text" name="caption" placeholder="caption" />
             <input type="text" name="alt" placeholder="alt text (for SEO and screen readers)" />
             <input type="text" name="title" placeholder="title- will be used in a tooltip" />
             <input type="text-box" name="description" placeholder="describe the image (for SEO and screen readers)" />
-            <input type="submit" value ="Embed Selected Video"/>
-          </div>
-        </li>
-        <li class="tab-header-and-content">
-          <%= link_to "Upload an Image", {controller: "media", action: "new"}, class: "tab-link", remote: true %>
-          <div class="tab-content">
-            <div class="uploaded-image"></div>
-            <div class="upload-preview">
-              <img />
-              <div class="progress-bar">
-                <span class="meter"></span>
-              </div>
-            </div>
-            <div class="upload_form">
-            </div>
+            <input type="submit" value ="Generate Markup for Image"/>
           </div>
         </li>
       </ul>

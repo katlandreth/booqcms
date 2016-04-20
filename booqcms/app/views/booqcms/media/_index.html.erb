@@ -1,6 +1,13 @@
 <% @uploads.each do |upload| %>
-  <%= link_to upload do %>
-  <img src="<%= upload.file.thumb %>">
+
+  <%= link_to upload, format: :js, remote: true do %>
+    <div class="gallery-thumb-wrapper">
+      <img src="<%= upload.file.thumb %>">
+      <div class="gallery-thumb-name">
+        <%= truncate(upload.file.file.filename, length:20) %>
+      </div>
+    </div>
   <% end %>
+
 <% end %>
 <%= js_will_paginate @uploads %>
