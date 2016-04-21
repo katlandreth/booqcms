@@ -1,0 +1,9 @@
+<%= form_for(@upload, url: {controller: "media", action: "create", :format => :js}, remote: true, authenticity_token: true) do |f| %>
+  <div>
+  </br>
+    <%= f.file_field :file, class: "file" %>
+  </div>
+  <div>
+    <%= f.submit class: "upload-submit" %>
+  </div>
+<% end %>

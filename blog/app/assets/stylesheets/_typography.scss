@@ -1,3 +1,41 @@
+@font-face {
+    font-family: 'charterbold_italic';
+    src:font-url('charter_bold_italic-webfont.eot');
+    src:font-url('charter_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('charter_bold_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'charterbold';
+    src:font-url('charter_bold-webfont.eot');
+    src:font-url('charter_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('charter_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'charteritalic';
+    src:font-url('charter_italic-webfont.eot');
+    src:font-url('charter_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('charter_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'charterregular';
+    src:font-url('charter_regular-webfont.eot');
+    src:font-url('charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('charter_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 body.type-system-rounded {
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -7,12 +45,18 @@ body.type-system-rounded {
   $light-gray: #DDD !default;
   $medium-screen: em(640) !default;
   $base-font-color: $dark-gray !default;
-  $sans-serif: 'Crimson Text', serif;
+  // $sans-serif: 'Crimson Text', serif;
+  $sans-serif: 'charterregular', serif;
   $sans-serif-2: 'Montserrat', sans-serif;
 
   @include clearfix;
   font-family: $sans-serif;
   text-align: left;
+
+  font-feature-settings: "liga";
+  text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
   h1, h2, h3, p {
     margin: 0;
@@ -103,9 +147,10 @@ body.type-system-rounded {
 
   p {
     font-family: $sans-serif;
-    font-size: 1.25em;
+    font-size: 21px;
     font-weight: 300;
-    line-height: 1.4em;
+    line-height: 1.58;
+    letter-spacing:-0.003em;
     margin-bottom: 1.5em;
 
     span {

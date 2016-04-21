@@ -1,0 +1,4 @@
+$(".image-gallery").html("<%= escape_javascript(render partial: '/booqcms/media/index') %>");
+$(".upload-preview img").removeAttr("src");
+$("#modal-2").prop('checked', true);
+NProgress.done();
