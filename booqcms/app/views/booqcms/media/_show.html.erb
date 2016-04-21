@@ -3,10 +3,12 @@
 <hr>
 
 <div class="image_embed_form">
+  <label for="featured-image-checkbox">Use as Featured Image</label>
+  <input type="checkbox" id="featured-image-checkbox" name="featured-image-checkbox" value="use-as-featured-image">
   <input type="hidden" id="image-src-field" value="<%= @upload.file %>"/>
-  <input type="text" id="image-caption-field" name="caption" placeholder="caption" />
-  <input type="text" id="image-alt-field" name="alt" placeholder="alt text (for SEO and screen readers)" />
-  <input type="text" id="image-title-field" name="title" placeholder="title- will be used in a tooltip" />
-  <input type="text-box" id="image-description-field" name="description" placeholder="describe the image (for SEO and screen readers)" />
+  <input type="text" title="caption" id="image-caption-field" name="caption" placeholder="caption" />
+  <input type="text" title="alt" id="image-alt-field" name="alt" placeholder="alt text (for SEO and screen readers)" />
+  <input type="text" title="title" id="image-title-field" name="title" placeholder="title- will be used in a tooltip" />
+  <input type="text-box" title="description" id="image-description-field" name="description" placeholder="describe the image (for SEO and screen readers)" />
   <input type="submit" class="submit" value ="Generate Markup for Image" return="false"/>
 </div>

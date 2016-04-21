@@ -52,6 +52,7 @@ $(document).on("click", "#image-details-tab", function(){
     $(".image_embed_form").on("click", ".submit", function() {
       create_image_markup();
       get_image_thumbnail();
+      set_featured_image();
       $(this).addClass("component-created").text("drag the image into place");
       $(".image-component-thumb").replaceWith(image_thumbnail);
       $(".modal-state:checked").prop("checked", false).change();
@@ -74,9 +75,21 @@ title="'+title+'" description="'+description+'"/>\n\
     function get_image_thumbnail() {
       console.log("in img thumb func");
       var image_src = $("#image-src-field").val();
-      console.log(image_src);
       image_thumbnail = $.trim('<img src="'+ image_src +
       '" class="image-component-thumb"/>');
+    };
+
+    function set_featured_image() {
+      var img_src = $("#image-src-field").val();
+      var entry_id = $("#entry-id-field").val();
+      $.ajax({
+        url: "../../entries/" + entry_id,
+        type: "PATCH",
+        data: {entry: {featured_image: img_src}},
+        success: function() {
+          alert( "Data Saved: ");
+        }
+      });
     };
 
     dragComponent.ondragstart = function(evt) {

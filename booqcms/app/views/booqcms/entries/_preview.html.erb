@@ -1,6 +1,6 @@
 <h2><%= @entry.title %></h2>
 <p class="meta"><%= @entry.author_name %> <%= @entry.published_at %></p>
-
 <div class="post-body">
+  <img src="<%= @entry.featured_image %>" />
   <%= markdown(@entry.payload) %>
 </div>

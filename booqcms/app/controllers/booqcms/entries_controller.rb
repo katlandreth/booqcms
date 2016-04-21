@@ -2,12 +2,11 @@ require_dependency "booqcms/application_controller"
 
 module Booqcms
   class EntriesController < ApplicationController
-    respond_to :html, :json
+    respond_to :html, :json, :js
     before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
     def index
       @entries = Entry.all.reverse_order!
-      # @uploads = Medium.all
     end
 
     def show
@@ -26,8 +25,6 @@ module Booqcms
 
     def edit
       @entry = Entry.find(params[:id])
-      # @uploads = Medium.all
-      # @upload = Medium.new
     end
 
     def create
@@ -41,7 +38,7 @@ module Booqcms
 
     def update
       if @entry.update(entry_params)
-        respond_with(@entry, :location => edit_entry_path(@entry.id))
+        respond_with(@entry)
       else
         flash[:notice] = "Sad Trombone."
       end
@@ -65,7 +62,7 @@ module Booqcms
 
 
     def entry_params
-      allowed_attrs = %i(id category title slug published_at payload)
+      allowed_attrs = %i(id category title slug published_at payload featured_image)
       params.require(:entry).permit(*allowed_attrs)
     end
   end
