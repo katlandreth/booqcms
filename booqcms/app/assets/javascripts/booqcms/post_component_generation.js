@@ -64,11 +64,11 @@ $(document).on("click", "#image-details-tab", function(){
       var title = $("#image-title-field").val();
       var caption = $("#image-caption-field").val();
       var description = $("#image-description-field").val();
-      image_embed_markup = $.trim('<figure>\n \
-    <img src="'+image_src+'" class="inline-image" alt="' +alt+ '"\
-  title="'+title+'" description="'+description+'"/>\n \
-    <figcaption>'+caption+'</figcaption>\n \
-</figure> ');
+      image_embed_markup = $.trim('<figure>\n\
+  <img src="'+image_src+'" class="inline-image" alt="' +alt+ '"\
+title="'+title+'" description="'+description+'"/>\n\
+  <figcaption>'+caption+'</figcaption>\n\
+</figure>');
     };
 
     function get_image_thumbnail() {

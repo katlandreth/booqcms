@@ -9,7 +9,7 @@ module Booqcms
     end
 
     def markdown(text)
-      renderer = HTMLwithCoderay.new(hard_wrap: true, filter_html: false)
+      renderer = HTMLwithCoderay.new(hard_wrap: false, filter_html: false)
       options = {
         filter_html: false,
         autolink: true,
