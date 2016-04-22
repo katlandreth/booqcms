@@ -50,5 +50,14 @@ module Booqcms
       input_map = {:string => :input, :text => :textarea, :date => :date, :boolean => :checkbox}
       input_map[attr_type]
     end
+
+    def preview_featured_image(entry)
+      if entry.featured_image != nil
+        return_html = '<img src="' + entry.featured_image + '" width="700" />'
+        return_html.html_safe
+      else
+        'nothing!'
+      end
+    end
   end
 end

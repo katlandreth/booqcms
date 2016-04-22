@@ -82,14 +82,16 @@ title="'+title+'" description="'+description+'"/>\n\
     function set_featured_image() {
       var img_src = $("#image-src-field").val();
       var entry_id = $("#entry-id-field").val();
-      $.ajax({
-        url: "../../entries/" + entry_id,
-        type: "PATCH",
-        data: {entry: {featured_image: img_src}},
-        success: function() {
-          alert( "Data Saved: ");
-        }
-      });
+      if($('#featured-image-checkbox').is(':checked')) {
+        $.ajax({
+          url: "../../entries/" + entry_id,
+          type: "PATCH",
+          data: {entry: {featured_image: img_src}},
+          success: function() {
+            alert( "Data Saved: ");
+          }
+        });
+      };
     };
 
     dragComponent.ondragstart = function(evt) {
