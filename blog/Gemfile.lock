@@ -10,9 +10,14 @@ PATH
   remote: ../booqcms
   specs:
     booqcms (0.0.1)
+      carrierwave
       coderay
+      figaro
+      fog
+      mini_magick
       rails (~> 4.2.6)
       redcarpet
+      remotipart (~> 1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -352,22 +357,17 @@ DEPENDENCIES
   bourbon
   byebug
   cancancan
-  carrierwave
   coffee-rails (~> 4.1.0)
   devise
-  figaro
-  fog
   inline_svg
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
-  mini_magick
   neat
   nprogress-rails
   pg (~> 0.15)
   pry
   rails (= 4.2.6)
-  remotipart (~> 1.2)
   responders
   rolify
   sass-rails (~> 5.0)

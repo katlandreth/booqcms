@@ -34,6 +34,9 @@ Rails.application.configure do
   # Randomize the order test cases are executed.
   config.active_support.test_order = :random
 
+  #prevent duplicate table warning for test db
+  config.active_record.maintain_test_schema = false
+
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 

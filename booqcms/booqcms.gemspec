@@ -21,5 +21,13 @@ Gem::Specification.new do |s|
   s.add_dependency "coderay"
   s.add_dependency "redcarpet"
 
+  #image upload
+  s.add_dependency 'carrierwave'
+  s.add_dependency 'fog'
+  s.add_dependency 'mini_magick'
+  s.add_dependency 'figaro'
+  s.add_dependency 'remotipart', '~> 1.2'
+  
+
   s.add_development_dependency "pg"
 end
