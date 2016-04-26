@@ -6,7 +6,7 @@ module Booqcms
     before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
     def index
-      @entries = Entry.all.reverse_order!
+      @entries = Entry.all
     end
 
     def show
@@ -37,11 +37,12 @@ module Booqcms
     end
 
     def update
-      if @entry.update(entry_params)
+      @entry.update(entry_params)
+      # if @entry.save
         respond_with(@entry, :location => edit_entry_path(@entry.id))
-      else
-        flash[:notice] = "Sad Trombone."
-      end
+      # else
+      #   render "edit"
+      # end
     end
 
     def destroy

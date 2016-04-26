@@ -73,6 +73,10 @@ section.media-library {
 }
 
 .selected {
-  
+
   border: 3px solid #41a1f0;
+}
+
+.expander .expander-content p.error_notification {
+  color:#CF000F;
 }

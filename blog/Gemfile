@@ -29,6 +29,7 @@ gem 'nprogress-rails'
 group :development, :test do
   gem 'byebug'
   gem 'pry'
+  gem 'minitest-reporters'
 end
 
 group :development do

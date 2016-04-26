@@ -16,3 +16,4 @@ gemspec
 gem 'jquery-rails'
 gem 'bourbon'
 gem 'neat'
+gem 'minitest-reporters'

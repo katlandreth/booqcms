@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421181413) do
+ActiveRecord::Schema.define(version: 20160426161102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "booqcms_entries", force: :cascade do |t|
-    t.string   "type"
+    t.string   "category"
     t.string   "title"
     t.string   "slug"
-    t.json     "payload"
+    t.text     "payload"
     t.integer  "user_id"
     t.string   "author_name"
     t.datetime "published_at"
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20160421181413) do
     t.string   "featured_image"
   end
 
+  add_index "booqcms_entries", ["category"], name: "index_booqcms_entries_on_category", using: :btree
   add_index "booqcms_entries", ["slug"], name: "index_booqcms_entries_on_slug", using: :btree
-  add_index "booqcms_entries", ["type"], name: "index_booqcms_entries_on_type", using: :btree
   add_index "booqcms_entries", ["user_id"], name: "index_booqcms_entries_on_user_id", using: :btree
 
   create_table "booqcms_media", force: :cascade do |t|

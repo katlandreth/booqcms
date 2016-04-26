@@ -8,4 +8,6 @@ Booqcms.configure do |config|
   config.sign_in_url do
     Rails.application.routes.url_helpers.new_user_session_path
   end
+
+  Rails.backtrace_cleaner.add_silencer { |line| line =~ /rbenv/ }
 end

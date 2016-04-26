@@ -14,7 +14,7 @@ module Booqcms
     end
 
     def post_status(entry)
-      if entry.published_at
+      if entry.published_at != nil
         "published"
       else
         "draft"
@@ -22,19 +22,19 @@ module Booqcms
     end
 
     def publish_status(entry)
-      if entry.published_at != nil
-        render 'published_notice'
-      else
+      # if entry.published_at != nil
+      #   render 'published_notice'
+      # else
         render 'publish_button'
-      end
+      # end
     end
 
     def edit_post_content(entry)
-      if entry.published_at != nil
-        render 'edit_post_disabled'
-      else
+      # if entry.published_at != nil
+      #   render 'edit_post_disabled'
+      # else
         render 'edit_post_enabled'
-      end
+      # end
     end
 
 
