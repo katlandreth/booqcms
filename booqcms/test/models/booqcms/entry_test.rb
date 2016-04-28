@@ -7,48 +7,23 @@ module Booqcms
       @entry = Entry.new
     end
 
-    #Payload
+    #Validations
 
-    test "save entry with payload" do
+    test "save incomplete entry" do
       @entry.payload = "body text"
       assert @entry.save
     end
 
-    test "publish entry with payload" do
-      @entry.update(payload: "body text")
+    test "publish complete entry" do
+      @entry.update(payload: "body text",
+      featured_image: "http://cdn.spacetelescope.org/archives/images/large/heic1509a.jpg")
       @entry.update(published_at: Time.now)
-      assert @entry.save
+      assert @entry.save!
     end
 
-    test "don't publish entry without payload" do
+    test "don't publish imcomplete entry" do
       @entry.published_at = Time.now
       assert_not @entry.save
-      puts @entry.inspect
     end
-
-    # test "entry saves title" do
-    #   assert true
-    # end
-    #
-    # test "entry saves type" do
-    #   assert true
-    # end
-    #
-    # test "entry saves slug" do
-    #   assert true
-    # end
-    #
-    # test "entry saves user id" do
-    #   assert true
-    # end
-    #
-    # test "entry saves author name" do
-    #   assert true
-    # end
-    #
-    # test "entry saves featured image" do
-    #   assert true
-    # end
-
   end
 end

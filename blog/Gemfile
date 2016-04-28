@@ -21,7 +21,7 @@ gem 'devise'
 gem 'cancancan'
 gem 'rolify'
 
-gem 'will_paginate'
+
 gem 'nprogress-rails'
 
 
@@ -30,6 +30,7 @@ group :development, :test do
   gem 'byebug'
   gem 'pry'
   gem 'minitest-reporters'
+  gem 'factory_girl_rails'
 end
 
 group :development do

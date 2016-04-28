@@ -10,6 +10,7 @@ PATH
       rails (~> 4.2.6)
       redcarpet
       remotipart (~> 1.2)
+      will_paginate
 
 GEM
   remote: https://rubygems.org/
@@ -277,6 +278,7 @@ GEM
     trollop (2.1.2)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    will_paginate (3.1.0)
     xml-simple (1.1.5)
 
 PLATFORMS

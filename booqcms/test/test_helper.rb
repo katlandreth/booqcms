@@ -7,6 +7,7 @@ ActiveRecord::Migrator.migrations_paths << File.expand_path('../../db/migrate', 
 require "rails/test_help"
 require 'rubygems'
 require "minitest/reporters"
+
 Minitest::Reporters.use!(
   Minitest::Reporters::ProgressReporter.new,
   ENV,
@@ -15,7 +16,7 @@ Minitest::Reporters.use!(
 
 # Filter out Minitest backtrace while allowing backtrace from other libraries
 # to be shown.
-Minitest.backtrace_filter = Minitest::BacktraceFilter.new
+# Minitest.backtrace_filter = Minitest::BacktraceFilter.new
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
@@ -25,4 +26,8 @@ if ActiveSupport::TestCase.respond_to?(:fixture_path=)
   ActiveSupport::TestCase.fixture_path = File.expand_path("../fixtures", __FILE__)
   ActionDispatch::IntegrationTest.fixture_path = ActiveSupport::TestCase.fixture_path
   ActiveSupport::TestCase.fixtures :all
+end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
 end
