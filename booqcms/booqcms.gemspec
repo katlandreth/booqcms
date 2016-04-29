@@ -31,6 +31,9 @@ Gem::Specification.new do |s|
   #Pagination
   s.add_dependency 'will_paginate'
 
+  #Authentication
+  s.add_dependency 'devise', '3.5.1'
 
+  #DB
   s.add_development_dependency "pg"
 end

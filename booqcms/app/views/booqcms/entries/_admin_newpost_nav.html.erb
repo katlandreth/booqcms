@@ -3,7 +3,7 @@
   <ul>
     <% Booqcms.configuration.content_classes.each do |class_name| %>
       <li class="expander">
-        <%= link_to class_name.tableize.titleize.singularize, new_entry_path(content_class: class_name) %>
+        <%= link_to class_name.tableize.titleize.singularize, booqcms.new_entry_path %>
 
          <%= link_to "#{class_name.tableize.titleize.singularize} Options", "#expand",
          :class => "expander-trigger expander-hidden" %>
@@ -11,7 +11,7 @@
           <span class="bip-label">slug</span>
 
           </br></br>
-          
+
         </div>
       </li>
     <% end %>

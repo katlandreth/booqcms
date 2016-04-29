@@ -6,6 +6,7 @@ Gem.loaded_specs['booqcms'].dependencies.each do |d|
   end
 end
 
+require 'devise'
 require "booqcms/engine"
 require "booqcms/configuration"
 require 'redcarpet'

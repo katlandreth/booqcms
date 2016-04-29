@@ -17,9 +17,6 @@ gem 'inline_svg'
 gem 'best_in_place', github: 'bernat/best_in_place'
 gem 'simple_form'
 gem 'responders'
-gem 'devise'
-gem 'cancancan'
-gem 'rolify'
 
 
 gem 'nprogress-rails'

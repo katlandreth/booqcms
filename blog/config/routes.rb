@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # get 'posts/index'
-    resources :posts, only: [:show]
+  resources :posts, only: [:show]
 
   mount Booqcms::Engine, at: '/admin'
   Post.where.not(slug: nil).all.each do |blogpost|

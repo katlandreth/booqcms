@@ -1,6 +1,19 @@
 module Booqcms
   module EntriesHelper
 
+    def new_entry_path
+      booqcms.new_entry_path
+    end
+
+    # def entries_path(class_name)
+    #   booqcms.entries_path(content_class: class_name)
+    # end
+
+    def media_path
+      booqcms.media_path
+    end
+
+
     def grid_item_box(entry)
       render "grid_item_content", entry: entry
     end
