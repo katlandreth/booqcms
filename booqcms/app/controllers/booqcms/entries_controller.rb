@@ -38,11 +38,7 @@ module Booqcms
 
     def update
       @entry.update(entry_params)
-      # if @entry.save
         respond_with(@entry, :location => edit_entry_path(@entry.id))
-      # else
-      #   render "edit"
-      # end
     end
 
     def destroy

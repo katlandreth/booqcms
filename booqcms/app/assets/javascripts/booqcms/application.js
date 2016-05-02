@@ -13,9 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.remotipart
-//= require jquery-ui
-//= require best_in_place
-//= require best_in_place.jquery-ui
 //= require nprogress
 //= require nprogress-turbolinks
 //= require_tree .

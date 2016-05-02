@@ -69,7 +69,7 @@ module Booqcms
         return_html = '<img src="' + entry.featured_image + '" width="700" />'
         return_html.html_safe
       else
-        'nothing!'
+        '[No Featured Image Set]'
       end
     end
   end

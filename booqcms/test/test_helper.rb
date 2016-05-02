@@ -14,10 +14,6 @@ Minitest::Reporters.use!(
   Minitest.backtrace_filter
 )
 
-# Filter out Minitest backtrace while allowing backtrace from other libraries
-# to be shown.
-# Minitest.backtrace_filter = Minitest::BacktraceFilter.new
-
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
@@ -27,6 +23,11 @@ if ActiveSupport::TestCase.respond_to?(:fixture_path=)
   ActionDispatch::IntegrationTest.fixture_path = ActiveSupport::TestCase.fixture_path
   ActiveSupport::TestCase.fixtures :all
 end
+
+class ActiveSupport::TestCase
+  fixtures :all
+end
+
 
 class ActionController::TestCase
   include Devise::TestHelpers

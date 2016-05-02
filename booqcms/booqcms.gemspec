@@ -20,6 +20,8 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.2.6"
   s.add_dependency "coderay"
   s.add_dependency "redcarpet"
+  s.add_dependency 'jquery-ui-rails'
+  s.add_dependency 'nprogress-rails'
 
   #image upload
   s.add_dependency 'carrierwave'
@@ -27,6 +29,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'mini_magick'
   s.add_dependency 'figaro'
   s.add_dependency 'remotipart', '~> 1.2'
+
+  #use inline svg images
+  s.add_dependency 'inline_svg'
 
   #Pagination
   s.add_dependency 'will_paginate'
