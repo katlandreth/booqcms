@@ -1,3 +1,7 @@
+# NullStorage provider for CarrierWave for use in tests.  Doesn't actually
+# upload or store files but allows test to pass as if files were stored and
+# the use of fixtures.
+
 CarrierWave.configure do |config|
   config.fog_credentials = {
       :provider               => 'AWS',
@@ -5,5 +9,6 @@ CarrierWave.configure do |config|
       :aws_secret_access_key  => ENV['S3_SECRET']
       # :region                 => ENV['S3_REGION'] # Change this for different AWS region. Default is 'us-east-1'
   }
+
   config.fog_directory  = ENV['S3_BUCKET']
 end

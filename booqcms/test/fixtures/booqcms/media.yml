@@ -1,11 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  file: MyString
-
-two:
-  title: MyString
-  description: MyText
-  file: MyString
+<% 20.times do |n| %>
+media_<%= n %>:
+  title: <%= "title #{n}" %>
+  description: "description text"
+  file: "http://example.com/image.jpg"
+<% end %>

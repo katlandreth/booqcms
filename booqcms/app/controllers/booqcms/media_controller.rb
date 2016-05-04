@@ -15,9 +15,6 @@ module Booqcms
 
   def show
     respond_with @upload
-    # respond_to do |format|
-    #   format.js { render :json => @upload }
-    # end
   end
 
   def new
@@ -35,8 +32,6 @@ module Booqcms
         format.html { redirect_to media_url }
         format.js { render :index }
       end
-    # else
-    #   redirect_to media_url
      end
   end
 

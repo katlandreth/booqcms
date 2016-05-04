@@ -4,21 +4,6 @@ module Booqcms
 
     protect_from_forgery with: :exception
 
-    # def current_user
-    #   unless defined?(@current_user)
-    #     @current_user = instance_eval(&Booqcms.configuration.current_user_lookup)
-    #   end
-    #   @current_user
-    # end
-    # helper_method :current_user
-
-    # def authenticate_user
-    #   return if current_user
-    #
-    #   redirect_to instance_eval(&Booqcms.configuration.sign_in_url)
-    # end
-
-  
   def content_entries_path
    entries_path
   end
