@@ -15,6 +15,7 @@
 //= require jquery.remotipart
 //= require nprogress
 //= require nprogress-turbolinks
+//= require theme
 //= require_tree .
 
 
