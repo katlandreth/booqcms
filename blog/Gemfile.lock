@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/katlandreth/booqcms_theme.git
+  revision: cfa93115e3467c30c404c1d1597128c1cee90fae
+  specs:
+    booqcms_theme (0.1.0)
+      sass-rails
+
 PATH
   remote: ../booqcms
   specs:
@@ -360,6 +367,7 @@ PLATFORMS
 
 DEPENDENCIES
   booqcms!
+  booqcms_theme!
   bourbon
   byebug
   coffee-rails (~> 4.1.0)
