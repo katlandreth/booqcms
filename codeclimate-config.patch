@@ -32,9 +32,10 @@ index e69de29..2667000 100644
 +  - "**.py"
 +  - "**.rb"
 +exclude_paths:
-- "tests/**/*"
-- "blog/public/assets/**/*"
-- "blog/db/**/*"
+- blog/test/**/*
+- booqcms/test/**/*
+- blog/public/assets/**/*
+- blog/db/**/*
 diff --git a/.csslintrc b/.csslintrc
 index e69de29..aacba95 100644
 --- a/.csslintrc
