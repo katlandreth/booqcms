@@ -34,3 +34,19 @@ $success-color: #e6efc2 !default;
 .badge-success {
   @include badge($success-color);
 }
+
+
+body.type-system-rounded a[class*=' badge'],
+body.type-system-rounded a[class^='badge'] {
+  color: #ffffff;
+}
+
+
+.status {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  padding: 10px;
+}

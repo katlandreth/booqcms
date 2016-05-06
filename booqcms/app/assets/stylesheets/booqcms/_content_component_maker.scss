@@ -1,0 +1,67 @@
+.content-component {
+  border: 1px dotted #41A1F0;
+  padding:10px;
+  margin: 10px 0;
+  color: #555;
+  h4 {
+    font-family: "PT Sans";
+    text-align:center;
+    text-transform:none;
+    margin:6px;
+    font-weight:normal;
+  }
+  span.content-component-text {
+    font-size:1em;
+    text-transform:none;
+    text-align:center;
+    display:block;
+  }
+  button {
+    width:100%;
+    text-align:center;
+  }
+  input {
+    width:100%;
+  }
+  .modal-trigger {
+    font-size:.6em;
+    font-weight:normal;
+    padding:5px;
+    text-align:center;
+    border:1px solid #333;
+    &:hover {
+      cursor:pointer;
+      color:#41A1F0;
+      border-color:#41A1F0;
+    }
+  }
+}
+
+
+.content-component-svg {
+  display: block;
+  margin: 0 auto;
+  fill: #41A1F0;
+  width: 5em;
+  height: 5em;
+}
+
+.content-component img {
+  width:150px;
+}
+
+
+.component-created {
+  border: 1px solid #eee;
+  position:relative;
+  background: white;
+  padding:10px;
+  &:before {
+    content: "✔";
+    font-size:20px;
+    color: #03A678;
+    position:relative;
+    left:-5px;
+
+  }
+}
