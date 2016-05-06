@@ -15,7 +15,7 @@ module Booqcms
 
 
     def grid_item_box(entry)
-      render "grid_item_content", entry: entry
+      render "index_item", entry: entry
     end
 
     def post_status_class(entry)
@@ -43,11 +43,7 @@ module Booqcms
     end
 
     def edit_post_content(entry)
-      # if entry.published_at != nil
-      #   render 'edit_post_disabled'
-      # else
-        render 'edit_post_enabled'
-      # end
+        render 'edit_form'
     end
 
 
