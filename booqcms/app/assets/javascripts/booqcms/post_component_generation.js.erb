@@ -5,6 +5,7 @@ $(document).ready(function() {
     var video_thumbnail;
     var dragComponent = document.getElementById('content-component-video');
     $(".video_embed_form .submit").on("click", function() {
+      console.log("inside the js");
       create_video_markup();
       get_video_thumbnail();
       $(this).addClass("component-created").text("drag the video into place");
@@ -12,13 +13,14 @@ $(document).ready(function() {
     });
 
     function create_video_markup(){
+      console.log("inside create markup func");
       var video_id = $("#video_id_field").val();
       video_embed_markup = $.trim('<div class="video">\n \
     <div class="video-wrapper">\n \
       <iframe src="https://www.youtube.com/embed/'+ video_id +
       ' "frameborder="0" allowfullscreen></iframe>\n \
     </div>\n \
-  </div>');
+</div>');
     };
 
     function get_video_thumbnail() {
