@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160502142308) do
+ActiveRecord::Schema.define(version: 20160510152140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,22 @@ ActiveRecord::Schema.define(version: 20160502142308) do
     t.string   "file"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "booqcms_taggings", force: :cascade do |t|
+    t.integer  "booqcms_entry_id"
+    t.integer  "booqcms_tag_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "booqcms_taggings", ["booqcms_entry_id"], name: "index_booqcms_taggings_on_booqcms_entry_id", using: :btree
+  add_index "booqcms_taggings", ["booqcms_tag_id"], name: "index_booqcms_taggings_on_booqcms_tag_id", using: :btree
+
+  create_table "booqcms_tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "booqcms_users", force: :cascade do |t|
@@ -77,4 +93,6 @@ ActiveRecord::Schema.define(version: 20160502142308) do
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
 
+  add_foreign_key "booqcms_taggings", "booqcms_entries"
+  add_foreign_key "booqcms_taggings", "booqcms_tags"
 end
