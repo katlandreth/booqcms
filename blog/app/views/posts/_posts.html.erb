@@ -7,6 +7,7 @@
       <div class="post-excerpt">
         <h2><%= post.title %></h2>
         <p><%= truncate(post.payload, length: 175, separator: ' ') %></p>
+        <span><%= show_tags(post) %></span>
       </div>
     </div>
   <% end %>

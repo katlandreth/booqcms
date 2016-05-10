@@ -10,9 +10,13 @@ module Booqcms
     validates :published_at, absence: { message: "body can't be blank"}, unless: :payload?
     validates :published_at, absence: { message: "featured image can't be blank"}, unless: :featured_image?
 
+    def self.tagged_with(name)
+      Booqcms::Tag.find_by_name!(name).entries
+    end
+
     def all_tags=(names)
       self.tags = names.split(",").map do |name|
-        Tag.where(name: name.strip).first_or_create!
+        Booqcms::Tag.where(name: name.strip).first_or_create!
       end
     end
 

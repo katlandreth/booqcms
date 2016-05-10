@@ -1,10 +1,7 @@
 Booqcms::Engine.routes.draw do
 
-  # scope "/admin" do
-       devise_for :users, class_name: "Booqcms::User", module: :devise
-  # end
-
-  #devise_for :users, class_name: "Booqcms::User", path: 'admin/users'
+  devise_for :users, class_name: "Booqcms::User", module: :devise
+  get 'tags/:tag', to: 'entries#index', as: "tag"
 
   resources :media do
     collection do

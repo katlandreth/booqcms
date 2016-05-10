@@ -6,7 +6,11 @@ module Booqcms
     before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
     def index
-      @entries = Entry.all
+      if params[:tag]
+        @entries = Entry.tagged_with(params[:tag])
+      else
+        @entries = Entry.all
+      end
     end
 
     def show
@@ -59,7 +63,7 @@ module Booqcms
 
 
     def entry_params
-      allowed_attrs = %i(id category title slug published_at payload featured_image all_tags)
+      allowed_attrs = %i(id category title slug published_at payload featured_image all_tags author_name)
       params.require(:entry).permit(*allowed_attrs)
     end
   end

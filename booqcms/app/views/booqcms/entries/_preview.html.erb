@@ -1,5 +1,8 @@
 <h2><%= @entry.title %></h2>
-<p class="meta"><%= @entry.author_name %> <%= @entry.published_at %></p>
+<p class="meta">by: <%= @entry.author_name %></p>
+<p>published at: <%= @entry.published_at %></p>
+<p>tags: <%= raw tag_links(@entry.all_tags) %></p>
+<p>url: yourdomain.com/<%= @entry.slug %>
 <div class="post-body">
   <%= preview_featured_image(@entry) %>
   <%= markdown(@entry.payload) %>

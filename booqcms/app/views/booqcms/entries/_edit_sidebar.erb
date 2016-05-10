@@ -8,6 +8,14 @@
 
         <%= simple_form_for @entry do |f| %>
           <div class="input-group">
+            <span class="bip-label sidebar">by</span>
+            <%= f.input :author_name, label: false, input_html: {class: 'slug-input'} %>
+          </div>
+          <div class="input-group">
+            <span class="bip-label sidebar">tags</span>
+            <%= f.input :all_tags, label: false, input_html: {class: 'slug-input'} %>
+          </div>
+          <div class="input-group">
             <span class="bip-label sidebar">slug</span>
             <%= f.input :slug, label: false, input_html: {class: 'slug-input'} %>
           </div>

@@ -5,10 +5,6 @@ module Booqcms
       booqcms.new_entry_path
     end
 
-    # def entries_path(class_name)
-    #   booqcms.entries_path(content_class: class_name)
-    # end
-
     def media_path
       booqcms.media_path
     end
@@ -67,6 +63,10 @@ module Booqcms
       else
         '[No Featured Image Set]'
       end
+    end
+
+    def tag_links(tags)
+      tags.split(",").map{|tag| link_to tag.strip, tag_path(tag.strip)}.join(", ")
     end
   end
 end

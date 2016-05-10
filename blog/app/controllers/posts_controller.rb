@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   def index
-    @posts = all_post_types.published.order('published_at DESC')
+    # @posts = all_post_types.published.order('published_at DESC')
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.all.published
+    end
   end
 
   def show
