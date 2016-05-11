@@ -1,23 +1,26 @@
 <div class="sort_and_filter">
-  <div class="input-group">
-    <%= label_tag "post_type"  %>
-    <div class="select">
-      <%= select_tag("type", options_for_select(["All", "Video", "Written"], "All")) %>
-      <div class="select__arrow"></div>
+  <%= form_tag category_path, method: :get, class: "sort-and-filter" do %>
+    <div class="input-group">
+      <%= label_tag "post_type"  %>
+      <div class="select">
+        <%= select_tag("type", options_for_select(["All", "Video", "Written"], "All")) %>
+        <div class="select__arrow"></div>
+      </div>
     </div>
-  </div>
-  <div class="input-group">
-    <%= label_tag "category"  %>
-    <div class="select">
-      <%= select_tag("category", options_for_select(tag_filter,  "All")) %>
-      <div class="select__arrow"></div>
+    <div class="input-group">
+      <%= label_tag "category"  %>
+      <div class="select">
+        <%= select_tag(:tag, options_for_select(tag_filter,  "All")) %>
+        <div class="select__arrow"></div>
+      </div>
     </div>
-  </div>
-  <div class="input-group">
-    <%= label_tag "sort"  %>
-    <div class="select">
-      <%= select_tag("sort", options_for_select(["Newest First", "Videos First", "Written First", "Oldest First"], "Newest First")) %>
-      <div class="select__arrow"></div>
+    <div class="input-group">
+      <%= label_tag "sort"  %>
+      <div class="select">
+        <%= select_tag("sort", options_for_select(["Newest First", "Videos First", "Written First", "Oldest First"], "Newest First")) %>
+        <div class="select__arrow"></div>
+      </div>
     </div>
-  </div>
+    <%= submit_tag%>
+  <% end %>
 </div>

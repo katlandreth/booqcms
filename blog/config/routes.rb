@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :posts, only: [:show]
+  resources :posts, only: [:show, :index]
 
   get 'tags/:tag', to: 'posts#index', as: "tag"
+  get 'category', to: 'posts#filter', as: "category"
 
   mount Booqcms::Engine, at: '/admin'
   Post.where.not(slug: nil).all.each do |blogpost|

@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   def index
-    # @posts = all_post_types.published.order('published_at DESC')
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
     else
@@ -15,6 +14,16 @@ class PostsController < ApplicationController
   def slug
      @post = all_post_types.published.find_by_slug!(params[:slug])
      render 'show'
+  end
+
+  def filter
+    if params[:tag] && params[:tag] != "all"
+      @posts = Post.tagged_with(params[:tag])
+      render 'index'
+    else
+      @posts = Post.all.published
+      render 'index'
+    end
   end
 
   private
