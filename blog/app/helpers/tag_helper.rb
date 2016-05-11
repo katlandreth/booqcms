@@ -12,4 +12,17 @@ module TagHelper
   def tag_links(tags)
     tags.split(",").map{|tag| link_to tag.strip, tag_path(tag.strip)}.join(", ")
   end
+
+  def tag_filter
+    entries = Booqcms::Entry.all
+    tag_list = Array.new
+    entries.each do |entry|
+      entry.tags.each do |tag|
+        tag_list << tag.name
+      end
+    end
+    # tag_list.group_by(&:capitalize).map{|k, v| [k, v.length]}
+    tag_list.group_by(&:capitalize).map{ |tag, count| "#{tag} (#{count.length})" }
+  end
+
 end

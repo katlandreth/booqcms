@@ -9,7 +9,7 @@
   <div class="input-group">
     <%= label_tag "category"  %>
     <div class="select">
-      <%= select_tag("category", options_for_select(["All", "Setup", "Interface", "Graphic Design", "Digital Painting", "Photography", "Typeography"],  "All")) %>
+      <%= select_tag("category", options_for_select(tag_filter,  "All")) %>
       <div class="select__arrow"></div>
     </div>
   </div>
