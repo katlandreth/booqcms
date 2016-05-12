@@ -11,13 +11,21 @@ module Booqcms
     validates :published_at, absence: { message: "featured image can't be blank"}, unless: :featured_image?
 
     def self.tagged_with(name)
-      Booqcms::Tag.find_by_name!(name).entries
+      if name != "all"
+        Booqcms::Tag.find_by_name!(name).entries.published
+      else
+        Entry.published.all
+      end
     end
 
     def all_tags=(names)
       self.tags = names.split(",").map do |name|
         Booqcms::Tag.where(name: name.strip).first_or_create!
       end
+    end
+
+    def self.sorted_by(order)
+       self.order(:published_at => order)
     end
 
     def all_tags

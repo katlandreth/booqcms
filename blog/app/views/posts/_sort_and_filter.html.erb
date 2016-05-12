@@ -17,7 +17,7 @@
     <div class="input-group">
       <%= label_tag "sort"  %>
       <div class="select">
-        <%= select_tag("sort", options_for_select(["Newest First", "Videos First", "Written First", "Oldest First"], "Newest First")) %>
+        <%= select_tag(:order, options_for_select([["Newest First", "desc"], ["Oldest First", "asc"]], "Newest First")) %>
         <div class="select__arrow"></div>
       </div>
     </div>

@@ -19,13 +19,14 @@ class PostsController < ApplicationController
   end
 
   def filter
-    if params[:tag] && params[:tag] != "all"
-      @posts = Post.tagged_with(params[:tag])
-      respond_with @posts
-    else
-      @posts = Post.all.published
-      respond_with @posts
-    end
+    @posts = Post.tagged_with(params[:tag]).sorted_by(params[:order])
+     #if params[:tag] && params[:tag] != "all"
+    #   @posts = Post.tagged_with(params[:tag])
+   respond_with @posts
+    # else
+    #   @posts = Post.all.published
+    #   respond_with @posts
+    # end
   end
 
   private
