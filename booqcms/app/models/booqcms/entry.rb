@@ -18,6 +18,10 @@ module Booqcms
       end
     end
 
+    def self.post_type(type)
+      Booqcms::Entry.where(post_type: type)
+    end
+
     def all_tags=(names)
       self.tags = names.split(",").map do |name|
         Booqcms::Tag.where(name: name.strip).first_or_create!

@@ -63,7 +63,7 @@ module Booqcms
 
 
     def entry_params
-      allowed_attrs = %i(id category title slug published_at payload featured_image all_tags author_name)
+      allowed_attrs = %i(id category title slug published_at payload featured_image all_tags author_name post_type)
       params.require(:entry).permit(*allowed_attrs)
     end
   end

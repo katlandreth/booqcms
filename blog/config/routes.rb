@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'tags/:tag', to: 'posts#index', as: "tag"
   get 'category', to: 'posts#filter', as: "category"
+  get 'blog', to: 'posts#blog', as: "blog"
+  get 'tutorials', to: 'posts#tutorials', as: "tutorials"
 
   mount Booqcms::Engine, at: '/admin'
   Post.where.not(slug: nil).all.each do |blogpost|

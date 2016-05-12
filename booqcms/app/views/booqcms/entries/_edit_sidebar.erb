@@ -7,6 +7,10 @@
       <div class="expander-content">
 
         <%= simple_form_for @entry do |f| %>
+        <div class="input-group">
+          <span class="bip-label sidebar">type</span>
+          <%= f.input :post_type, collection: ["blog", "tutorial", "marketing"], prompt: "select a post type", label: false %>
+        </div>
           <div class="input-group">
             <span class="bip-label sidebar">by</span>
             <%= f.input :author_name, label: false, input_html: {class: 'slug-input'} %>

@@ -2,11 +2,7 @@ class PostsController < ApplicationController
   respond_to :html, :json, :js
 
   def index
-    if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
-    else
-      @posts = Post.all.published
-    end
+    @posts = Post.all.published
   end
 
   def show
@@ -18,15 +14,22 @@ class PostsController < ApplicationController
      render 'show'
   end
 
+  def tutorials
+    @posts = Post.published.post_type(params[:post_type])
+    respond_with @posts
+  end
+
+  def blog
+    @posts = Post.published.post_type(params[:post_type])
+    respond_with @posts
+  end
+
+  def book
+  end
+
   def filter
-    @posts = Post.tagged_with(params[:tag]).sorted_by(params[:order])
-     #if params[:tag] && params[:tag] != "all"
-    #   @posts = Post.tagged_with(params[:tag])
-   respond_with @posts
-    # else
-    #   @posts = Post.all.published
-    #   respond_with @posts
-    # end
+    @posts = Post.tagged_with(params[:tag]).published.post_type(params[:post_type]).sorted_by(params[:order])
+    respond_with @posts
   end
 
   private

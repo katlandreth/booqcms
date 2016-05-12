@@ -1,4 +1,5 @@
 <h2><%= @entry.title %></h2>
+<p>post type: <%= @entry.post_type %></p>
 <p class="meta">by: <%= @entry.author_name %></p>
 <p>published at: <%= @entry.published_at %></p>
 <p>tags: <%= raw tag_links(@entry.all_tags) %></p>
