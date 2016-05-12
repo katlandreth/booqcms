@@ -10,14 +10,14 @@
     <div class="input-group">
       <%= label_tag "category"  %>
       <div class="select">
-        <%= select_tag(:tag, options_for_select(tag_filter,  "All")) %>
+        <%= select_tag(:tag, options_for_select(tag_filter,  "All"), autocomplete: "off") %>
         <div class="select__arrow"></div>
       </div>
     </div>
     <div class="input-group">
       <%= label_tag "sort"  %>
       <div class="select">
-        <%= select_tag(:order, options_for_select([["Newest First", "desc"], ["Oldest First", "asc"]], "Newest First")) %>
+        <%= select_tag(:order, options_for_select([["Newest First", "desc"], ["Oldest First", "asc"]], "Newest First"), autocomplete: "off") %>
         <div class="select__arrow"></div>
       </div>
     </div>
