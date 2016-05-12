@@ -1,14 +1,16 @@
 <% @posts.each do |post| %>
-  <%= link_to path_to_post(post) do %>
-    <div class="post_card">
-      <div class="post-excerpt-image">
-        <img src="<%= post.featured_image%>"/>
+  <div class="post_card_wrapper">
+    <%= link_to path_to_post(post) do %>
+      <div class="post_card">
+        <div class="post-excerpt-image">
+          <img src="<%= post.featured_image%>"/>
+        </div>
+        <div class="post-excerpt">
+          <h2><%= post.title %></h2>
+          <p><%= truncate(post.payload, length: 175, separator: ' ') %></p>
+          <span><%= show_tags(post) %></span>
+        </div>
       </div>
-      <div class="post-excerpt">
-        <h2><%= post.title %></h2>
-        <p><%= truncate(post.payload, length: 175, separator: ' ') %></p>
-        <span><%= show_tags(post) %></span>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 <% end %>

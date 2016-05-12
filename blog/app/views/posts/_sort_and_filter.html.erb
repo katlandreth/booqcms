@@ -1,5 +1,5 @@
 <div class="sort_and_filter">
-  <%= form_tag category_path, method: :get, class: "sort-and-filter" do %>
+  <%= form_tag category_path, method: :get, remote: true, class: "sort-and-filter" do %>
     <div class="input-group">
       <%= label_tag "post_type"  %>
       <div class="select">
