@@ -1,3 +1,8 @@
+<div class="post_card_wrapper">
+  <div class="post_count"><h3><%= "#{@posts.count}" + " " + "#{@posts.post_type}" +
+ " " + "post".pluralize(@posts.count)%></h3>
+ </div>
+</div>
 <% @posts.each do |post| %>
   <div class="post_card_wrapper">
     <%= link_to path_to_post(post) do %>

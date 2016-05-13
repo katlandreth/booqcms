@@ -18,8 +18,12 @@ module Booqcms
       end
     end
 
-    def self.post_type(type)
-      Booqcms::Entry.where(post_type: type)
+    def self.post_type(*type)
+      if type.size > 0
+        Booqcms::Entry.where(post_type: type)
+      elsif self.count > 0
+        self.first[:post_type]
+      end
     end
 
     def all_tags=(names)

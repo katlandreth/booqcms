@@ -183,11 +183,17 @@ img.nav-logo {
   width:33.3%;
   float:left;
   overflow:hidden;
+  position:relative;
   img{
+    height:auto;
+    width: 100%;
     height:100%;
     overflow:hidden;
-    position: relative;
-    left:-50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
 }
 
@@ -277,6 +283,19 @@ label {
 
 .parallax-background {
   -webkit-background-size: cover;
-  -moz-background-size: cover; 
+  -moz-background-size: cover;
   background-size:cover;
+}
+
+.post_count {
+  width:500px;
+  text-align:center;
+  margin:10px auto;
+  font-style: italic;
+  text-transform: capitalize;
+  font-variant: small-caps;
+}
+
+.posts {
+  padding-bottom: 40px;
 }
