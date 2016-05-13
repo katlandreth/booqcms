@@ -167,11 +167,12 @@ img.nav-logo {
 
 .post_card {
   box-shadow: 0 0 3px rgba(0,0,0,0.4);
-  width:80%;
+  width:70%;
   margin:50px auto;
   overflow:hidden;
-  height:350px;
+  height:400px;
   border: 5px solid rgba(255,255,255,1);
+  position: relative;
   &:hover {
     border: 5px solid #49B5FF;
     cursor: pointer;
@@ -180,7 +181,7 @@ img.nav-logo {
 
 .post-excerpt-image {
   height:100%;
-  width:33.3%;
+  width:40%;
   float:left;
   overflow:hidden;
   position:relative;
@@ -198,13 +199,15 @@ img.nav-logo {
 }
 
 .type-system-rounded .post-excerpt {
-  width:66.7%;
+  width:60%;
+  height:100%;
   float:left;
+  position:relative;
   p{
     width:80%;
     margin:10px auto;
     padding:40px;
-    border-top:2px solid #ccc;
+    border-top:1px solid #ccc;
   }
   h2 {
     text-align: center;
@@ -298,4 +301,11 @@ label {
 
 .posts {
   padding-bottom: 40px;
+}
+
+.post-tags {
+  position:absolute;
+  left:50%;
+  margin-left:-25%;
+  bottom:10px;
 }
