@@ -1,9 +1,9 @@
 <div class="content_nav">
   <nav>
     <ul>
-      <li id="blog_tab"><%= link_to "BLOG", {controller: "posts", action: "blog", post_type: "blog", method: :get }, remote: true %></li>
-      <li id="tutorials_tab" class="active_tab"><%= link_to "TUTORIALS", {action: "tutorials", post_type: "tutorial", method: :get}, remote: true %></li>
-      <li id="book_tab">BOOK</li>
+      <li id="blog_tab" class="tab" data-post-type="blog">BLOG</li>
+      <li id="tutorials_tab" class="active_tab tab" data-post-type="tutorial">TUTORIALS</li>
+      <li id="book_tab" class="tab">BOOK</li>
     </ul>
   </nav>
 </div>

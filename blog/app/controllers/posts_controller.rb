@@ -14,16 +14,6 @@ class PostsController < ApplicationController
      render 'show'
   end
 
-  def tutorials
-    @posts = Post.published.post_type(params[:post_type])
-    respond_with @posts
-  end
-
-  def blog
-    @posts = Post.published.post_type(params[:post_type])
-    respond_with @posts
-  end
-
   def book
   end
 
