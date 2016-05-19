@@ -1,8 +1,9 @@
 $action-color: #31B1FA;
 
   .hero-image {
-    background: url("landing-cover1.jpg") no-repeat;
+    background: url("keyboard.jpg") no-repeat;
     height: 500px;
+    background-size: cover;
     position:relative;
     width:100%;
   }
@@ -31,3 +32,94 @@ $action-color: #31B1FA;
     box-shadow: 0;
     padding:15px;
   }
+
+  .how-it-works {
+    margin:10px auto;
+    color: $action-color;
+    overflow:hidden;
+    width: 1000px;
+    .third {
+      width:30%;
+      margin:1.6%;
+      float:left;
+      position:relative;
+      min-height:120px;
+      div {
+        border-bottom: 1px solid;
+        text-align:left;
+      }
+      h3{
+        font-size:30px;
+        vertical-align:bottom;
+        margin-top:10px;
+      }
+      p {
+        font-size:18px;
+        color:#333;
+      }
+    }
+  }
+
+.book-pricing-content {
+  display:flex;
+  text-align:center;
+}
+
+.book-pricing {
+  margin-bottom:100px;
+}
+
+.book-pricing hgroup{
+  width:100%;
+  text-align:center;
+  font-size:2.4em;
+}
+
+.book-option {
+  align-items: stretch;
+  width:33%;
+  padding: 30px;
+  box-shadow:0 0 3px rgba(0,0,0,0.4);
+  display:flex;
+  flex-direction:column;
+  &:nth-child(2){
+    border:12px solid $action-color;
+    margin-top: -10px;
+    margin-bottom:10px;
+  }
+  ul {
+    list-style:none;
+    padding:0;
+    li{
+      padding:10px 0;
+    }
+  }
+  h3{
+    color:#666;
+    font-variant: small-caps;
+    font-style:italic;
+  }
+}
+
+.pricing-button {
+  margin-top:auto;
+  margin-bottom:20px;
+  button{
+    background: $action-color;
+    color:#fff;
+  }
+}
+
+.dollar {
+  font-size:20px;
+}
+
+.price{
+  font-size:55px;
+  font-weight:bold;
+  line-height:1;
+  border-bottom:2px solid #ccc;
+  padding-bottom:15px;
+  width:200px;
+  margin:0 auto;
+}

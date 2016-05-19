@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>GIMP Book</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -11,14 +11,62 @@
     <nav class="book-nav"></nav>
     <div class="hero-image">
       <div class="hero-benefit-box">
-        <h1>Become a GIMP Ninja!</h1>
-        <span>This book is great, and it will make you great.</span>
-        <button class="cta-button">Buy Now</button>
+        <h1>You <u>Can</u> Learn GIMP</h1>
+        <h3>Even if you're not a rocket scientist</h3>
+        <button class="cta-button">Buy the Book</button>
       </div>
     </div>
-    <div class="testimonials"></div>
+    <div class="how-it-works">
+      <div class="third">
+        <div>1</div>
+        <h3>Set Up GIMP</h3>
+        <p>GIMP doesn't have to be so complicated. Learn how to
+          simplify the interface, and learn how to find tools
+           when you need them.</p>
+      </div>
+      <div class="third" >
+        <div>2</div>
+        <h3>Learn the Basics</h3>
+        <p>This GIMP book doesn't assume you have prior experience.
+        Follow easy step-by-step instructions on to find and how to use
+        the most useful tools.</p>
+      </div>
+      <div class="third">
+        <div>3</div>
+        <h3>Build Up Skills</h3>
+        <p>Combine basic skills to work through more advanced tutorials,
+          using 30+ free practice images to follow along.</p>
+      </div>
+    </div>
+    <section class="testimonials">
+      <div class="testimonial">
+        <div class="quote">
+          "I’m delighted with your book. The layout is brilliant and each step
+          by step explanation is just perfect."
+        </div>
+        <div class="author">
+          <img/>
+          <a href="http://tomndi.blogspot.com">Tom, Canada</a>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="quote"></div>
+        <div class="author">
+          <img/>
+          <a href=""></a>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="quote"></div>
+        <div class="author">
+          <img/>
+          <a href=""></a>
+        </div>
+      </div>
+    </section>
     <div class="look-inside"></div>
-    <button>Buy Now</button>
+    <button>Buy the Book</button>
+    <%= render "pricing" %>
     <footer></footer>
   </div>
 </body>
