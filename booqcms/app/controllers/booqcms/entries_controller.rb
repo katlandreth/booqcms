@@ -16,33 +16,39 @@ module Booqcms
     def show
     end
 
-    def preview
-      @entry = Entry.find(params[:entry_id])
-      respond_to do |format|
-        format.js {render layout: false}
-      end
-    end
-
     def new
       @entry = Entry.new
+    end
+
+    def create
+      @entry = Entry.new(entry_params)
+      if @entry.draft_creation
+        redirect_to edit_entry_path(@entry[:id]), :notice => "The Draft was Saved!", :format => :json
+      else
+        render :action => "new", :notice => "didn't save"
+      end
     end
 
     def edit
       @entry = Entry.find(params[:id])
     end
 
-    def create
-      @entry = Entry.new(entry_params)
-      if @entry.save
-        redirect_to edit_entry_path(@entry[:id]), :notice => "The Entry was Saved!", :format => :json
+    def update
+      @entry.attributes = entry_params
+      if @entry.draft?
+        @entry.draft_update
+        respond_with(@entry, :location => edit_entry_path(@entry.id))
       else
-        render :action => "new", :notice => "didn't save"
+        @entry.draft_creation
+        respond_with(@entry, :location => edit_entry_path(@entry.id))
       end
     end
 
-    def update
-      @entry.update(entry_params)
-        respond_with(@entry, :location => edit_entry_path(@entry.id))
+    def preview
+      @entry = Entry.find(params[:entry_id])
+      respond_to do |format|
+        format.js {render layout: false}
+      end
     end
 
     def destroy
@@ -55,12 +61,18 @@ module Booqcms
       redirect_to content_entries_path, notice: 'Entries were successfully destroyed.'
     end
 
+    def publish
+      @entry = Entry.find(params[:entry_id])
+      if @entry.draft.publish!
+        respond_with(@entry, :location => edit_entry_path(@entry.id))
+      end
+    end
+
     private
 
     def set_entry
       @entry = Entry.find(params[:id])
     end
-
 
     def entry_params
       allowed_attrs = %i(id category title slug published_at payload featured_image all_tags author_name post_type)

@@ -1,5 +1,4 @@
-<%= simple_form_for(@entry, as: :entry, url: content_entry_path(@entry)) do |f| %>
+<%= simple_form_for(@entry, as: :entry, url: entry_publish_path(@entry)) do |f| %>
   <%= f.error_notification %>
-  <%= f.input :published_at, as: :hidden, input_html: { :value => Time.now }  -%>
   <%= f.submit 'publish now' -%>
 <%- end -%>

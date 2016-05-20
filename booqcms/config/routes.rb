@@ -10,6 +10,7 @@ Booqcms::Engine.routes.draw do
   end
   resources :entries do
     get 'preview'
+    patch 'publish'
     collection do
       delete :destroy_multiple
     end

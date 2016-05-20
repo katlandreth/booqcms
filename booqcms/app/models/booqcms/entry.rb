@@ -3,6 +3,7 @@ module Booqcms
     include Booqcms::MarkdownHelper
     scope :published, -> { where('published_at <= ?', Time.zone.now) }
 
+    has_drafts
     has_many :taggings
     has_many :tags, through: :taggings
 

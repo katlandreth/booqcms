@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160520162710) do
+ActiveRecord::Schema.define(version: 20160520172540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20160520162710) do
     t.datetime "updated_at",     null: false
     t.string   "featured_image"
     t.string   "content_format"
+    t.integer  "draft_id"
+    t.datetime "trashed_at"
   end
 
   add_index "booqcms_entries", ["post_type"], name: "index_booqcms_entries_on_post_type", using: :btree
@@ -72,5 +74,24 @@ ActiveRecord::Schema.define(version: 20160520162710) do
 
   add_index "booqcms_users", ["email"], name: "index_booqcms_users_on_email", unique: true, using: :btree
   add_index "booqcms_users", ["reset_password_token"], name: "index_booqcms_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "drafts", force: :cascade do |t|
+    t.string   "item_type",      null: false
+    t.integer  "item_id",        null: false
+    t.string   "event",          null: false
+    t.string   "whodunnit"
+    t.text     "object"
+    t.text     "previous_draft"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.text     "object_changes"
+  end
+
+  add_index "drafts", ["created_at"], name: "index_drafts_on_created_at", using: :btree
+  add_index "drafts", ["event"], name: "index_drafts_on_event", using: :btree
+  add_index "drafts", ["item_id"], name: "index_drafts_on_item_id", using: :btree
+  add_index "drafts", ["item_type"], name: "index_drafts_on_item_type", using: :btree
+  add_index "drafts", ["updated_at"], name: "index_drafts_on_updated_at", using: :btree
+  add_index "drafts", ["whodunnit"], name: "index_drafts_on_whodunnit", using: :btree
 
 end

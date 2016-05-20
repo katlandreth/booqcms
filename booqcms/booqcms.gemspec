@@ -39,6 +39,9 @@ Gem::Specification.new do |s|
   #Authentication
   s.add_dependency 'devise', '3.5.1'
 
+  #Drafts
+  s.add_dependency 'draftsman', '~> 0.4.0'
+
   #DB
   s.add_development_dependency "pg"
 end
