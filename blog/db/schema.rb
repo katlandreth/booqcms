@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512210042) do
+ActiveRecord::Schema.define(version: 20160520162710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160512210042) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "featured_image"
+    t.string   "content_format"
   end
 
   add_index "booqcms_entries", ["post_type"], name: "index_booqcms_entries_on_post_type", using: :btree

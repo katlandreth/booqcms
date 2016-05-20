@@ -7,25 +7,35 @@
       <div class="expander-content">
 
         <%= simple_form_for @entry do |f| %>
-        <div class="input-group">
-          <span class="bip-label sidebar">type</span>
-          <%= f.input :post_type, collection: ["blog", "tutorial", "marketing"], prompt: "select a post type", label: false %>
-        </div>
+
           <div class="input-group">
             <span class="bip-label sidebar">by</span>
             <%= f.input :author_name, label: false, input_html: {class: 'slug-input'} %>
           </div>
+
+          <div class="input-group">
+            <span class="bip-label sidebar">type</span>
+            <%= f.input :post_type, collection: ["blog", "tutorial", "marketing"], selected: 1, label: false %>
+          </div>
+
+          <div class="input-group">
+            <span class="bip-label sidebar">format</span>
+            <%= f.input :content_format, collection: ["written", "video", "gallery"], selected: 1, label: false %>
+          </div>
+
           <div class="input-group">
             <span class="bip-label sidebar">tags</span>
             <%= f.input :all_tags, label: false, input_html: {class: 'slug-input'} %>
           </div>
+
           <div class="input-group">
             <span class="bip-label sidebar">slug</span>
             <%= f.input :slug, label: false, input_html: {class: 'slug-input'} %>
           </div>
+
           <%= f.button :submit %>
         <% end %>
-        <hr>
+
         <%= publish_status(@entry) %>
       </div>
     </li>
