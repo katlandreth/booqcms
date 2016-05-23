@@ -3,9 +3,6 @@
 <hr>
 
 <%= form_for @entry, url: {controller: "entries", action: "update", id: @entry.id}, method: "patch" do |f| %>
-
-  <!-- <label for="featured-image-checkbox">Use as Featured Image</label> -->
-  <!-- <input type="checkbox" id="featured-image-checkbox" name="featured-image-checkbox" value="use-as-featured-image"> -->
   <%= f.hidden_field :featured_image, value: @upload.file %>
   <%= f.submit "Use as Featured Image" %>
 <% end %>
