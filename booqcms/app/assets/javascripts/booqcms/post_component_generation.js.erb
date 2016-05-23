@@ -82,6 +82,7 @@ title="'+title+'" description="'+description+'"/>\n\
     };
 
     function set_featured_image() {
+      alert("inside set featured img func");
       var img_src = $("#image-src-field").val();
       var entry_id = $("#entry-id-field").val();
       if($('#featured-image-checkbox').is(':checked')) {
@@ -90,6 +91,7 @@ title="'+title+'" description="'+description+'"/>\n\
           type: "PATCH",
           data: {entry: {featured_image: img_src}},
           success: function() {
+            console.log("inside success");
             alert( "Data Saved: ");
           }
         });
