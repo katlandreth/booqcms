@@ -1,6 +1,6 @@
 <% @uploads.each do |upload| %>
 
-  <%= link_to upload, format: :js, remote: true do %>
+  <%= link_to media_show_path(id: upload.id, entry_id: @entry.id), format: :js, remote: true do %>
     <div class="gallery-thumb-wrapper">
       <img src="<%= upload.file.thumb %>">
       <div class="gallery-thumb-name">

@@ -63,7 +63,7 @@
                 </div>
               </a>
               <label for="modal-2">
-                <%= link_to "Media Library", {controller: "media"},
+                <%= link_to "Media Library", media_library_path(entry_id: @entry.id),
                remote: true, class: "modal-trigger square-button-link"  %>
               </label>
             </div>

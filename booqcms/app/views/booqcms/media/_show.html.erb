@@ -2,9 +2,15 @@
 <img src="<%= @upload.file.thumb %>" /><br/>
 <hr>
 
+<%= form_for @entry, url: {controller: "entries", action: "update", id: @entry.id}, method: "patch" do |f| %>
+
+  <!-- <label for="featured-image-checkbox">Use as Featured Image</label> -->
+  <!-- <input type="checkbox" id="featured-image-checkbox" name="featured-image-checkbox" value="use-as-featured-image"> -->
+  <%= f.hidden_field :featured_image, value: @upload.file %>
+  <%= f.submit "Use as Featured Image" %>
+<% end %>
+
 <div class="image_embed_form">
-  <label for="featured-image-checkbox">Use as Featured Image</label>
-  <input type="checkbox" id="featured-image-checkbox" name="featured-image-checkbox" value="use-as-featured-image">
   <input type="hidden" id="image-src-field" value="<%= @upload.file %>"/>
   <input type="text" title="caption" id="image-caption-field" name="caption" placeholder="caption" />
   <input type="text" title="alt" id="image-alt-field" name="alt" placeholder="alt text (for SEO and screen readers)" />

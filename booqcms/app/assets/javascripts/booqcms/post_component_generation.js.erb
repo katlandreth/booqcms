@@ -45,16 +45,14 @@ $(document).ready(function() {
 
   //Image Embed
 $(document).on("click", "#image-details-tab", function(){
-  console.log("tab clicked");
   if ($(".modal").has(".image_embed_form").length) {
-    console.log("has image embed form");
     var image_embed_markup;
     var image_thumbnail;
     var dragComponent = document.getElementById('content-component-image');
     $(".image_embed_form").on("click", ".submit", function() {
       create_image_markup();
       get_image_thumbnail();
-      set_featured_image();
+      // set_featured_image();
       $(this).addClass("component-created").text("drag the image into place");
       $(".image-component-thumb").replaceWith(image_thumbnail);
       $(".modal-state:checked").prop("checked", false).change();

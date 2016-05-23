@@ -6,6 +6,9 @@ module Booqcms
     before_action :set_image, only: [:show, :edit, :update, :destroy]
 
   def index
+    if params[:entry_id]
+      @entry = Entry.find(params[:entry_id])
+    end
     @uploads = Medium.paginate(per_page: 8, page: params[:page]).order('id DESC')
     respond_to do |format|
       format.html
@@ -14,6 +17,9 @@ module Booqcms
   end
 
   def show
+    if params[:entry_id]
+      @entry = Entry.find(params[:entry_id])
+    end
     respond_with @upload
   end
 
