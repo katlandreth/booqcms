@@ -1,6 +1,6 @@
 $parallax-window-height: 30em;
  #js-parallax-background.parallax-background {
-   background-image: image-url("writing.jpg") repeat;
+   background: url("writing.jpg") repeat;
    background-position: center -250px;
    background-size: cover;
  }
