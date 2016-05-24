@@ -32,6 +32,13 @@ module Booqcms
     # def scale(width, height)
     #   # do something
     # end
+    process :auto_orient
+
+    def auto_orient
+      manipulate! do |img|
+         img.auto_orient
+       end
+     end
 
     # Create different versions of your uploaded files:
      version :thumb do
