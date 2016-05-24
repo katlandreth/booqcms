@@ -24,13 +24,20 @@ module Booqcms
   end
 
   def new
+    if params[:entry_id]
+      @entry = Entry.find(params[:entry_id])
+    end
     @upload = Medium.new
+    respond_with @upload
   end
 
   def edit
   end
 
   def create
+    if params[:entry_id]
+      @entry = Entry.find(params[:entry_id])
+    end
   @upload = Medium.create(media_upload_params)
      if @upload.save
       @uploads = Medium.paginate(per_page: 8, page: params[:page]).order('id DESC')

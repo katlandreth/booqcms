@@ -4,6 +4,7 @@ Booqcms::Engine.routes.draw do
   get 'tags/:tag', to: 'entries#index', as: "tag"
   get 'media-library/:entry_id', to: 'media#index', as: "media_library"
   get 'media-show/:id/:entry_id', to: 'media#show', as: "media_show"
+  get 'media-new/:entry_id', to: 'media#new', as: "media_new"
 
   resources :media do
     collection do
