@@ -10,7 +10,7 @@
         <%= f.file_field :file, class: "file" %>
       </div>
       <div>
-        <%= f.submit %>
+        <%= f.submit %> <%= button_tag 'Cancel', type: 'reset', id: 'cancel-upload' %>
       </div>
     <% end %>
   </div>
