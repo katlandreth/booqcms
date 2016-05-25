@@ -20,7 +20,7 @@ $(document).ready(function(){
       h1:["\n#", "\n"],
       h2:["\n##", "\n"],
       h3:["\n###", "\n"],
-      link: ["[", "](url)"]
+      link: ["<a href='' target='blank'>", "</a>"]
     };
     var tag = tags[tagName];
     var openTag = tag[0];

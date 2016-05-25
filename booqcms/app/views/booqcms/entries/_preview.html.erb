@@ -1,9 +1,9 @@
 <h2><%= @entry.title %></h2>
-<p>post type: <%= @entry.post_type %></p>
-<p class="meta">by: <%= @entry.author_name %></p>
-<p>published at: <%= @entry.published_at %></p>
-<p>tags: <%= raw tag_links(@entry.all_tags) %></p>
-<p>url: yourdomain.com/<%= @entry.slug %>
+<span class="meta"><strong>post type:</strong> <%= @entry.post_type %></span>
+<span class="meta"><strong>by:</strong> <%= @entry.author_name %></span>
+<span class="meta"><strong>published at:</strong> <%= @entry.published_at %></span>
+<span class="meta"><strong>tags:</strong> <%= raw tag_links(@entry.all_tags) %></span>
+<span class="meta"><strong>url:</strong> yourdomain.com/<%= @entry.slug %></span>
 <div class="post-body">
   <%= preview_featured_image(@entry) %>
   <%= markdown(@entry.payload) %>
