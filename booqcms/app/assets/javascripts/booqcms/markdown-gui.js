@@ -15,11 +15,12 @@ $(document).ready(function(){
     var tags = {
       bold:["**", "**"],
       italic:["_", "_"],
-      blockquote:[">", "\n"],
-      image:["**", "**"],
-      h1:["#", "\n"],
-      h2:["##", "\n"],
-      h3:["###", "\n"]
+      blockquote:["\n>", "\n"],
+      image:["![alt text](url 'title text')", ""],
+      h1:["\n#", "\n"],
+      h2:["\n##", "\n"],
+      h3:["\n###", "\n"],
+      link: ["[", "](url)"]
     };
     var tag = tags[tagName];
     var openTag = tag[0];
@@ -29,12 +30,34 @@ $(document).ready(function(){
 
   }
 
+  //Button Clicks
+
   $("#bold-button").click({tagName: "bold"}, makeTags);
   $("#italic-button").click({tagName: "italic"}, makeTags);
   $("#blockquote-button").click({tagName: "blockquote"}, makeTags);
   $("#image-button").click({tagName: "image"}, makeTags);
+  $("#link-button").click({tagName: "link"}, makeTags);
   $("#h1-button").click({tagName: "h1"}, makeTags);
   $("#h2-button").click({tagName: "h2"}, makeTags);
   $("#h3-button").click({tagName: "h3"}, makeTags);
 
+  //Keyboard Shortcuts
+
+  $(document).keydown(function(e) {
+    if(e.metaKey && e.keyCode == 66) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("#bold-button").triggerHandler("click");
+    }
+    else if(e.metaKey && e.keyCode == 73) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("#italic-button").triggerHandler("click");
+    }
+    else if(e.metaKey && e.keyCode == 76) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("#link-button").triggerHandler("click");
+    }
+  });
 });
