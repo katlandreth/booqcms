@@ -44,20 +44,29 @@ $(document).ready(function(){
   //Keyboard Shortcuts
 
   $(document).keydown(function(e) {
+    //cmd + b
     if(e.metaKey && e.keyCode == 66) {
       e.preventDefault();
       e.stopPropagation();
       $("#bold-button").triggerHandler("click");
     }
+    //cmd + i
     else if(e.metaKey && e.keyCode == 73) {
       e.preventDefault();
       e.stopPropagation();
       $("#italic-button").triggerHandler("click");
     }
+    //cmd + l
     else if(e.metaKey && e.keyCode == 76) {
       e.preventDefault();
       e.stopPropagation();
       $("#link-button").triggerHandler("click");
+    }
+    //cmd + s
+    else if(e.metaKey && e.keyCode == 83) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(".edit_entry").submit();
     }
   });
 });
