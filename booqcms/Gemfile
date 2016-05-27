@@ -18,3 +18,4 @@ gem 'bourbon'
 gem 'neat'
 gem 'minitest-reporters'
 gem "booqcms_theme", git: "git://github.com/katlandreth/booqcms_theme.git"
+gem "booqmark", git: "git://github.com/katlandreth/booqmark.git"
