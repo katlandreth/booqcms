@@ -12,5 +12,6 @@ require "booqcms/configuration"
 require 'redcarpet'
 
 
+
 module Booqcms
 end

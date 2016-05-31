@@ -41,7 +41,9 @@
 .content-component-svg {
   display: block;
   margin: 0 auto;
-  fill: #41A1F0;
+  path {
+    fill: #41A1F0;
+  }
   width: 5em;
   height: 5em;
 }

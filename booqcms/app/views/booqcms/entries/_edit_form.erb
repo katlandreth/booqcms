@@ -1,6 +1,5 @@
-<%#= render "md_toolbar" %>
-<%= booqmark_toolbar %>
-<%= simple_form_for @entry do |f| %>
+<%= render 'booqmark/toolbar' %>
+<%= simple_form_for @entry, html: {id: 'payload_form'} do |f| %>
   <div class="input-group">
     <span class="bip-label">title</span>
     <%= f.input :title, label: false, input_html: {class: 'mkdwn-title'} %>
