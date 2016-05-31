@@ -7,9 +7,9 @@ GIT
 
 GIT
   remote: git://github.com/katlandreth/booqmark.git
-  revision: 73bc0593763ef6cb53c13266a83512345e370b5c
+  revision: 551292a7eaeb7325b437c366444702bdcd6ca2ea
   specs:
-    booqmark (0.1.21)
+    booqmark (0.1.23)
       sass-rails
 
 PATH

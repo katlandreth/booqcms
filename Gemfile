@@ -15,6 +15,8 @@ gem 'turbolinks'
 gem 'simple_form'
 gem 'responders'
 gem "booqcms_theme", git: "git://github.com/katlandreth/booqcms_theme.git"
+# gem 'booqmark', path: '../../booqmark'
+gem "booqmark", git: "git://github.com/katlandreth/booqmark.git"
 
 group :development, :test do
   gem 'byebug'
