@@ -4,6 +4,7 @@ module Booqcms
   class EntriesController < ApplicationController
     respond_to :html, :json, :js
     before_action :set_entry, only: [:show, :edit, :update, :destroy]
+    before_filter :reify_entry, only: [:show, :edit]
 
     def index
       if params[:tag]
@@ -30,17 +31,20 @@ module Booqcms
     end
 
     def edit
-      @entry = Entry.find(params[:id])
     end
 
     def update
       @entry.attributes = entry_params
       if @entry.draft?
         @entry.draft_update
-        respond_with(@entry, :location => edit_entry_path(@entry.id))
+        # respond_with(@entry, :location => edit_entry_path(@entry.id))
+        flash[:success] = 'a draft of this entry was saved'
+        render :edit
       else
         @entry.draft_creation
-        respond_with(@entry, :location => edit_entry_path(@entry.id))
+        # respond_with(@entry, :location => edit_entry_path(@entry.id))
+        flash[:error] = 'there was an error saving this draft'
+        render :edit
       end
     end
 
@@ -49,6 +53,7 @@ module Booqcms
       respond_to do |format|
         format.js {render layout: false}
       end
+      # respond_with @entry
     end
 
     def destroy
@@ -63,7 +68,12 @@ module Booqcms
 
     def publish
       @entry = Entry.find(params[:entry_id])
-      if @entry.draft.publish!
+      if @entry.draft?
+        @entry.draft.publish!
+        respond_with(@entry, :location => edit_entry_path(@entry.id))
+      else
+        @entry.published_at = Time.now
+        @entry.save!
         respond_with(@entry, :location => edit_entry_path(@entry.id))
       end
     end
@@ -75,8 +85,12 @@ module Booqcms
     end
 
     def entry_params
-      allowed_attrs = %i(id category title slug published_at payload featured_image all_tags author_name post_type)
+      allowed_attrs = %i(id category title slug published_at payload featured_image all_tags author_name post_type content_format)
       params.require(:entry).permit(*allowed_attrs)
+    end
+
+    def reify_entry
+      @entry = @entry.draft.reify if @entry.draft?
     end
   end
 end

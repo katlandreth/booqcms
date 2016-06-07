@@ -1,12 +1,11 @@
 <%= render 'booqmark/toolbar' %>
-<%= simple_form_for @entry, html: {id: 'payload_form'} do |f| %>
-  <div class="input-group">
-    <span class="bip-label">title</span>
-    <%= f.input :title, label: false, input_html: {class: 'mkdwn-title'} %>
-  </div>
-  <div class="input-group">
-    <span class="bip-label">body</span>
-    <%= f.input :payload, label: false, input_html: {class: 'textarea-body droppable'} %>
-  </div>
-  <%= f.button :submit, id: "submit-payload" %>
-<% end %>
+
+<div class="input-group">
+  <span class="bip-label">title</span>
+  <%= form.input :title, label: false, input_html: {class: 'mkdwn-title'} %>
+</div>
+<div class="input-group">
+  <span class="bip-label">body</span>
+  <%= form.input :payload, label: false, input_html: {class: 'textarea-body droppable'} %>
+</div>
+<%= form.button :submit, id: "submit-payload" %>

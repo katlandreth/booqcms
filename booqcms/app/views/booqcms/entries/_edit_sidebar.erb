@@ -2,72 +2,58 @@
   <h2>Content Options</h2>
   <ul>
     <li class="expander">
-       <%= link_to "Publishing Options", "#expand",
-       :class => "expander-trigger expander-hidden" %>
+      <%= link_to "Publishing Options", "#expand", :class => "expander-trigger expander-hidden" %>
       <div class="expander-content">
-
-        <%= simple_form_for @entry do |f| %>
-
-          <div class="input-group">
-            <span class="bip-label sidebar">by</span>
-            <%= f.input :author_name, label: false, input_html: {class: 'slug-input'} %>
-          </div>
-
-          <div class="input-group">
-            <span class="bip-label sidebar">type</span>
-            <%= f.input :post_type, collection: ["blog", "tutorial", "marketing"], selected: 1, label: false %>
-          </div>
-
-          <div class="input-group">
-            <span class="bip-label sidebar">format</span>
-            <%= f.input :content_format, collection: ["written", "video", "gallery"], selected: 1, label: false %>
-          </div>
-
-          <div class="input-group">
-            <span class="bip-label sidebar">tags</span>
-            <%= f.input :all_tags, label: false, input_html: {class: 'slug-input'} %>
-          </div>
-
-          <div class="input-group">
-            <span class="bip-label sidebar">slug</span>
-            <%= f.input :slug, label: false, input_html: {class: 'slug-input'} %>
-          </div>
-
-          <%= f.button :submit %>
-        <% end %>
-
-        <%= publish_status(@entry) %>
-      </div>
+        <div class="input-group">
+          <span class="bip-label sidebar">by</span>
+          <%= form.input :author_name, label: false, input_html: {class: 'slug-input'} %>
+        </div>
+        <div class="input-group">
+          <span class="bip-label sidebar">type</span>
+          <%= form.input :post_type, collection: ["blog", "tutorial", "marketing"], selected: 1, label: false %>
+        </div>
+        <div class="input-group">
+          <span class="bip-label sidebar">format</span>
+          <%= form.input :content_format, collection: ["written", "video", "gallery"], selected: 1, label: false %>
+        </div>
+        <div class="input-group">
+          <span class="bip-label sidebar">tags</span>
+          <%= form.input :all_tags, label: false, input_html: {class: 'slug-input'} %>
+        </div>
+        <div class="input-group">
+          <span class="bip-label sidebar">slug</span>
+          <%= form.input :slug, label: false, input_html: {class: 'slug-input'} %>
+        </div>
+        <%= link_to "publish now", entry_publish_path(@entry), method: :patch, class: "square-button-link" %>
+      </div> <!-- end 'expander-content' -->
     </li>
     <li class="expander">
-      <%= link_to "Markup Options", "#expand",
-      :class => "expander-trigger expander-hidden" %>
+      <%= link_to "Markup Options", "#expand", :class => "expander-trigger expander-hidden" %>
       <div class="expander-content">
         <div class="content-component">
-            <h4>Embed a Video</h4>
-            <a id="content-component-video" href="#" draggable="true">
-              <div class="youtube-component-thumb">
-                <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
-              </div>
-            </a>
-            <div class="video_embed_form">
-              <input type="text" placeholder="youtube video id:" id="video_id_field" value=""/>
-              <button class="submit">submit</button>
+          <h4>Embed a Video</h4>
+          <a id="content-component-video" href="#" draggable="true">
+            <div class="youtube-component-thumb">
+              <%= inline_svg("booqcms/videoplayer.svg", class: 'content-component-svg') %>
             </div>
+          </a>
+          <div class="video_embed_form">
+            <input type="text" placeholder="youtube video id:" id="video_id_field" value=""/>
+            <button class="submit">submit</button>
           </div>
-          <div class="content-component">
-              <h4>Embed an Image</h4>
-              <a id="content-component-image" href="#" draggable="true">
-                <div class="image-component-thumb">
-                  <%= inline_svg("booqcms/picture.svg", class: 'content-component-svg') %>
-                </div>
-              </a>
-              <label for="modal-2">
-                <%= link_to "Media Library", media_library_path(entry_id: @entry.id),
-               remote: true, class: "modal-trigger square-button-link"  %>
-              </label>
+        </div>
+        <div class="content-component">
+          <h4>Embed an Image</h4>
+          <a id="content-component-image" href="#" draggable="true">
+            <div class="image-component-thumb">
+              <%= inline_svg("booqcms/picture.svg", class: 'content-component-svg') %>
             </div>
-      </div>
+          </a>
+          <label for="modal-2">
+            <%= link_to "Media Library", media_library_path(entry_id: @entry.id), remote: true, class: "modal-trigger square-button-link"  %>
+          </label>
+        </div>
+      </div> <!-- end 'expander-content' -->
     </li>
   </ul>
 </aside>

@@ -1,22 +1,24 @@
 <section>
-  <%= render "edit_sidebar" %>
-  <article>
-    <ul class="accordion-tabs-minimal">
-      <li class="tab-header-and-content">
-        <a href="#" class="tab-link is-active">MarkDown</a>
-        <div class="tab-content">
-          <%= edit_post_content(@entry) %>
-        </div>
-      </li>
-      <li class="tab-header-and-content">
-        <%= link_to "Visual Preview", entry_preview_path(@entry.id),
-         id: "preview-tab", class: "tab-link", remote: true  %>
-        <div class="tab-content">
-          <div class="preview-content"></div>
-        </div>
-      </li>
-    </ul>
-  </article>
+  <%= simple_form_for @entry, html: {id: 'payload_form'} do |form| %>
+    <%= render partial: "edit_sidebar", locals: {form: form} %>
+    <article>
+      <ul class="accordion-tabs-minimal">
+        <li class="tab-header-and-content">
+          <a href="#" class="tab-link is-active">MarkDown</a>
+          <div class="tab-content">
+            <%= render partial: "edit_form", locals: {form: form} %>
+          </div>
+        </li>
+        <li class="tab-header-and-content">
+          <%= link_to "Visual Preview", entry_preview_path(@entry.id),
+           id: "preview-tab", class: "tab-link", remote: true  %>
+          <div class="tab-content">
+            <div class="preview-content"></div>
+          </div>
+        </li>
+      </ul>
+    </article>
+  <% end %>
 </section>
 
 <%= render "image_library_modal" %>
