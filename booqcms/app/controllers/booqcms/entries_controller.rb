@@ -35,13 +35,13 @@ module Booqcms
 
     def update
       @entry.attributes = entry_params
-      if @entry.draft?
-        @entry.draft_update
+
+     if @entry.draft_update
         # respond_with(@entry, :location => edit_entry_path(@entry.id))
         flash[:success] = 'a draft of this entry was saved'
         render :edit
       else
-        @entry.draft_creation
+
         # respond_with(@entry, :location => edit_entry_path(@entry.id))
         flash[:error] = 'there was an error saving this draft'
         render :edit
