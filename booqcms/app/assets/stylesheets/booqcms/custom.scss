@@ -13,7 +13,8 @@ body {
 }
 
 .flash_success,
-.flash_error {
+.flash_error,
+.flash_notice {
     position: fixed;
     top: 30px;
     left: 50%;
@@ -27,7 +28,8 @@ body {
     animation: fade 4s ease;
 }
 
-.flash_success {
+.flash_success,
+.flash_notice {
   color: rgb(65, 161, 240);
   border: 3px solid rgb(65, 161, 240);
   &:before {
