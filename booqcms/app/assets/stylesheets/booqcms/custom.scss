@@ -15,15 +15,16 @@ body {
 .flash_success,
 .flash_error {
     position: fixed;
-    top: 20px;
+    top: 30px;
     left: 50%;
-    transform: translateX(-50%);
+    z-index: 1000;
+    transform: translate(-50%, -200px);
     text-align: center;
     background: rgb(255, 255, 255) none repeat scroll 0% 0%;
     padding: 20px;
-    z-index: 1000;
     font-family: "Montserrat";
     text-transform: capitalize;
+    animation: fade 4s ease;
 }
 
 .flash_success {
@@ -39,4 +40,18 @@ body {
 .flash_error {
   color: rgb(139, 24, 32);
   border: 3px solid rgb(139, 24, 32);
+  &:before {
+    content: '⦻';
+    font-size: 25px;
+    padding:10px;
+  }
+}
+
+@keyframes fade {
+0%,100% {
+  transform: translate(-50%, -200px);
+ }
+10%,90% {
+  transform: translate(-50%, 0);
+  }
 }
