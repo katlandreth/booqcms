@@ -3,7 +3,7 @@
 <span class="meta"><strong>by:</strong> <%= @entry.author_name %></span>
 <span class="meta"><strong>published at:</strong> <%= @entry.published_at %></span>
 <span class="meta"><strong>tags:</strong> <%= raw tag_links(@entry.all_tags) %></span>
-<span class="meta"><strong>url:</strong> <%= request.domain(2) %>/<%= @entry.draft.slug || @entry.slug %></span>
+<span class="meta"><strong>url:</strong> <%= request.domain(2) %>/<%= @entry.slug %></span>
 <div class="post-body">
   <%= preview_featured_image(@entry) %>
   <%= markdown(@entry.payload) %>
