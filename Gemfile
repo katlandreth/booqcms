@@ -17,6 +17,7 @@ gem 'responders'
 gem "booqcms_theme", git: "git://github.com/katlandreth/booqcms_theme.git"
 # gem 'booqmark', path: '../../booqmark'
 gem "booqmark", git: "git://github.com/katlandreth/booqmark.git"
+gem 'utf8-cleaner'
 
 group :development, :test do
   gem 'byebug'
