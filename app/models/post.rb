@@ -1,2 +1,2 @@
-class Post < Booqcms::Entry
+class Post < Dashboard::Entry
 end

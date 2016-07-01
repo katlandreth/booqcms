@@ -1,3 +1,3 @@
-class Marketing < Booqcms::Entry
+class Marketing < Dashboard::Entry
   # content_attr :body, :text
 end

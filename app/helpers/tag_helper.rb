@@ -14,7 +14,7 @@ module TagHelper
   end
 
   def tag_filter
-    entries = Booqcms::Entry.all
+    entries = Dashboard::Entry.all
     tag_list = ["All"]
     entries.each do |entry|
       entry.tags.each do |tag|

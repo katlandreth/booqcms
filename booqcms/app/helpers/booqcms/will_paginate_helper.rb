@@ -1,4 +1,4 @@
-module Booqcms
+module Dashboard
   module WillPaginateHelper
     class WillPaginateJSLinkRenderer < WillPaginate::ActionView::LinkRenderer
       def prepare(collection, options, template)

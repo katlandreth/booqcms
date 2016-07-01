@@ -1,5 +1,5 @@
 # encoding: utf-8
-module Booqcms
+module Dashboard
   class ImageUploader < CarrierWave::Uploader::Base
 
     # Include RMagick or MiniMagick support:

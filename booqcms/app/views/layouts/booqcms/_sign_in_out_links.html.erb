@@ -1,9 +1,9 @@
 <% if user_signed_in? %>
   <li class="nav-link">
-  <%= link_to('Logout', booqcms.destroy_user_session_path, :method => :delete) %>
+  <%= link_to('Logout', dashboard.destroy_user_session_path, :method => :delete) %>
   </li>
 <% else %>
   <li class="nav-link">
-  <%= link_to('Login', booqcms.new_user_session_path)  %>
+  <%= link_to('Login', dashboard.new_user_session_path)  %>
   </li>
 <% end %>

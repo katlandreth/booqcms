@@ -1,4 +1,4 @@
-# This migration comes from booqcms (originally 20160520171001)
+# This migration comes from dashboard (originally 20160520171001)
 class CreateDrafts < ActiveRecord::Migration
   def change
     create_table :drafts do |t|

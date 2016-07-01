@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>BooqCMS</title>
-  <%= favicon_link_tag 'booqcms/book.png' %>
-  <%= stylesheet_link_tag    "booqcms/application", media: "all" %>
-  <%= javascript_include_tag "booqcms/application" %>
+  <%= favicon_link_tag 'dashboard/book.png' %>
+  <%= stylesheet_link_tag    "dashboard/application", media: "all" %>
+  <%= javascript_include_tag "dashboard/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body class="type-system-rounded">
-<%= render 'layouts/booqcms/navbar' %>
-<%#= render 'layouts/booqcms/paralax' %>
+<%= render 'layouts/dashboard/navbar' %>
+<%#= render 'layouts/dashboard/paralax' %>
 <% flash.each do |name, msg| %>
   <% if msg.is_a?(String) %>
     <%= content_tag :div, msg, :class => "flash_#{name}" %>
@@ -17,6 +17,6 @@
 <% end %>
 <%= yield %>
 
-<%= render 'layouts/booqcms/footer' %>
+<%= render 'layouts/dashboard/footer' %>
 </body>
 </html>

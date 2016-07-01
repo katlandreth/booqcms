@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module Booqcms
+module Dashboard
   class UserTest < ActiveSupport::TestCase
     # test "the truth" do
     #   assert true

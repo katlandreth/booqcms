@@ -1,4 +1,4 @@
-module Booqcms
+module Dashboard
   module MarkdownHelper
     class HTMLwithCoderay < ::Redcarpet::Render::HTML
       include ::Redcarpet::Render::SmartyPants

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module Booqcms
+module Dashboard
   class EntryTest < ActiveSupport::TestCase
 
     def setup

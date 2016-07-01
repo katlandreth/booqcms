@@ -1,11 +1,11 @@
 require 'test_helper'
 
-module Booqcms
+module Dashboard
   class EntriesControllerTest < ActionController::TestCase
     include Engine.routes.url_helpers
     setup do
       @routes = Engine.routes
-      @controller = Booqcms::EntriesController.new
+      @controller = Dashboard::EntriesController.new
       @user = booqcms_users(:two)
     end
 

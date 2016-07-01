@@ -1,6 +1,6 @@
-require_dependency "booqcms/application_controller"
+require_dependency "dashboard/application_controller"
 
-module Booqcms
+module Dashboard
   class MediaController < ApplicationController
     respond_to :html, :json, :js
     before_action :set_image, only: [:show, :edit, :update, :destroy]

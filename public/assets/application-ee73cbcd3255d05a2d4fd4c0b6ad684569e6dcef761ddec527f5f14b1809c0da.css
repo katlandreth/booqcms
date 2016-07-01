@@ -24,25 +24,25 @@ html {
   box-sizing: inherit;
 }
 
-/* line 6, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 6, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* line 11, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 11, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 img.nav-logo {
   width: 43px;
 }
 
-/* line 16, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 16, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .featured-posts {
   width: 100%;
   margin-bottom: 20px;
   overflow: auto;
 }
 
-/* line 23, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 23, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-excerpt-title {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -56,12 +56,12 @@ img.nav-logo {
   width: 100%;
   position: relative;
 }
-/* line 33, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 33, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-excerpt-title h3 {
   font-size: 18px;
   color: #888;
 }
-/* line 36, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 36, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-excerpt-title h3:before {
   content: '';
   width: 100px;
@@ -72,12 +72,12 @@ img.nav-logo {
   top: 75px;
   margin-left: -50px;
 }
-/* line 47, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 47, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-excerpt-title:hover {
   color: white;
   background: #242424;
 }
-/* line 51, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 51, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-excerpt-title:after {
   content: '';
   width: 0;
@@ -95,31 +95,31 @@ img.nav-logo {
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-/* line 66, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 66, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-excerpt-title:hover:after {
   border-top: 15px solid #242424;
   border-top: 15px solid #242424;
 }
 
-/* line 72, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 72, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .show-post {
   max-width: 700px;
   width: 80%;
   margin: 40px auto;
 }
-/* line 76, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 76, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .show-post img {
   width: 100%;
 }
 
-/* line 81, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 81, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .teaser {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-/* line 87, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 87, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .login-form {
   width: 33%;
   margin: 20px auto;
@@ -127,11 +127,11 @@ img.nav-logo {
   padding: 20px;
   font-family: "Montserrat", sans-serif;
 }
-/* line 93, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 93, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .login-form h2 {
   text-transform: uppercase;
 }
-/* line 99, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 99, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .login-form input[type="email"],
 .login-form input[type="password"],
 .login-form input[type="submit"] {
@@ -141,35 +141,35 @@ img.nav-logo {
   font-size: 1em;
   line-height: 2;
 }
-/* line 108, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 108, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .login-form input[type="submit"] {
   background: white;
   border: 1px solid #41A1F0;
   color: #41A1F0;
   margin-top: 20px;
 }
-/* line 114, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 114, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .login-form .recover-links {
   font-size: 0.75em;
 }
 
-/* line 119, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 119, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .content_nav {
   width: 100%;
   position: relative;
 }
-/* line 122, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 122, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .content_nav nav {
   width: 100%;
 }
-/* line 124, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 124, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .content_nav nav ul {
   list-style: none;
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-/* line 129, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 129, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .content_nav nav ul li {
   float: left;
   width: 33.3%;
@@ -181,7 +181,7 @@ img.nav-logo {
   text-align: center;
   padding: 20px;
 }
-/* line 140, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 140, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .content_nav nav ul li.active_tab {
   position: relative;
   background: #fff;
@@ -189,7 +189,7 @@ img.nav-logo {
   color: #333;
 }
 
-/* line 151, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 151, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-container {
   padding-top: 20px;
   min-height: 100px;
@@ -198,18 +198,18 @@ img.nav-logo {
   position: relative;
 }
 
-/* line 159, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 159, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .sort_and_filter {
   width: 510px;
   margin: 20px auto;
   overflow: hidden;
 }
-/* line 163, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 163, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .sort_and_filter select {
   margin-right: 20px;
 }
 
-/* line 168, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 168, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post_card {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   width: 70%;
@@ -219,13 +219,13 @@ img.nav-logo {
   border: 5px solid white;
   position: relative;
 }
-/* line 176, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 176, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post_card:hover {
   border: 5px solid #49B5FF;
   cursor: pointer;
 }
 
-/* line 182, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 182, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-excerpt-image {
   height: 100%;
   width: 40%;
@@ -233,7 +233,7 @@ img.nav-logo {
   overflow: hidden;
   position: relative;
 }
-/* line 188, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 188, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-excerpt-image img {
   height: auto;
   width: 100%;
@@ -246,21 +246,21 @@ img.nav-logo {
   left: 0;
 }
 
-/* line 201, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 201, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .type-system-rounded .post-excerpt {
   width: 60%;
   height: 100%;
   float: left;
   position: relative;
 }
-/* line 206, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 206, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .type-system-rounded .post-excerpt p {
   width: 80%;
   margin: 10px auto;
   padding: 40px;
   border-top: 1px solid #ccc;
 }
-/* line 212, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 212, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .type-system-rounded .post-excerpt h2 {
   text-align: center;
   font-size: 30px;
@@ -271,14 +271,14 @@ img.nav-logo {
   margin-bottom: 10px;
 }
 
-/* line 223, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 223, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .select {
   position: relative;
   display: inline-block;
   margin-bottom: 15px;
   width: 130px;
 }
-/* line 228, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 228, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .select select {
   display: inline-block;
   width: 100%;
@@ -293,21 +293,21 @@ img.nav-logo {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-/* line 241, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 241, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .select select::-ms-expand {
   display: none;
 }
-/* line 244, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 244, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .select select:hover, .select select:focus {
   color: #000;
 }
-/* line 248, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 248, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .select select:disabled {
   opacity: 0.5;
   pointer-events: none;
 }
 
-/* line 254, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 254, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .select__arrow {
   position: absolute;
   top: 16px;
@@ -319,23 +319,23 @@ img.nav-logo {
   border-width: 8px 5px 0 5px;
   border-color: #49B5FF transparent transparent transparent;
 }
-/* line 264, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 264, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .select select:hover ~ .select__arrow
 .select select:focus ~ .select__arrow {
   border-top-color: #000;
 }
-/* line 269, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 269, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .select select:disabled ~ .select__arrow {
   border-top-color: #555;
 }
 
-/* line 274, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 274, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .input-group {
   float: left;
   margin: 10px 20px;
 }
 
-/* line 279, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 279, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 label {
   display: block;
   text-transform: uppercase;
@@ -344,14 +344,14 @@ label {
   font-family: "Montserrat";
 }
 
-/* line 287, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 287, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .parallax-background {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
 }
 
-/* line 293, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 293, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post_count {
   width: 500px;
   text-align: center;
@@ -361,12 +361,12 @@ label {
   font-variant: small-caps;
 }
 
-/* line 302, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 302, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .posts {
   padding-bottom: 40px;
 }
 
-/* line 306, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_custom.scss */
+/* line 306, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_custom.scss */
 .post-tags {
   position: absolute;
   left: 50%;
@@ -402,7 +402,7 @@ label {
   font-weight: normal;
   font-style: normal;
 }
-/* line 39, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 39, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded {
   font-family: "charterregular", serif;
   text-align: left;
@@ -417,11 +417,11 @@ body.type-system-rounded::after {
   content: "";
   display: table;
 }
-/* line 61, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 61, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded h1, body.type-system-rounded h2, body.type-system-rounded h3, body.type-system-rounded p {
   margin: 0;
 }
-/* line 65, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 65, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded hr {
   border-bottom: 1px solid #DDD;
   border-left: none;
@@ -429,21 +429,21 @@ body.type-system-rounded hr {
   border-top: none;
   margin: 1.5em 0;
 }
-/* line 73, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 73, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded p {
   color: #333;
   line-height: 1.5em;
 }
-/* line 78, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 78, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded p strong {
   font-weight: 600;
 }
-/* line 82, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 82, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded a {
   color: #477DCA;
   text-decoration: none;
 }
-/* line 87, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 87, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded .type {
   border-bottom: 1px solid;
   display: inline-block;
@@ -455,19 +455,19 @@ body.type-system-rounded .type {
   text-align: left;
   text-transform: uppercase;
 }
-/* line 99, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 99, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.8em;
   margin-bottom: 0.5em;
 }
 @media screen and (min-width: 40em) {
-  /* line 99, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+  /* line 99, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
   body.type-system-rounded h1 {
     font-size: 2.4em;
   }
 }
-/* line 109, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 109, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2em;
@@ -476,12 +476,12 @@ body.type-system-rounded h2 {
   margin-bottom: 0.9em;
 }
 @media screen and (min-width: 40em) {
-  /* line 109, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+  /* line 109, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
   body.type-system-rounded h2 {
     font-size: 1.4em;
   }
 }
-/* line 121, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 121, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded code {
   background: #F7F7F7;
   border-radius: 4.5px;
@@ -492,7 +492,7 @@ body.type-system-rounded code {
   padding: 0.1em 0.4em;
   white-space: nowrap;
 }
-/* line 133, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 133, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2em;
@@ -500,14 +500,14 @@ body.type-system-rounded h3 {
   line-height: 1.3em;
   margin-bottom: 0.4em;
 }
-/* line 141, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 141, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded p.date {
   color: rgba(51, 51, 51, 0.4);
   font-family: "charterregular", serif;
   font-size: 0.9em;
   margin-bottom: 0.3em;
 }
-/* line 148, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 148, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded p {
   font-family: "charterregular", serif;
   font-size: 21px;
@@ -516,13 +516,13 @@ body.type-system-rounded p {
   letter-spacing: -0.003em;
   margin-bottom: 1.5em;
 }
-/* line 156, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 156, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded p span {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
   text-transform: uppercase;
 }
-/* line 163, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 163, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded a.read-more {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
@@ -532,23 +532,23 @@ body.type-system-rounded a.read-more {
   position: relative;
   text-transform: uppercase;
 }
-/* line 172, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 172, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded a.read-more span {
   font-size: 1.5em;
   position: absolute;
   right: -12px;
   top: -1px;
 }
-/* line 180, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 180, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded hr {
   width: 3em;
 }
-/* line 184, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 184, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 body.type-system-rounded p.author {
   font-family: "charterregular", serif;
 }
 
-/* line 191, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 191, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 section {
   max-width: 1200px;
   margin-left: auto;
@@ -561,7 +561,7 @@ section::after {
   display: table;
 }
 
-/* line 195, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 195, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 article {
   float: left;
   display: block;
@@ -575,7 +575,7 @@ article:last-child {
   margin-right: 0;
 }
 
-/* line 201, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 201, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 aside {
   float: left;
   display: block;
@@ -587,31 +587,31 @@ aside {
 aside:last-child {
   margin-right: 0;
 }
-/* line 205, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 205, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 aside ul {
   list-style: none;
   font-weight: bold;
   text-transform: uppercase;
   padding-left: 5px;
 }
-/* line 210, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 210, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 aside ul li {
   margin: 5px 0;
   padding: 5px 0;
 }
-/* line 215, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_typography.scss */
+/* line 215, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_typography.scss */
 aside h2 {
   padding-top: 10px;
 }
 
-/* line 1, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_video_embed.scss */
+/* line 1, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_video_embed.scss */
 .video-wrapper {
   height: 0;
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
 }
-/* line 7, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/_video_embed.scss */
+/* line 7, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/_video_embed.scss */
 .video-wrapper embed,
 .video-wrapper object,
 .video-wrapper iframe {
@@ -622,7 +622,7 @@ aside h2 {
   width: 100%;
 }
 
-/* line 3, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 3, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .hero-image {
   background: url("keyboard.jpg") no-repeat;
   height: 500px;
@@ -631,7 +631,7 @@ aside h2 {
   width: 100%;
 }
 
-/* line 11, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 11, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .hero-benefit-box {
   position: absolute;
   top: 140px;
@@ -642,13 +642,13 @@ aside h2 {
   background: rgba(255, 255, 255, 0.7);
   text-align: center;
 }
-/* line 20, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 20, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .hero-benefit-box button {
   display: block;
   margin: 10px auto;
 }
 
-/* line 26, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 26, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 button {
   font-size: 20px;
   background: white;
@@ -659,14 +659,14 @@ button {
   padding: 15px;
 }
 
-/* line 36, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 36, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .how-it-works {
   margin: 10px auto;
   color: #31B1FA;
   overflow: hidden;
   width: 1000px;
 }
-/* line 41, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 41, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .how-it-works .third {
   width: 30%;
   margin: 1.6%;
@@ -674,42 +674,42 @@ button {
   position: relative;
   min-height: 120px;
 }
-/* line 47, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 47, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .how-it-works .third div {
   border-bottom: 1px solid;
   text-align: left;
 }
-/* line 51, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 51, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .how-it-works .third h3 {
   font-size: 30px;
   vertical-align: bottom;
   margin-top: 10px;
 }
-/* line 56, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 56, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .how-it-works .third p {
   font-size: 18px;
   color: #333;
 }
 
-/* line 63, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 63, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .book-pricing-content {
   display: flex;
   text-align: center;
 }
 
-/* line 68, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 68, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .book-pricing {
   margin-bottom: 100px;
 }
 
-/* line 72, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 72, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .book-pricing hgroup {
   width: 100%;
   text-align: center;
   font-size: 2.4em;
 }
 
-/* line 78, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 78, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .book-option {
   align-items: stretch;
   width: 33%;
@@ -718,45 +718,45 @@ button {
   display: flex;
   flex-direction: column;
 }
-/* line 85, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 85, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .book-option:nth-child(2) {
   border: 12px solid #31B1FA;
   margin-top: -10px;
   margin-bottom: 10px;
 }
-/* line 90, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 90, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .book-option ul {
   list-style: none;
   padding: 0;
 }
-/* line 93, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 93, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .book-option ul li {
   padding: 10px 0;
 }
-/* line 97, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 97, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .book-option h3 {
   color: #666;
   font-variant: small-caps;
   font-style: italic;
 }
 
-/* line 104, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 104, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .pricing-button {
   margin-top: auto;
   margin-bottom: 20px;
 }
-/* line 107, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 107, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .pricing-button button {
   background: #31B1FA;
   color: #fff;
 }
 
-/* line 113, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 113, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .dollar {
   font-size: 20px;
 }
 
-/* line 117, /Users/katherinelandreth/Desktop/Rails_Apps/booqcms/blog/app/assets/stylesheets/book.scss */
+/* line 117, /Users/katherinelandreth/Desktop/Rails_Apps/dashboard/blog/app/assets/stylesheets/book.scss */
 .price {
   font-size: 55px;
   font-weight: bold;

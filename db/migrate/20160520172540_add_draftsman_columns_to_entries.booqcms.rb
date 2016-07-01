@@ -1,4 +1,4 @@
-# This migration comes from booqcms (originally 20160520171149)
+# This migration comes from dashboard (originally 20160520171149)
 class AddDraftsmanColumnsToEntries < ActiveRecord::Migration
   def change
     add_column :booqcms_entries, :draft_id, :integer

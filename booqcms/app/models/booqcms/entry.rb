@@ -1,6 +1,6 @@
-module Booqcms
+module Dashboard
   class Entry < ActiveRecord::Base
-    include Booqcms::MarkdownHelper
+    include Dashboard::MarkdownHelper
     # scope :published, -> { where('published_at <= ?', Time.zone.now) }
 
     has_drafts
@@ -12,7 +12,7 @@ module Booqcms
 
     def self.tagged_with(name)
       if name != "all"
-        Booqcms::Tag.find_by_name!(name).entries.published
+        Dashboard::Tag.find_by_name!(name).entries.published
       else
         Entry.published.all
       end
@@ -20,7 +20,7 @@ module Booqcms
 
     def self.post_type(*type)
       if type.size > 0
-        Booqcms::Entry.where(post_type: type)
+        Dashboard::Entry.where(post_type: type)
       elsif self.count > 0
         self.first[:post_type]
       end
@@ -28,7 +28,7 @@ module Booqcms
 
     def all_tags=(names)
       self.tags = names.split(",").map do |name|
-        Booqcms::Tag.where(name: name.strip).first_or_create!
+        Dashboard::Tag.where(name: name.strip).first_or_create!
       end
     end
 

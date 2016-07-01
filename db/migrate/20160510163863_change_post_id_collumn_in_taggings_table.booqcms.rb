@@ -1,4 +1,4 @@
-# This migration comes from booqcms (originally 20160510162443)
+# This migration comes from dashboard (originally 20160510162443)
 class ChangePostIdCollumnInTaggingsTable < ActiveRecord::Migration
   def change
     change_table :booqcms_taggings do |t|

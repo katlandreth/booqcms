@@ -15,7 +15,7 @@ GIT
 PATH
   remote: .
   specs:
-    booqcms (0.0.1)
+    dashboard (0.0.1)
       carrierwave
       coderay
       devise (= 3.5.1)
@@ -334,7 +334,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  booqcms!
+  dashboard!
   booqcms_theme!
   booqmark!
   bourbon

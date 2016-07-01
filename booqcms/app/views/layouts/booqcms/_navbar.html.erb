@@ -1,7 +1,7 @@
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="/admin/entries" class="logo">
-      <%= image_tag 'booqcms/book.png' %>
+      <%= image_tag 'dashboard/book.png' %>
     </a>
     <h1 id="nav-title">BooqCMS Dashboard</h1>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
@@ -22,8 +22,8 @@
             <li class="more"><a href="javascript:void(0)">Web Content</a>
               <ul class="submenu">
                 <li><%= link_to "Add New", new_entry_path %></li>
-                <li><%= link_to "All Web Content", booqcms.entries_path %></li>
-                <li><%= link_to "Media Library", booqcms.media_path %></li>
+                <li><%= link_to "All Web Content", dashboard.entries_path %></li>
+                <li><%= link_to "Media Library", dashboard.media_path %></li>
               </ul>
             </li>
             <li class="more"><a href="javascript:void(0)">Book</a>
@@ -36,7 +36,7 @@
         </li>
         <li class="nav-link"><%= link_to 'Analytics', analytics_dashboard_path %></li>
         <li class="nav-link"><a href="javascript:void(0)">Social Media</a></li>
-        <%= render "layouts/booqcms/sign_in_out_links" %>
+        <%= render "layouts/dashboard/sign_in_out_links" %>
       </ul>
     </nav>
   </div>

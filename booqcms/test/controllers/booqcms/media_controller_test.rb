@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module Booqcms
+module Dashboard
   class MediaControllerTest < ActionController::TestCase
     setup do
       @routes = Engine.routes

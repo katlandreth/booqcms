@@ -1,4 +1,4 @@
-# This migration comes from booqcms (originally 20160408205616)
+# This migration comes from dashboard (originally 20160408205616)
 class CreateBooqcmsMedia < ActiveRecord::Migration
   def change
     create_table :booqcms_media do |t|

@@ -1,4 +1,4 @@
-module Booqcms
+module Dashboard
   class Configuration
     attr_accessor :content_classes
 

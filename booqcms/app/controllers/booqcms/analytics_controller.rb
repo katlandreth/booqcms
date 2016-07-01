@@ -1,6 +1,6 @@
-require_dependency "booqcms/application_controller"
+require_dependency "dashboard/application_controller"
 
-module Booqcms
+module Dashboard
   class AnalyticsController < ApplicationController
 
     def index

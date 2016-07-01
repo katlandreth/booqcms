@@ -29,6 +29,6 @@ class PostsController < ApplicationController
   private
 
   def all_post_types
-    Booqcms::Entry.all.published
+    Dashboard::Entry.all.published
   end
 end

@@ -1,4 +1,4 @@
-Gem.loaded_specs['booqcms'].dependencies.each do |d|
+Gem.loaded_specs['dashboard'].dependencies.each do |d|
   if d.name == "fog"
     require 'fog/aws'
   else
@@ -7,11 +7,11 @@ Gem.loaded_specs['booqcms'].dependencies.each do |d|
 end
 
 require 'devise'
-require "booqcms/engine"
-require "booqcms/configuration"
+require "dashboard/engine"
+require "dashboard/configuration"
 require 'redcarpet'
 
 
 
-module Booqcms
+module Dashboard
 end

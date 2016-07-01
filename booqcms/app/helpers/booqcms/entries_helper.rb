@@ -1,12 +1,12 @@
-module Booqcms
+module Dashboard
   module EntriesHelper
 
     def new_entry_path
-      booqcms.new_entry_path
+      dashboard.new_entry_path
     end
 
     def media_path
-      booqcms.media_path
+      dashboard.media_path
     end
 
 

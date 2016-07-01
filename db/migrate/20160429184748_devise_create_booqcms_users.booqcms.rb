@@ -1,4 +1,4 @@
-# This migration comes from booqcms (originally 20160429184422)
+# This migration comes from dashboard (originally 20160429184422)
 class DeviseCreateBooqcmsUsers < ActiveRecord::Migration
   def change
     create_table(:booqcms_users) do |t|
