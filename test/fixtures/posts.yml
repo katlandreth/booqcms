@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+unpublished:
+  title: "Entry Title"
+  slug: "entry-slug"
+  payload: "##Entry Body  _add some stuff with markdown_."
+  featured_image: "http://exapleimage.com/example.jpg"
+
+published:
+  title: "Second Entry Title"
+  slug: "second-entry-slug"
+  payload: "##Entry Body  _add some stuff with markdown_."
+  published_at: <%= Time.now %>
+  featured_image: "http://exapleimage.com/example.jpg"
+
+<% 20.times do |n| %>
+entry_<%= n %>:
+  title: <%= "title #{n}" %>
+  payload: "##Entry Body  _add some stuff with markdown_."
+  featured_image: "http://exapleimage.com/example.jpg"
+<% end %>
