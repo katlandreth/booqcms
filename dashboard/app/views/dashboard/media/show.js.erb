@@ -1,0 +1,2 @@
+$(".uploaded-image").html('<%= escape_javascript(render partial: "/dashboard/media/show", locals: { upload: @upload } ) %>');
+$(".upload-preview img").removeAttr("src");

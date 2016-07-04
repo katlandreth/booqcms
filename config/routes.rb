@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'category', to: 'posts#filter', as: "category"
   get 'gimp_book', to: 'posts#book', as: "gimp_book"
 
-  mount Booqcms::Engine, at: '/admin'
+  mount Dashboard::Engine, at: '/admin'
 
   Post.where.not(slug: nil).all.each do |blogpost|
      get '/:slug', to: 'posts#slug'

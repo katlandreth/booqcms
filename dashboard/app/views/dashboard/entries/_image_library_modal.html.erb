@@ -1,0 +1,37 @@
+<div class="modal" id="image-library-modal">
+  <input class="modal-state" id="modal-2" type="checkbox" />
+  <div class="modal-fade-screen">
+    <div class="modal-inner">
+      <div class="progress-bar"></div>
+      <div class="modal-close" for="modal-2"></div>
+      <h2>Image Library</h2>
+      <ul class="accordion-tabs-minimal">
+        <li class="tab-header-and-content">
+          <a href="#" class="tab-link is-active">Your Images</a>
+          <div class="tab-content">
+            <input type="hidden" id="entry-id-field" value="<%= @entry.id %>"/>
+            <div class="upload-preview">
+              <img />
+            </div>
+            <div class="upload_form">
+            </div>
+            <div class="gallery-thumb-wrapper button-card">
+              <%= link_to new_medium_path(entry_id: @entry.id), format: :js, remote: true, class: "primary-button", id: "new-image-button" do %>
+                <h3>Upload Image</h3> <br>
+                <%= inline_svg("dashboard/plusicon.svg", class: 'content-component-svg') %>
+              <% end %>
+            </div>
+            <div class="image-gallery">
+            </div>
+          </div>
+        </li>
+        <li class="tab-header-and-content">
+          <a href="#" id="image-details-tab" class="tab-link">Image Details</a>
+          <div class="tab-content">
+            <div class="uploaded-image"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

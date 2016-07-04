@@ -1,5 +1,5 @@
 class RenameTypeColumn < ActiveRecord::Migration
-  def change
-    rename_column :booqcms_entries, :type, :category
-  end
+  # def change
+  #   rename_column :dashboard_entries, :type, :category
+  # end
 end

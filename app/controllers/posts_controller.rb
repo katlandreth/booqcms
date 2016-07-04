@@ -6,11 +6,11 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = all_post_types.published.find(params[:id])
+    @post = Post.published.find(params[:id])
   end
 
   def slug
-     @post = all_post_types.published.find_by_slug!(params[:slug])
+     @post = Post.published.find_by_slug!(params[:slug])
      render 'show'
   end
 
@@ -29,6 +29,6 @@ class PostsController < ApplicationController
   private
 
   def all_post_types
-    Booqcms::Entry.all.published
+    Dashboard::Entry.all.published
   end
 end
