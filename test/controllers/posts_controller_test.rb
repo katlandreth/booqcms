@@ -7,7 +7,6 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    #binding.pry
     get(:show, {'id' => posts(:published).id})
     assert_response :success
   end
