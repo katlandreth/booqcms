@@ -55,5 +55,13 @@
         </div>
       </div> <!-- end 'expander-content' -->
     </li>
+    <li class="expander">
+      <%= link_to "SEO Analysis", "#expand", :class => "expander-trigger expander-hidden" %>
+      <div class="expander-content">
+        <div class="content-component">
+          <%= render 'seo_tool' %>
+        </div>
+      </div> <!-- end 'expander-content' -->
+    </li>
   </ul>
 </aside>

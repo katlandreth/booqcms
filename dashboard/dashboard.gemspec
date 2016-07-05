@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency "redcarpet"
   s.add_dependency 'jquery-ui-rails'
   s.add_dependency 'nprogress-rails'
+  s.add_dependency 'words_counted'
 
   #image upload
   s.add_dependency 'carrierwave'

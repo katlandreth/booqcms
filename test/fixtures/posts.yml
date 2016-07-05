@@ -15,6 +15,7 @@ published:
   slug: "second-entry-slug"
   payload: "##Entry Body  _add some stuff with markdown_."
   published_at: <%= Time.now %>
+  content_format: "written"
   featured_image: "http://exapleimage.com/example.jpg"
 
 <% 20.times do |n| %>

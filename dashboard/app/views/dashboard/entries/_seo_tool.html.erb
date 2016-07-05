@@ -1,0 +1,33 @@
+<table>
+ <tr>
+   <th colspan="2">Word Count</th>
+ </tr>
+ <tr>
+   <td>Total count</td>
+   <td><%= words_count(@entry.payload) %></td>
+ </tr>
+</table>
+
+<table>
+ <tr>
+   <th colspan="2">Word Frequency</th>
+ </tr>
+ <% word_frequency(@entry.payload).first(5).each do |word, frequency| %>
+   <tr>
+     <td><%= word %></td>
+     <td><%= frequency %></td>
+   </tr>
+ <% end %>
+</table>
+
+<table>
+ <tr>
+   <th colspan="2">Word Density</th>
+ </tr>
+ <% word_density(@entry.payload).first(5).each do |word, density| %>
+   <tr>
+     <td><%= word %></td>
+     <td><%= density %></td>
+   </tr>
+ <% end %>
+</table>

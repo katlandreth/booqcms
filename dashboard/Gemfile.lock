@@ -30,6 +30,7 @@ PATH
       redcarpet
       remotipart (~> 1.2)
       will_paginate
+      words_counted
 
 GEM
   remote: https://rubygems.org/
@@ -330,6 +331,7 @@ GEM
     warden (1.2.6)
       rack (>= 1.0)
     will_paginate (3.1.0)
+    words_counted (1.0.2)
     xml-simple (1.1.5)
 
 PLATFORMS

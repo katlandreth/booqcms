@@ -46,5 +46,36 @@ module Dashboard
     def tag_links(tags)
       tags.split(",").map{|tag| link_to tag.strip, tag_path(tag.strip)}.join(", ")
     end
+
+
+    ##SEO Tool
+
+    def count_words(string, exclude = nil)
+      @counter = WordsCounted.count(string, exclude: exclude)
+    end
+
+    def words_count(string)
+      count_words(string)
+      @counter.token_count
+    end
+
+    def word_frequency(string)
+      count_words(string, stop_words)
+      @counter.token_frequency
+    end
+
+    def word_density(string)
+      count_words(string, stop_words)
+      @counter.token_density
+    end
+
+    def stop_words
+      [->(t){t.length < 4 }, "figcaption", "figure", "amazonaws", "https", "booqcms", "class", "inline-image"]
+    end
+    #
+    # def highlight_words(string, word)
+    #   highlight(string, word, highlighter: '<span style= "color:red;">\1<em>')
+    # end
+
   end
 end
