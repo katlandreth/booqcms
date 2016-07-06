@@ -1,33 +1,55 @@
 <table>
- <tr>
-   <th colspan="2">Word Count</th>
- </tr>
- <tr>
-   <td>Total count</td>
-   <td><%= words_count(@entry.payload) %></td>
- </tr>
+  <thead>
+   <tr>
+     <th colspan="2">Word Count</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td>Total count</td>
+     <td><%= words_count(@entry.payload) %></td>
+   </tr>
+ </tbody>
 </table>
 
 <table>
- <tr>
-   <th colspan="2">Word Frequency</th>
- </tr>
- <% word_frequency(@entry.payload).first(5).each do |word, frequency| %>
+  <thead>
    <tr>
-     <td class= "seo-word"><%= word %></td>
-     <td><%= frequency %></td>
+     <th colspan="2">Word Frequency</th>
    </tr>
- <% end %>
+ </thead>
+ <tbody>
+   <% word_frequency(@entry.payload).each do |word, frequency| %>
+     <tr>
+       <td class= "seo-word"><%= word %></td>
+       <td><%= frequency %></td>
+     </tr>
+   <% end %>
+ </tbody>
+ <tfoot>
+   <tr>
+     <td clospan="2"><button type="button" class="clear-highlighting btn-small">clear highlighting</button></td>
+   </tr>
+ </tfoot>
 </table>
 
 <table>
- <tr>
-   <th colspan="2">Word Density</th>
- </tr>
- <% word_density(@entry.payload).first(5).each do |word, density| %>
+  <thead>
    <tr>
-     <td class= "seo-word"><%= word %></td>
-     <td><%= density %></td>
+     <th colspan="2">Word Density</th>
    </tr>
- <% end %>
+ </thead>
+ <tbody>
+   <% word_density(@entry.payload).each do |word, density| %>
+     <tr>
+       <td class= "seo-word"><%= word %></td>
+       <td><%= density %></td>
+     </tr>
+   <% end %>
+ </tbody>
+ <tfoot>
+   <tr>
+     <td clospan="2"><button type="button" class="clear-highlighting btn-small">clear highlighting</button></td>
+   </tr>
+ </tfoot>
 </table>

@@ -112,3 +112,52 @@ section.media-library {
     cursor: pointer;
   }
 }
+
+button,
+input[type="submit"] {
+  padding:10px;
+  border-radius:0;
+  border:1px solid #41A1F0;
+  color:#41A1F0;
+  background:#fff;
+  &:hover {
+    cursor: pointer;
+  }
+  &.btn-small {
+    font-size: 10px;
+    padding:5px;
+  }
+}
+
+table {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+
+table tbody {
+    /* body takes all the remaining available space */
+    /* flex: 1 1 auto; */
+    display: block;
+    overflow-y: scroll;
+    max-height: 100px;
+}
+table tbody tr,
+table thead tr,
+table tfoot tr {
+    width: 100%;
+    padding: 3px 0;
+}
+table thead,
+table tbody tr,
+table thead tr,
+table tfoot tr {
+    display: table;
+    table-layout: fixed;
+}
+
+table td:first-child,
+table th:first-child {
+  width:70%;
+}
