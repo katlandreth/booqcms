@@ -132,10 +132,17 @@
 			}
 
 			//this escapes figure and img tags in the input
+			// input = input.replace(/&/, '&amp;')
+			// 						 .replace(/<figure>/, '&lt;figure&rt;')
+			// 						 .replace(/<figcaption>/, '&lt;figcaption&rt;')
+			// 						 .replace(/<img/, '&lt;img');
+
 			input = input.replace(/&/, '&amp;')
-									 .replace(/<figure>/, '&lt;figure&rt;')
-									 .replace(/<figcaption>/, '&lt;figcaption&rt;')
-									 .replace(/<img/, '&lt;img');
+										.replace(/"/g, '&quot;')
+										.replace(/</g, '&lt;')
+										.replace(/>/g, '&gt;')
+										.replace(/&lt;mark&gt;/g,'<mark>')
+										.replace(/&lt;\/mark&gt;/g,'</mark>');
 
 			// this keeps scrolling aligned when input ends with a newline
 			input = input.replace(/\n(<\/mark>)?$/, '\n\n');
