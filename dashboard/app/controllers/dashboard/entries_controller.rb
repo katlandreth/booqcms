@@ -46,6 +46,7 @@ module Dashboard
 
     def preview
       @entry = Entry.find(params[:entry_id])
+      reify_entry
       respond_to do |format|
         format.js {render layout: false}
       end
