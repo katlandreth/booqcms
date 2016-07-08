@@ -59,6 +59,7 @@
       <%= link_to "SEO Analysis", "#expand", :class => "expander-trigger expander-hidden" %>
       <div class="expander-content">
         <div class="content-component">
+          <%#= seo_analysis(@entry.payload).count %>
           <%= render 'seo_tool' %>
         </div>
       </div> <!-- end 'expander-content' -->
