@@ -6,8 +6,12 @@
  </thead>
  <tbody>
    <tr>
-     <td>Total count</td>
+     <td>Word count</td>
      <td><%= seo_analysis(@entry.payload).word_count %></td>
+   </tr>
+   <tr>
+     <td>Sentence count</td>
+     <td><%= seo_analysis(@entry.payload).sentence_count %></td>
    </tr>
  </tbody>
 </table>
@@ -17,6 +21,11 @@
    <tr>
      <th colspan="3">Word Frequency</th>
    </tr>
+   <tr>
+     <th>word</th>
+     <th>count</th>
+     <th>density</th>
+   </tr>
  </thead>
  <tbody>
    <% seo_analysis(@entry.payload).words.each do |w| %>
@@ -24,6 +33,9 @@
        <td class= "seo-word"><%= w.word %></td>
        <td><%= w.frequency %></td>
        <td><%= w.density %></td>
+     </tr>
+     <tr>
+       <td><%= w.syllables%></td>
      </tr>
    <% end %>
  </tbody>

@@ -15,6 +15,11 @@ module Dashboard
       @counter.token_count
     end
 
+    def sentence_count
+      @string.strip.split(/\w[?!.]/).length
+    end
+
+
     def word_analysis(string = @string)
       @analysis = {}
       tokenize_words(string, html_and_stop_words)
@@ -45,7 +50,7 @@ module Dashboard
         "inline-image", "id", "src", "href", "alt", "title", "description",
         "allowfullscreen", "frameborder", "www", "png", "jpg", "gif", "iframe",
         "youtube", "uploads", "target", "blank", "embed", "xs", "''", "'blank'",
-        "video", "video-wrapper"]
+        "video", "video-wrapper", "img", "com"]
     end
 
     def stop_words
@@ -77,13 +82,13 @@ module Dashboard
         @density = density
       end
 
-      # def frequency(word)
-      #   @analysis[word][:frequency]
-      # end
-      #
-      # def density(word)
-      #   @analysis[word][:density]
-      # end
+      def syllables
+        word_dup = @word.dup
+        return 1 if word_dup.length <= 3
+        word_dup.sub!(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '')
+        word_dup.sub!(/^y/, '')
+        word_dup.scan(/[aeiouy]{1,2}/).size
+      end
 
     end
 

@@ -141,7 +141,7 @@ table tbody {
     /* flex: 1 1 auto; */
     display: block;
     overflow-y: scroll;
-    max-height: 100px;
+    max-height: 118px;
 }
 table tbody tr,
 table thead tr,
@@ -159,5 +159,15 @@ table tfoot tr {
 
 table td:first-child,
 table th:first-child {
-  width:70%;
+  width:50%;
+}
+
+thead tr:first-child {
+  border-bottom: 1px solid #ccc;
+}
+
+thead tr:nth-child(2) {
+  font-size:12px;
+  font-weight:normal;
+  color: #666;
 }
