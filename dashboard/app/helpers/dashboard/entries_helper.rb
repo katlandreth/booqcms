@@ -47,8 +47,12 @@ module Dashboard
       tags.split(",").map{|tag| link_to tag.strip, tag_path(tag.strip)}.join(", ")
     end
 
-    def seo_analysis(string)
-      SeoAnalyzer.new(string)
+    def seo_analysis
+      if @entry.payload != nil
+        SeoAnalyzer.new(@entry.payload)
+      else
+        SeoAnalyzer.new("0")
+      end
     end
 
   end
