@@ -3,15 +3,11 @@ module Dashboard
     attr_accessor :string
 
     def initialize(string)
-      @string = string
+      @string = string.gsub(/src.+[\.][\w]{3}["|']/i, '')
     end
 
-    def tokenize_words(string = @string, exclude = html_tags)
-      @counter = WordsCounted.count(string, exclude: exclude)
-    end
-
-    def word_count
-      tokenize_words(@string)
+    def word_count(string = @string)
+      tokenize_words(string)
       @counter.token_count
     end
 
@@ -19,6 +15,60 @@ module Dashboard
       @string.strip.split(/\w[?!.]/).length
     end
 
+    def words
+      @words = []
+      word_analysis(@string)
+      @analysis.each_pair { |word, values| @words.push SeoWord.new(word, values[:frequency], values[:density])}
+      @words
+    end
+
+    def readibility_score
+      raw_score = 206.835 - (1.015 * asl) - (84.6 * asw)
+      raw_score.to_int
+    end
+
+    def score_meaning
+      if readibility_score.between?(90,100)
+        "very easy"
+      elsif readibility_score.between?(80,89)
+        "easy"
+      elsif readibility_score.between?(70,79)
+        "fairly easy"
+      elsif readibility_score.between?(60,69)
+        "standard"
+      elsif readibility_score.between?(50,59)
+        "fairly difficult"
+      elsif readibility_score.between?(30,49)
+        "difficult"
+      elsif readibility_score.between?(0,29)
+        "very confusing"
+      end
+
+    end
+
+
+    private
+
+    def tokenize_words(string = @string, exclude = html_tags)
+      @counter = WordsCounted.count(string, exclude: exclude)
+    end
+
+    def total_syllables
+      tokenize_words(@string, html_tags)
+      sum = []
+      @counter.token_frequency.each do |word, freq|
+        sum.push SeoWord.new(word).syllables * freq
+      end
+      sum.reduce(0, :+)
+    end
+
+    def asw
+      total_syllables.to_f / word_count.to_f
+    end
+
+    def asl
+      word_count.to_f / sentence_count.to_f
+    end
 
     def word_analysis(string = @string)
       @analysis = {}
@@ -26,13 +76,6 @@ module Dashboard
       @counter.token_frequency.each { |word, freq| @analysis[word] = {frequency: freq} }
       @counter.token_density.each   { |word, dens| @analysis[word][:density] = dens }
       @analysis
-    end
-
-    def words
-      @words = []
-      word_analysis(@string)
-      @analysis.each_pair { |word, values| @words.push SeoWord.new(word, values[:frequency], values[:density])}
-      @words
     end
 
     def word_density(string)
@@ -45,6 +88,10 @@ module Dashboard
       @counter.token_frequency
     end
 
+    def exclude_img_attrs
+      /src.+[\.][\w]{3}["|']/i
+     end
+
     def html_tags
       ["figcaption", "figure", "amazonaws", "https", "booqcms", "class",
         "inline-image", "id", "src", "href", "alt", "title", "description",
@@ -52,6 +99,7 @@ module Dashboard
         "youtube", "uploads", "target", "blank", "embed", "xs", "''", "'blank'",
         "video", "video-wrapper", "img", "com"]
     end
+
 
     def stop_words
         %w(a about above after again against all am an and any are aren't as at be because
@@ -70,18 +118,17 @@ module Dashboard
     end
 
     def html_and_stop_words
-      stop_words.concat html_tags
+      html_tags.concat stop_words
     end
 
     class SeoWord < SeoAnalyzer
       attr_accessor :word, :frequency, :density
 
-      def initialize(word, frequency, density)
+      def initialize(word, frequency = 0, density = 0)
         @word = word
         @frequency = frequency
         @density = density
       end
-
       def syllables
         word_dup = @word.dup
         return 1 if word_dup.length <= 3
@@ -89,8 +136,6 @@ module Dashboard
         word_dup.sub!(/^y/, '')
         word_dup.scan(/[aeiouy]{1,2}/).size
       end
-
     end
-
   end
 end

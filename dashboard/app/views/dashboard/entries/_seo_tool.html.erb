@@ -34,9 +34,6 @@
        <td><%= w.frequency %></td>
        <td><%= w.density %></td>
      </tr>
-     <tr>
-       <td><%= w.syllables%></td>
-     </tr>
    <% end %>
  </tbody>
  <tfoot>
@@ -44,4 +41,22 @@
      <td clospan="3"><button type="button" class="clear-highlighting btn-small">clear highlighting</button></td>
    </tr>
  </tfoot>
+</table>
+
+<table>
+  <thead>
+   <tr>
+     <th colspan="2">Readability Score</th>
+   </tr>
+   <tr>
+     <th>score</th>
+     <th>meaning</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td><%= seo_analysis.readibility_score %></td>
+     <td><%= seo_analysis.score_meaning %></td>
+   </tr>
+ </tbody>
 </table>
