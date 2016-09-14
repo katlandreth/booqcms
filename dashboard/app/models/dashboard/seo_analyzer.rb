@@ -2,7 +2,7 @@ module Dashboard
   class SeoAnalyzer < WordsCounted::Counter
     attr_accessor :string
 
-    def initialize(string)
+    def initialize(string = 'There is no body yet, please write some content. For another thing, write some more.')
       @string = string.gsub(/src.+[\.][\w]{3}["|']/i, '')
     end
 

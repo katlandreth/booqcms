@@ -51,7 +51,7 @@ module Dashboard
       if @entry.payload != nil
         SeoAnalyzer.new(@entry.payload)
       else
-        SeoAnalyzer.new("0")
+        SeoAnalyzer.new("No body found.")
       end
     end
 
