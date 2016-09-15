@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   mount Dashboard::Engine, at: '/admin'
 
-  # Post.where.not(slug: nil).all.each do |blogpost|
-  #    get '/:slug', to: 'posts#slug'
-  # end
+  Post.where.not(slug: nil).all.each do |blogpost|
+     get '/:slug', to: 'posts#slug'
+  end
   root to: 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
