@@ -1,2 +1,2 @@
-class Post < Dashboard::Entry
-end
+# class Post < Dashboard::Entry
+# end
