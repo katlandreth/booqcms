@@ -1,4 +1,4 @@
-class RegistrationsController < Devise::RegistrrationsController
+class RegistrationsController < Devise::RegistrationsController
   before_action :one_user_registered?, only: [:new, :create]
 
   protected
