@@ -1,6 +1,6 @@
 Dashboard::Engine.routes.draw do
 
-  devise_for :users, class_name: "Dashboard::User", module: :devise, controllers: {registrations: "dashboard/registrations"}
+  devise_for :users, class_name: "Dashboard::User", module: :devise
   get 'tags/:tag', to: 'entries#index', as: "tag"
   get 'media-library/:entry_id', to: 'media#index', as: "media_library"
   get 'media-show/:id/:entry_id', to: 'media#show', as: "media_show"
