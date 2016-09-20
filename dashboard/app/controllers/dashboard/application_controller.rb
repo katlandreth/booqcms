@@ -1,6 +1,7 @@
 module Dashboard
   class ApplicationController < ActionController::Base
-    before_action :authenticate_user!
+    before_filter :auth_user
+
 
     protect_from_forgery with: :exception
 
@@ -14,4 +15,10 @@ module Dashboard
   end
   helper_method :content_entry_path
   end
+end
+
+private
+
+def auth_user
+  redirect_to new_user_registration_url unless user_signed_in?
 end
