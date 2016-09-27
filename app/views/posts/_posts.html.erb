@@ -13,7 +13,7 @@
       <div class="post-excerpt">
         <%= render 'share_buttons' %>
         <h2><%= post.title %></h2>
-        <p><%= truncate(post.payload, length: 175, separator: ' ') %></p>
+        <p><%= truncate(strip_tags(markdown(post.payload)), length: 175, separator: ' ') %></p>
         <div class="post-tags"><%= show_tags(post) %></div>
       </div>
       <% end %>
