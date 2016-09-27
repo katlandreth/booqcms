@@ -1,9 +1,9 @@
 <div class="sort_and_filter">
-  <%= form_tag category_path, method: :get, remote: true, class: "sort-and-filter" do %>
+  <%= form_tag filter_path, method: :get, remote: true, class: "sort-and-filter" do %>
     <div class="input-group">
-      <%= label_tag "post_type"  %>
+      <%= label_tag "format"  %>
       <div class="select">
-        <%= select_tag("type", options_for_select(["All", "Video", "Written"], "All")) %>
+        <%= select_tag(:content_format, options_for_select(["all", "video", "written"], "all")) %>
         <div class="select__arrow"></div>
       </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="select__arrow"></div>
       </div>
     </div>
-    <%= hidden_field_tag :post_type, "value", id: "post_type_field" %>
+    <%= hidden_field_tag :post_type, "tutorial", id: "post_type_field" %>
     <%= submit_tag%>
   <% end %>
 </div>

@@ -1,7 +1,6 @@
 module Dashboard
   class Entry < ActiveRecord::Base
     include Dashboard::MarkdownHelper
-    # scope :published, -> { where('published_at <= ?', Time.zone.now) }
 
     has_drafts
     has_many :taggings
@@ -10,30 +9,42 @@ module Dashboard
     validates :published_at, absence: { message: "body can't be blank"}, unless: :payload?
     validates :published_at, absence: { message: "featured image can't be blank"}, unless: :featured_image?
 
+    # def published
+    #   Dashboard::Entry.published
+    # end
+
     def self.tagged_with(name)
       if name != "all"
-        Dashboard::Tag.find_by_name!(name).entries.published
+        joins(:tags).where("name = ?", name )
       else
-        Entry.published.all
+        all
       end
     end
 
-    def self.post_type(*type)
+    def self.post_type(type = 'tutorial')
       if type.size > 0
-        Dashboard::Entry.where(post_type: type)
+        self.where(post_type: type)
       elsif self.count > 0
         self.first[:post_type]
       end
+    end
+
+    def self.content_format(c_format = 'all')
+      if c_format != "all"
+        where(content_format: c_format)
+      else
+        all
+      end
+    end
+
+    def self.sorted_by(order)
+       self.order(:published_at => order)
     end
 
     def all_tags=(names)
       self.tags = names.split(",").map do |name|
         Dashboard::Tag.where(name: name.strip).first_or_create!
       end
-    end
-
-    def self.sorted_by(order)
-       self.order(:published_at => order)
     end
 
     def all_tags

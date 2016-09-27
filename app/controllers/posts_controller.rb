@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   respond_to :html, :json, :js
 
   def index
-    @posts = Post.published.post_type(:tutorial)
+    @posts = Post.published.post_type(:tutorial).sorted_by('desc')
   end
 
   def show
@@ -14,11 +14,8 @@ class PostsController < ApplicationController
      render 'show'
   end
 
-  def book
-  end
-
   def filter
-    @posts = Post.published.tagged_with(params[:tag]).post_type(params[:post_type]).sorted_by(params[:order])
+    @posts = Post.published.post_type(params[:post_type]).tagged_with(params[:tag]).content_format(params[:content_format]).sorted_by(params[:order])
     respond_with @posts
   end
 

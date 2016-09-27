@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:show, :index]
 
   get 'tags/:tag', to: 'posts#index', as: "tag"
-  get 'category', to: 'posts#filter', as: "category"
+  get 'filter', to: 'posts#filter', as: "filter"
   get 'gimp_book', to: 'posts#book', as: "gimp_book"
 
   mount Dashboard::Engine, at: '/admin'
