@@ -10,6 +10,7 @@
 <body class="type-system-rounded">
   <%= yield %>
 
+
 <!-- Google Analytics Tracking -->
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,5 +22,19 @@
   ga('send', 'pageview');
 
   </script>
+  <script>
+    $(document).ready(function(){
+      $('.btn-look-inside').click(function(){
+        $('#look-inside-modal').addClass('modal-active');
+        $('.page').addClass('modal-active');
+      });
+      $('#look-inside-modal span').click(function(){
+        $('#look-inside-modal').removeClass('modal-active');
+        $('.page').removeClass('modal-active');
+      })
+    });
+  </script>
+  </script>>
+
 </body>
 </html>
