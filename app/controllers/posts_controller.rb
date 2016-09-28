@@ -19,10 +19,7 @@ class PostsController < ApplicationController
     respond_with @posts
   end
 
-  def book
-   render action: "book", layout: "/layouts/book"
-  end
-
+  
   private
 
   def all_post_types

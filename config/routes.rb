@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'tags/:tag', to: 'posts#index', as: "tag"
   get 'filter', to: 'posts#filter', as: "filter"
-  get 'gimp_book', to: 'posts#book', as: "gimp_book"
+  get 'gimp-book', to: 'book_sales#book', as: "gimp_book"
 
   mount Dashboard::Engine, at: '/admin'
 

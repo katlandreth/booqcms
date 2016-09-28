@@ -1,0 +1,76 @@
+<div class="page">
+  <nav class="book-nav">
+    <header class="navigation" role="banner">
+      <div class="navigation-wrapper">
+      <%= link_to root_path, class: "logo" do %>
+        <%= image_tag 'edit_image.svg', class: "nav-logo" %>
+        <h1 id="nav-title">HOW TO GIMP</h1>
+      <% end %>
+      </div>
+    </header>
+  </nav>
+  <div class="hero-image">
+    <div class="hero-benefit-box">
+      <h1>You <u>Can</u> Learn <span title="The Gnu Image Manipulation Program">GIMP</span></h1>
+      <h3>Even if you're not a rocket scientist</h3>
+      <a class="scroll-on-page-link" href="#scroll-link-1"><button class="cta-button">Buy the Book</button></a>
+    </div>
+  </div>
+  <div class="how-it-works">
+    <h2>How to GIMP</h2>
+    <h3>A <span title="The Gnu Image Manipulation Program">GIMP</span> Book for Complete Beginners</h3>
+    <div class="third">
+      <div>1</div>
+      <h3>Set Up GIMP</h3>
+      <p>GIMP doesn't have to be so complicated. You'll learn GIMP's interface so you can find tools when you need them.</p>
+    </div>
+    <div class="third" >
+      <div>2</div>
+      <h3>Learn the Basics</h3>
+      <p>This GIMP book doesn't assume you're a computer guru.
+      Step-by-step instructions guide you through GIMP's tools and features.</p>
+    </div>
+    <div class="third">
+      <div>3</div>
+      <h3>Grow Your Skills</h3>
+      <p>Combine your new GIMP skills to work through more advanced tutorials.
+        30+ practice images make following along simple.</p>
+    </div>
+  </div>
+  <%= render 'look_inside' %>
+  <%= render "pricing" %>
+  <footer></footer>
+</div>
+<script>
+$(document).ready(function(){
+(function (jQuery) {
+  jQuery.mark = {
+    jump: function (options) {
+      var defaults = {
+        selector: 'a.scroll-on-page-link'
+      };
+      if (typeof options == 'string') {
+        defaults.selector = options;
+      }
+
+      options = jQuery.extend(defaults, options);
+      return jQuery(options.selector).click(function (e) {
+        var jumpobj = jQuery(this);
+        var target = jumpobj.attr('href');
+        var thespeed = 1000;
+        var offset = jQuery(target).offset().top;
+        jQuery('html,body').animate({
+          scrollTop: offset
+        }, thespeed, 'swing');
+        e.preventDefault();
+      });
+    }
+  };
+})(jQuery);
+
+
+jQuery(function(){
+  jQuery.mark.jump();
+});
+});
+</script>

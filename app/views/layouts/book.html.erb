@@ -2,72 +2,24 @@
 <html>
 <head>
   <title>GIMP Book</title>
+
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body class="type-system-rounded">
-  <div class="page">
-    <nav class="book-nav"></nav>
-    <div class="hero-image">
-      <div class="hero-benefit-box">
-        <h1>You <u>Can</u> Learn GIMP</h1>
-        <h3>Even if you're not a rocket scientist</h3>
-        <button class="cta-button">Buy the Book</button>
-      </div>
-    </div>
-    <div class="how-it-works">
-      <div class="third">
-        <div>1</div>
-        <h3>Set Up GIMP</h3>
-        <p>GIMP doesn't have to be so complicated. Learn how to
-          simplify the interface, and learn how to find tools
-           when you need them.</p>
-      </div>
-      <div class="third" >
-        <div>2</div>
-        <h3>Learn the Basics</h3>
-        <p>This GIMP book doesn't assume you have prior experience.
-        Follow easy step-by-step instructions on to find and how to use
-        the most useful tools.</p>
-      </div>
-      <div class="third">
-        <div>3</div>
-        <h3>Build Up Skills</h3>
-        <p>Combine basic skills to work through more advanced tutorials,
-          using 30+ free practice images to follow along.</p>
-      </div>
-    </div>
-    <section class="testimonials">
-      <div class="testimonial">
-        <div class="quote">
-          "I’m delighted with your book. The layout is brilliant and each step
-          by step explanation is just perfect."
-        </div>
-        <div class="author">
-          <img/>
-          <a href="http://tomndi.blogspot.com">Tom, Canada</a>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="quote"></div>
-        <div class="author">
-          <img/>
-          <a href=""></a>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="quote"></div>
-        <div class="author">
-          <img/>
-          <a href=""></a>
-        </div>
-      </div>
-    </section>
-    <div class="look-inside"></div>
-    <button>Buy the Book</button>
-    <%= render "pricing" %>
-    <footer></footer>
-  </div>
+  <%= yield %>
+
+<!-- Google Analytics Tracking -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78990277-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
 </body>
 </html>

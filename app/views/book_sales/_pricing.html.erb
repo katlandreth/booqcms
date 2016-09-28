@@ -1,15 +1,17 @@
-<section class="book-pricing">
+<section class="book-pricing" id="scroll-link-1">
   <hgroup><h2>Purchase Options</h2></hgroup>
 
   <div class="book-pricing-content">
     <div class="book-option">
-        <h3>EPUB</h3>
-
+        <h3>
+          <%= image_tag 'amazon-logo_black.png', class: 'pricing-file-image amazon' %>
+          EPUB
+        </h3>
         <span class="price"><sup class="dollar">$</sup>9.99</span>
         <ul>
           <li><em>Kindle</em> Optimised</li>
           <li><em>Instant</em> Download</li>
-          <li><em>300+</em> Pages</li>
+          <li><em>Same</em> Content as PDF</li>
           <li><em>30+</em> Practice Images</li>
           <li><em>GIMP 2.8</em> Compatible</li>
         </ul>
@@ -19,8 +21,10 @@
     </div>
 
     <div class="book-option">
-      <h3>PDF EBOOK</h3>
-
+      <h3>
+        <%= image_tag 'Adobe_PDF_file_icon_32x32.png', class: 'pricing-file-image pdf' %>
+        PDF EBOOK
+      </h3>
       <span class="price"><sup class="dollar">$</sup>9.99</span>
       <ul>
         <li><em>Desktop</em> Optimised</li>
@@ -36,14 +40,20 @@
 
     <div class="book-option">
       <h3>Paperback Book</h3>
-      <span class="coming-soon">Coming Soon</span>
-      <div class="email-form">
+      <span class="price"><sup class="dollar">Coming Soon</sup></span>
+     <ul>
+       <li><p>A printed paperback edition is in the works! Enter your email address below to get updates
+        on its availability.</p>
+      </li>
+    </ul>
+      <div class="email-form" style="margin:10px;">
         <label for="email">Email Address</label>
         <input type="email" name="email" id="email"/>
       </div>
       <div class="pricing-button">
         <button>Submit Email</button>
       </div>
+      <span class="privacy-link">Hate spam? Us too!</br>Here's our <a href="#">privacy policy</a> to prove it.</span>
     </div>
   </div>
 </section>
