@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'posts#index', as: "tag"
   get 'filter', to: 'posts#filter', as: "filter"
   get 'gimp-book', to: 'book_sales#book', as: "gimp_book"
+  get 'privacy-policy', to:'privacy_policy#show', as: "privacy_policy"
 
   mount Dashboard::Engine, at: '/admin'
 
