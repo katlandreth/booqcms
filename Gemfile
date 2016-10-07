@@ -15,7 +15,7 @@ gem 'turbolinks'
 gem 'simple_form'
 gem 'responders'
 gem "booqcms_theme", git: "git://github.com/katlandreth/booqcms_theme.git"
-# gem 'booqmark', path: '../../booqmark'
+gem "booqmail", git: "git://github.com/katlandreth/booqmail.git"
 gem "booqmark", git: "git://github.com/katlandreth/booqmark.git"
 gem 'utf8-cleaner'
 

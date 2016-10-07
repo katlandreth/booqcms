@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160520172540) do
+ActiveRecord::Schema.define(version: 20161006215104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -153,4 +153,26 @@ ActiveRecord::Schema.define(version: 20160520172540) do
   add_index "drafts", ["updated_at"], name: "index_drafts_on_updated_at", using: :btree
   add_index "drafts", ["whodunnit"], name: "index_drafts_on_whodunnit", using: :btree
 
+  create_table "gimp_versions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "operating_systems", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "os_versions", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "operating_system_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "os_versions", ["operating_system_id"], name: "index_os_versions_on_operating_system_id", using: :btree
+
+  add_foreign_key "os_versions", "operating_systems"
 end

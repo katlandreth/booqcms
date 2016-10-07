@@ -322,4 +322,37 @@ label {
   }
 }
 
-/* SHARE BUTTONS */
+
+.type-system-rounded .booqmail-form-wrapper {
+  width:650px;
+  margin: 40px auto;
+  padding:40px;
+  box-shadow:0 0 3px rgba(0,0,0,0.4);
+  h1 {
+    font-variant: small-caps;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  input, textarea {
+    width:50%;
+  }
+  textarea {
+    min-height:150px;
+  }
+  .error-messages-container {
+    p {
+      font-size:16px;
+      padding-top:20px;
+      margin-bottom:0px;
+    }
+    ul {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.sort_and_filter label {
+    display: block;
+}

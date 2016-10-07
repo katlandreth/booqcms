@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require theme
+//= require booqmail/application
 //= require_tree .
