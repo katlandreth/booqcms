@@ -39,7 +39,10 @@
     </div>
 
     <div class="book-option">
-      <h3>Paperback Book</h3>
+      <h3>
+        <%= image_tag 'paperback.png', class: 'pricing-file-image paperback' %>
+        Paperback Book
+      </h3>
       <span class="price"><sup class="dollar">Coming Soon</sup></span>
      <ul>
        <li><p>A printed paperback edition is in the works! Enter your email address below to get updates
@@ -50,10 +53,10 @@
         <label for="email">Email Address</label>
         <input type="email" name="email" id="email"/>
       </div>
+      <span class="privacy-link"><a href="#">We promise</a> not to spam you.</span>
       <div class="pricing-button">
         <button>Submit Email</button>
       </div>
-      <span class="privacy-link">Hate spam? Us too!</br>Here's our <a href="#">privacy policy</a> to prove it.</span>
     </div>
   </div>
 </section>

@@ -173,8 +173,8 @@ img.nav-logo {
   height:400px;
   position: relative;
   &:hover {
-    outline: 5px solid #49B5FF;
-    outline-offset: -5px;
+    outline: 10px solid #cbeaf2;
+    outline-offset: -10px;
     cursor: pointer;
   }
 }
@@ -308,9 +308,12 @@ label {
   padding-bottom: 40px;
 }
 
-.post-tags {
+.type-system-rounded .post-tags {
   padding:0 40px;
   text-align: right;
+  a {
+    color: #d65959;
+  }
 }
 
 .type-system-rounded .privacy-container {
@@ -355,4 +358,18 @@ label {
 
 .sort_and_filter label {
     display: block;
+}
+
+svg.nav-logo {
+  display:inline-block;
+  height: 50px;
+  margin-right: 5px;
+  position: relative;
+  width: 40px;
+  path {
+    fill: #666;
+  }
+  circle {
+    fill: #666;
+  }
 }

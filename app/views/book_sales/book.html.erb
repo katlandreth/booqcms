@@ -3,7 +3,7 @@
     <header class="navigation" role="banner">
       <div class="navigation-wrapper">
       <%= link_to root_path, class: "logo" do %>
-        <%= image_tag 'edit_image.svg', class: "nav-logo" %>
+        <%= inline_svg("edit_image.svg", class: 'nav-logo') %>
         <h1 id="nav-title">HOW TO GIMP</h1>
       <% end %>
       </div>
@@ -11,7 +11,7 @@
   </nav>
   <div class="hero-image">
     <div class="hero-benefit-box">
-      <h1>You <u>Can</u> Learn <span title="The Gnu Image Manipulation Program">GIMP</span></h1>
+      <h1>You <span class="small-caps">Can</span> Learn <span title="The Gnu Image Manipulation Program">GIMP</span></h1>
       <h3>Even if you're not a rocket scientist</h3>
       <a class="scroll-on-page-link" href="#scroll-link-1"><button class="cta-button">Buy the Book</button></a>
     </div>
@@ -42,36 +42,36 @@
   <footer></footer>
 </div>
 <%= render 'modal' %>
+
 <script>
+//Smooth Scroll
 $(document).ready(function(){
-(function (jQuery) {
-  jQuery.mark = {
-    jump: function (options) {
-      var defaults = {
-        selector: 'a.scroll-on-page-link'
-      };
-      if (typeof options == 'string') {
-        defaults.selector = options;
+  (function (jQuery) {
+    jQuery.mark = {
+      jump: function (options) {
+        var defaults = {
+          selector: 'a.scroll-on-page-link'
+        };
+        if (typeof options == 'string') {
+          defaults.selector = options;
+        }
+
+        options = jQuery.extend(defaults, options);
+        return jQuery(options.selector).click(function (e) {
+          var jumpobj = jQuery(this);
+          var target = jumpobj.attr('href');
+          var thespeed = 1000;
+          var offset = jQuery(target).offset().top;
+          jQuery('html,body').animate({
+            scrollTop: offset
+          }, thespeed, 'swing');
+          e.preventDefault();
+        });
       }
-
-      options = jQuery.extend(defaults, options);
-      return jQuery(options.selector).click(function (e) {
-        var jumpobj = jQuery(this);
-        var target = jumpobj.attr('href');
-        var thespeed = 1000;
-        var offset = jQuery(target).offset().top;
-        jQuery('html,body').animate({
-          scrollTop: offset
-        }, thespeed, 'swing');
-        e.preventDefault();
-      });
-    }
-  };
-})(jQuery);
-
-
-jQuery(function(){
-  jQuery.mark.jump();
-});
+    };
+  })(jQuery);
+  jQuery(function(){
+    jQuery.mark.jump();
+  });
 });
 </script>

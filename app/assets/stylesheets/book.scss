@@ -1,92 +1,97 @@
-$action-color: #31B1FA;
-// $special-color: #ECCA07;
+// $action-color: #31B1FA;
+// $action-color: #cbeaf2;
+$action-color:#73bccf;
 $special-color: #FEB508;
+$med-text-color: #666;
 
 
+.type-system-rounded h1,
+.type-system-rounded h2,
+.type-system-rounded h3,
+.type-system-rounded h4,
+body.type-system-rounded p {
+  color:$med-text-color;
+}
 
-  .hero-image {
-    background: url("keyboard.jpg") no-repeat;
-    height: 500px;
-    background-size: cover;
-    position:relative;
-    width:100%;
-  }
+.hero-image {
+  background: url("keyboard.jpg") no-repeat;
+  height: 500px;
+  background-size: cover;
+  position:relative;
+  width:100%;
+}
 
-  .type-system-rounded .hero-benefit-box {
-    position:absolute;
-    top:110px;
-    left:50%;
-    margin-left:-250px;
-    padding:40px;
-    width:500px;
-    background: rgba(255,255,255,0.7);
-    text-align:center;
-    button {
-      display:block;
-      margin: 30px auto 5px auto;
-    }
-    h1 {
-      margin-bottom: 0.25em;
-    }
-  }
-
+.type-system-rounded  .hero-benefit-box {
+  position:absolute;
+  top:110px;
+  left:50%;
+  margin-left:-250px;
+  padding:40px;
+  width:500px;
+  background: rgba(255,255,255,0.7);
+  text-align:center;
   button {
-    font-size:20px;
-    font-weight:500;
-    background: $special-color;
-    border: none;
-    color: white;
-    border-radius: 0;
-    box-shadow: 0;
-    padding:15px;
-    &:hover {
-      cursor: pointer;
+    display:block;
+    margin: 30px auto 5px auto;
+  }
+  h1 {
+    margin-bottom: 0.25em;
+  }
+}
+
+.type-system-rounded button {
+  font-size:20px;
+  font-weight:500;
+  background: $special-color;
+  border: none;
+  color: white;
+  border-radius: 0;
+  box-shadow: 0;
+  padding:15px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.type-system-rounded .how-it-works {
+  margin:10px auto;
+  color: $action-color;
+  overflow:hidden;
+  width: 1000px;
+  h2 {
+    font-size: 2.5em;
+    font-weight:bold;
+    text-align:center;
+    margin-top:40px;
+    margin-bottom:5px;
+  }
+  h3 {
+    text-align:center;
+    font-size: 1.75em;
+    margin-bottom:30px;
+  }
+  .third {
+    width:30%;
+    margin:1.6%;
+    float:left;
+    position:relative;
+    min-height:120px;
+    div {
+      border-bottom: 1px solid;
+      text-align:left;
+    }
+    h3{
+      font-size:30px;
+      vertical-align:bottom;
+      margin-top:10px;
+      color: $action-color;
+      text-align: left;
+    }
+    p {
+      font-size:18px;
     }
   }
-
-  .type-system-rounded .how-it-works {
-    margin:10px auto;
-    color: $action-color;
-    overflow:hidden;
-    width: 1000px;
-    h2 {
-      color:#333;
-      font-size: 2.5em;
-      font-weight:bold;
-      text-align:center;
-      margin-top:40px;
-      margin-bottom:5px;
-    }
-    h3 {
-      color:#333;
-      text-align:center;
-      font-size: 1.75em;
-      margin-bottom:30px;
-    }
-    .third {
-      width:30%;
-      margin:1.6%;
-      float:left;
-      position:relative;
-      min-height:120px;
-      div {
-        border-bottom: 1px solid;
-        text-align:left;
-      }
-      h3{
-        font-size:30px;
-        vertical-align:bottom;
-        margin-top:10px;
-        color: $action-color;
-        text-align: left;
-      }
-      p {
-        font-size:18px;
-        color:#333;
-      }
-    }
-  }
-
+}
 
 .book-pricing-content {
   display:flex;
@@ -126,25 +131,26 @@ $special-color: #FEB508;
     }
   }
   h3{
-    color:#666;
+    color:$med-text-color;
     font-variant: small-caps;
     font-style:italic;
   }
 }
 
 .type-system-rounded .book-option p {
-  margin-bottom: 0.5em;
+  margin: 10px auto;
+  font-size: 16px;
+  width:70%;
 }
 
 .pricing-button {
   margin-top:auto;
   margin-bottom:20px;
   button{
-    background: $action-color;
+    background: $special-color;
     color:#fff;
   }
 }
-
 
 .dollar {
   font-size:20px;
@@ -161,8 +167,8 @@ $special-color: #FEB508;
 }
 
 .privacy-link {
-     color: #666666;
-     font-size: 12px;
+  color: $med-text-color;
+  font-size: 12px;
 }
 
 .pricing-file-image {
@@ -176,6 +182,9 @@ $special-color: #FEB508;
   &.pdf {
     width: 32px;
   }
+  &.paperback {
+     width:35px;
+   }
 }
 
 .look-inside {
@@ -204,9 +213,23 @@ $special-color: #FEB508;
   img {
     width:70%;
     box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    padding: 20px 10px;
+    background: #f6f6f6;
+    outline: 15px solid transparent;
+    outline-offset: -15px;
+    transition: outline 0.2s ease-in;
+    &:hover {
+      outline: 15px solid $action-color;
+      outline-offset: -15px;
+      transition: outline 0.2s ease-out;
+      cursor:pointer;
+    }
   }
   h2 {
     font-size:2em;
+  }
+  p {
+    line-height:1.5;
   }
 }
 
@@ -215,7 +238,7 @@ $special-color: #FEB508;
   cursor:pointer;
 }
 
-figure {
+.half figure {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -235,7 +258,7 @@ figure {
   z-index: 1000;
   opacity:0;
   transition: height 1s 1s ease, width 1s 1s ease, opacity 0.5s ease, top 0.5s ease;
-  h1{
+  h1 {
     text-align:center;
   }
 }
@@ -267,4 +290,32 @@ figure {
     background:rgba(0,0,0,0.3);
     z-index:500;
   }
+}
+
+.email-form label {
+  display:block;
+}
+
+.small-caps {
+  font-variant: small-caps;
+  font-weight:bold;
+  position:relative;
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: #666;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transform-origin: top left;
+    animation: underline 0.2s ease-in-out 3s forwards;
+  }
+}
+
+@keyframes underline {
+    0%   {transform: scaleX(0);}
+    100% {transform: scaleX(1);}
 }
