@@ -130,13 +130,15 @@ img.nav-logo {
         float:left;
         width:33.3%;
         background:#f6f6f6;
-        // color:#4F94CD;
         color: #333;
         box-shadow:0 0 3px rgba(0,0,0,0.4);
         font-size:26px;
         font-family: "Montserrat";
         text-align: center;
         padding:20px;
+        &:hover {
+          cursor: pointer;
+        }
         &.active_tab {
           position:relative;
           background:#fff;
@@ -311,9 +313,15 @@ label {
 .type-system-rounded .post-tags {
   padding:0 40px;
   text-align: right;
-  a {
-    color: #d65959;
-  }
+  color: #666;
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:100%;
+  padding:15px 50px;
+  background: #efefef;
+  font-weight:bold;
+  z-index: -1;
 }
 
 .type-system-rounded .privacy-container {
