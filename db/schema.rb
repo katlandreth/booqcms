@@ -11,69 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006215104) do
+ActiveRecord::Schema.define(version: 20161013194658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "booqcms_entries", force: :cascade do |t|
-    t.string   "post_type"
-    t.string   "title"
-    t.string   "slug"
-    t.text     "payload"
-    t.integer  "user_id"
-    t.string   "author_name"
-    t.datetime "published_at"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.string   "featured_image"
-    t.string   "content_format"
-    t.integer  "draft_id"
-    t.datetime "trashed_at"
-  end
-
-  add_index "booqcms_entries", ["post_type"], name: "index_booqcms_entries_on_post_type", using: :btree
-  add_index "booqcms_entries", ["slug"], name: "index_booqcms_entries_on_slug", using: :btree
-  add_index "booqcms_entries", ["user_id"], name: "index_booqcms_entries_on_user_id", using: :btree
-
-  create_table "booqcms_media", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "file"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "booqcms_taggings", force: :cascade do |t|
-    t.integer "tag_id"
-    t.integer "entry_id"
-  end
-
-  add_index "booqcms_taggings", ["tag_id"], name: "index_booqcms_taggings_on_tag_id", using: :btree
-
-  create_table "booqcms_tags", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "booqcms_users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-  end
-
-  add_index "booqcms_users", ["email"], name: "index_booqcms_users_on_email", unique: true, using: :btree
-  add_index "booqcms_users", ["reset_password_token"], name: "index_booqcms_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "dashboard_entries", force: :cascade do |t|
     t.string   "post_type"
@@ -89,6 +30,7 @@ ActiveRecord::Schema.define(version: 20161006215104) do
     t.string   "content_format"
     t.integer  "draft_id"
     t.datetime "trashed_at"
+    t.string   "word_count"
   end
 
   add_index "dashboard_entries", ["post_type"], name: "index_dashboard_entries_on_post_type", using: :btree
