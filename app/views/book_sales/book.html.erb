@@ -84,8 +84,17 @@ $(document).ready(function(){
 </script>
 <script>
 $(document).ready(function() {
-  $(".type-letter").each(function(index){
-    $(this).delay(600*(index+1)).show(0);
-  });
+
+  var typeAnimation = function(){
+    console.log("inside typeAnimation");
+    $(".type-letter").each( function(index){
+      $(this).hide();
+    });
+    $(".type-letter").each(function(index){
+      $(this).delay(500*(index+1)).show(0);
+    });
+    setTimeout(typeAnimation, 5000);
+  };
+  typeAnimation();
 });
 </script>
