@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GIMP Book</title>
+  <head>
+    <title>GIMP Book</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="type-system-rounded">
+    <%= yield %>
+    <!-- Google Analytics Tracking -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body class="type-system-rounded">
-  <%= yield %>
+    ga('create', 'UA-78990277-1', 'auto');
+    ga('send', 'pageview');
 
-
-<!-- Google Analytics Tracking -->
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-78990277-1', 'auto');
-  ga('send', 'pageview');
-
-  </script>
-  <script>
-    $(document).ready(function(){
-      $('.btn-look-inside').click(function(){
-        $('#look-inside-modal').addClass('modal-active');
-        $('.page').addClass('modal-active');
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('.btn-look-inside').click(function(){
+          $('#look-inside-modal').addClass('modal-active');
+          $('.page').addClass('modal-active');
+        });
+        $('#look-inside-modal span').click(function(){
+          $('#look-inside-modal').removeClass('modal-active');
+          $('.page').removeClass('modal-active');
+        })
       });
-      $('#look-inside-modal span').click(function(){
-        $('#look-inside-modal').removeClass('modal-active');
-        $('.page').removeClass('modal-active');
-      })
-    });
-  </script>
-  </script>>
-
-</body>
+    </script>
+    </script>
+  </body>
 </html>

@@ -1,5 +1,3 @@
-// $action-color: #31B1FA;
-// $action-color: #cbeaf2;
 $action-color:#73bccf;
 $special-color: #FEB508;
 $med-text-color: #666;
@@ -300,22 +298,44 @@ body.type-system-rounded p {
   font-variant: small-caps;
   font-weight:bold;
   position:relative;
-  &:before {
-    content: "";
-    position: absolute;
-    background-color: #666;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    transform-origin: top left;
-    animation: underline 0.2s ease-in-out 3s forwards;
-  }
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   background-color: #666;
+  //   width: 100%;
+  //   height: 2px;
+  //   bottom: 0;
+  //   left: 0;
+    // -webkit-transform: scaleX(0);
+    // transform: scaleX(0);
+    // transform-origin: top left;
+    // animation: underline 0.2s ease-in-out 3s forwards;
+  //}
 }
 
-@keyframes underline {
-    0%   {transform: scaleX(0);}
-    100% {transform: scaleX(1);}
+// @keyframes underline {
+//     0%   {transform: scaleX(0);}
+//     100% {transform: scaleX(1);}
+// }
+
+.type-letters {
+  display:inline-block;
+  position:relative;
+}
+
+.type-letter {
+  display:none;
+}
+
+.cursor:before {
+  content: "|";
+  display:inline-block;
+  font-size: 30px;
+  color: $action-color;
+  margin-left: -8px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  to{opacity: .0;}
 }
