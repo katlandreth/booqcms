@@ -11,7 +11,14 @@
   </nav>
   <div class="hero-image">
     <div class="hero-benefit-box">
-      <h1>You <span class="small-caps">Can</span> Learn <span title="The Gnu Image Manipulation Program">GIMP</span></h1>
+      <h1>You
+        <span class="small-caps type-letters">
+          <span class="type-letter">C</span>
+          <span class="type-letter">a</span>
+          <span class="type-letter">n</span>
+          <span class="cursor"></span>
+        </span>
+        Learn <span title="The Gnu Image Manipulation Program">GIMP</span></h1>
       <h3>Even if you're not a rocket scientist</h3>
       <a class="scroll-on-page-link" href="#scroll-link-1"><button class="cta-button">Buy the Book</button></a>
     </div>
@@ -72,6 +79,13 @@ $(document).ready(function(){
   })(jQuery);
   jQuery(function(){
     jQuery.mark.jump();
+  });
+});
+</script>
+<script>
+$(document).ready(function() {
+  $(".type-letter").each(function(index){
+    $(this).delay(600*(index+1)).show(0);
   });
 });
 </script>
