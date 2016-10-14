@@ -381,3 +381,15 @@ svg.nav-logo {
     fill: #666;
   }
 }
+
+.footer-list-icon {
+  width:25px;
+  height:25px;
+  vertical-align:middle;
+  path, circle {
+    fill:#666;
+  }
+  &#book-and-glasses {
+    height:20px;
+  }
+}

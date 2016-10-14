@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/katlandreth/booqcms_theme.git
-  revision: b73a38d817cfd03cdee6d9bb54aa703d2cfcf9ba
+  revision: 524aa2d88be2c9b09d8dea92c6a2584cb845bcac
   specs:
-    booqcms_theme (1.0.6)
+    booqcms_theme (1.0.7)
       sass-rails
 
 GIT
