@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'gimp-book', to: 'book_sales#book', as: "gimp_book"
   get 'privacy-policy', to:'privacy_policy#show', as: "privacy_policy"
   get 'practice-images', to:'practice_images#show', as: "practice_images"
+  get 'book-faq', to:'book_faq#show', as: "book_faq"
 
   mount Dashboard::Engine, at: '/admin'
 
