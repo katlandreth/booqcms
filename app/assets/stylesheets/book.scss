@@ -37,7 +37,8 @@ body.type-system-rounded p {
   }
 }
 
-.type-system-rounded button {
+.type-system-rounded button,
+.pricing-button input {
   font-size:20px;
   font-weight:500;
   background: $special-color;
@@ -144,7 +145,7 @@ body.type-system-rounded p {
 .pricing-button {
   margin-top:auto;
   margin-bottom:20px;
-  button{
+  input{
     background: $special-color;
     color:#fff;
   }
