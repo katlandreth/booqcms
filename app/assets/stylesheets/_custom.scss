@@ -179,6 +179,10 @@ img.nav-logo {
     outline-offset: -10px;
     cursor: pointer;
   }
+  a {
+    position:relative;
+    z-index:1000;
+  }
 }
 
 .post-excerpt-image {
