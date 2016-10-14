@@ -382,14 +382,13 @@ body.type-system-rounded p {
 @media only screen and (max-width: 550px) {
   .type-system-rounded .how-it-works .third,
   .type-system-rounded .look-inside .half,
-  .book-pricing-content .book-option,
-  .type-system-rounded .hero-benefit-box {
+  .book-pricing-content .book-option {
     width: 90%;
   }
   .type-system-rounded .look-inside,
   .type-system-rounded .how-it-works,
   .book-pricing-content {
-    padding: 20px;
+    padding: 10px;
   }
   .type-system-rounded .hero-image {
     padding:100px 0;
@@ -398,6 +397,11 @@ body.type-system-rounded p {
       top:0;
       left:0;
       margin:0 auto;
+      width: 100%;
+      padding:30px;
+      h1 {
+        font-size: 1.6em;
+      }
     }
   }
 }
