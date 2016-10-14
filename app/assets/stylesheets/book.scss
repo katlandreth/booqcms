@@ -56,7 +56,8 @@ body.type-system-rounded p {
   margin:10px auto;
   color: $action-color;
   overflow:hidden;
-  width: 1000px;
+  width: 100%;
+  padding:0 100px;
   h2 {
     font-size: 2.5em;
     font-weight:bold;
@@ -322,4 +323,81 @@ body.type-system-rounded p {
 
 @keyframes blink{
   to{opacity: .0;}
+}
+
+//MEDIA QUERRIES
+
+@media only screen
+  and (max-width: 1024px) {
+    .type-system-rounded .how-it-works .third {
+      float:none;
+      margin:10px auto;
+      display:block;
+      width: 60%;
+    }
+    .type-system-rounded .look-inside {
+      display:block;
+      padding: 100px;
+      .half {
+        display:block;
+        width:60%;
+        margin: 10px auto 100px auto;
+        img {
+          width:100%;
+        }
+      }
+    }
+  .book-pricing-content {
+    display:block;
+    width:100%;
+    padding:20px 100px;
+    margin: 10px auto;
+    .book-option {
+      display:block;
+      width:60%;
+      margin:10px auto;
+      .price {
+        display:block;
+      }
+      ul {
+        margin-top:10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .type-system-rounded .how-it-works .third,
+  .type-system-rounded .look-inside .half,
+  .book-pricing-content .book-option {
+    width: 80%;
+  }
+  .type-system-rounded .look-inside,
+  .type-system-rounded .how-it-works,
+  .book-pricing-content {
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .type-system-rounded .how-it-works .third,
+  .type-system-rounded .look-inside .half,
+  .book-pricing-content .book-option,
+  .type-system-rounded .hero-benefit-box {
+    width: 90%;
+  }
+  .type-system-rounded .look-inside,
+  .type-system-rounded .how-it-works,
+  .book-pricing-content {
+    padding: 20px;
+  }
+  .type-system-rounded .hero-image {
+    padding:100px 0;
+    .hero-benefit-box {
+      position:relative;
+      top:0;
+      left:0;
+      margin:0 auto;
+    }
+  }
 }
