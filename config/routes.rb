@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'book_faq/show'
+
   resources :posts, only: [:show, :index]
 
   get 'tags/:tag', to: 'posts#index', as: "tag"
