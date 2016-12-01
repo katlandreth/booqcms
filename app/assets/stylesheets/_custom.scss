@@ -337,7 +337,6 @@ label {
   }
 }
 
-
 .type-system-rounded .booqmail-form-wrapper {
   width:650px;
   margin: 40px auto;
@@ -350,7 +349,7 @@ label {
     font-size: 14px;
     line-height: 1.2;
   }
-  input, textarea {
+  input {
     width:50%;
   }
   textarea {
@@ -395,5 +394,15 @@ svg.nav-logo {
   }
   &#book-and-glasses {
     height:20px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .type-system-rounded .booqmail-form-wrapper  {
+    width:100%;
+    input{
+      width:100%;
+    }
   }
 }
