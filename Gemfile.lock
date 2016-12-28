@@ -7,9 +7,9 @@ GIT
 
 GIT
   remote: git://github.com/katlandreth/booqmail.git
-  revision: 9e69a0fb54898b1e6b95ce79a0e975bd3ac614f1
+  revision: 83b0b23e23629ab6445b0656fecdc3d9d089d25e
   specs:
-    booqmail (1.2.6)
+    booqmail (1.2.11)
       bootstrap-sass (~> 3.3.6)
       coffee-rails
       figaro
