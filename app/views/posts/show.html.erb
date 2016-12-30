@@ -1,4 +1,12 @@
 <%= render "layouts/show_paralax" %>
 <div class="show-post">
   <%= markdown(@post.payload) %>
+  <hr>
+  <div class="discus-wrapper">
+    <%= disqus_init :short_name => "howtogimp",
+                    :public_key => "",
+                    :secret_key => "",
+                    :access_token => "" %>
+    <%- disqus_thread %>
+  </div>
 </div>

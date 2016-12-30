@@ -18,6 +18,7 @@ gem "booqcms_theme", git: "git://github.com/katlandreth/booqcms_theme.git"
 gem "booqmail", git: "git://github.com/katlandreth/booqmail.git"
 gem "booqmark", git: "git://github.com/katlandreth/booqmark.git"
 gem 'utf8-cleaner'
+gem 'disqus_rails'
 
 group :development, :test do
   gem 'byebug'
