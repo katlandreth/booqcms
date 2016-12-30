@@ -3,14 +3,20 @@
     <div class="input-group">
       <%= label_tag "format"  %>
       <div class="select">
-        <%= select_tag(:content_format, options_for_select(["all", "video", "written"], "all")) %>
+        <%= select_tag(:content_format,
+        options_for_select([
+          ["all (#{posts_of_type(@post_type).count})", "all"],
+          ["video (#{count_all_posts_of_format('video', @post_type)})", "video"],
+          ["written (#{count_all_posts_of_format('written', @post_type)})", "written"]
+          ], "all")
+          ) %>
         <div class="select__arrow"></div>
       </div>
     </div>
     <div class="input-group">
       <%= label_tag "category"  %>
       <div class="select">
-        <%= select_tag(:tag, options_for_select(tag_filter,  "All"), autocomplete: "off") %>
+        <%= select_tag(:tag, options_for_select(tag_filter(@post_type),  "All"), autocomplete: "off") %>
         <div class="select__arrow"></div>
       </div>
     </div>
@@ -22,6 +28,6 @@
       </div>
     </div>
     <%= hidden_field_tag :post_type, "tutorial", id: "post_type_field" %>
-    <%= submit_tag%>
+    <%= submit_tag "", style: "display: none;" %>
   <% end %>
 </div>
