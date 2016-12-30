@@ -1,1 +1,27 @@
-<h1>Book Faq</h1>
+<%= render "layouts/show_paralax" %>
+<div class="show-post">
+  <h1>Book Purchase Questions</h1>
+  <h2>How do I buy this book for my class? Is there an educators discount?</h2>
+  <p>At the moment, the book is only available in digital form, so how you buy
+    the book for your class depends on how your class will use it.</p>
+  <p>Some classes purchase a copy of the book for each computer in their classroom. Others purchase a copy for each student.
+  Either way, I'll work with you to get you the apropriate number of copies for your needs.</p>
+  <p>I offer a 10% educators discount, just <%= link_to "send me an email", new_contact_message_path %> to get started.</p>
+
+  <h2>How can I buy a print copy?</h2>
+  <p>How to GIMP is only available as a digital book at the moment. But, a new
+    edition is in the works, and it should be available as both a digital and paperback book!</p>
+  <p>Can sign up for email notificationa about the new edition's progress from <%= link_to "the book sales page", gimp_book_path  %>.
+    You're also welcome to print your own copy for personal use from the PDF. But please don't distribute printed copies.</p>
+
+  <h1>Questions about GIMP</h1>
+  <h2>I lost/accidentally closed my Toolbox! Help!</h2>
+  <p>First, try pressing Ctrl B on your keyboard. The Toolbox <i>should</i> reappear.</p>
+  <p>If that didn't do the trick, go to Windows > New Toolbox. A new Toolbox should appear.</p>
+  <p>It <i>that</i> didn't do the trick, your Toolbox might just be hidden somewhere.
+    It might be hiding behind another window, or the pannel it's in might be collapsed.</p>
+
+  <h2>I lost/can't dock my Layers Dialog (or other Dialogs)</h2>
+  <p>Watch <a href="https://www.youtube.com/watch?v=S_HC0EkV-AQ">this video</a> on how to find lost dialogs, and how to dock them to the bottom of your Toolbox area.</p>
+  <hr>
+</div>

@@ -8,6 +8,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="type-system-rounded">
+  <div id="rails-flash-message">
+    <% flash.each do |name, msg| %>
+      <% if msg.is_a?(String) %>
+        <%= content_tag :div, msg, :class => "flash_#{name}" %>
+      <% end %>
+    <% end %>
+  </div>
   <%= render 'layouts/navbar' %>
   <%= yield %>
   <%= render 'layouts/footer' %>

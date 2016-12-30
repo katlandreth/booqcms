@@ -2,6 +2,13 @@ $color--dark-grey: #333;
 $color--light-grey: #ccc;
 $color--black:#000;
 $color--grey: #555;
+$alert-color: #E6B10A;
+$error-color: rgb(139, 24, 32);
+$success-color: rgb(65, 161, 240);
+$notice-color: rgb(65, 161, 240);
+$logo-color: rgb(00, 160, 220);
+$action-color-warm: #eb9da2;
+
 
 body {
   margin: 0;
@@ -397,6 +404,126 @@ svg.nav-logo {
   }
 }
 
+div.flash_success,
+div.flash_error,
+div.flash_notice,
+div.flash_alert,
+div.flash_open {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    z-index: 2000;
+    transition: all 0.5s ease;
+    transform: translate(-50%, -200px);
+    text-align: center;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    padding: 20px;
+    font-family: "Montserrat";
+    text-transform: capitalize;
+    animation: show-hide 4s ease;
+    &.flash_show {
+      transform: translate(-50%, 0);
+    }
+}
+
+.flash_button,
+.scroll_button,
+.round-button {
+  border-radius: 50%;
+  box-shadow: none;
+  font-size:25px;
+  width:35px;
+  height:35px;
+  padding: 0px;
+  margin:10px;
+  line-height:1;
+  color:#fff;
+  &.flash_success {
+    //background: $success-color;
+    color: $success-color;
+    border: 3px solid $success-color;
+  }
+  &.flash_error {
+    background: $error-color;
+    //color: $error-color;
+    border: 3px solid $error-color;
+  }
+  &.flash_notice {
+    background: $notice-color;
+    //color: $notice-color;
+    border: 3px solid $notice-color;
+    font-family: monospace;
+    font-weight:bold;
+    font-size:20px;
+  }
+  &.flash_alert {
+    background: $alert-color;
+    //color: $alert-color;
+    border: 3px solid $alert-color;
+  }
+  &.scroll_down {
+    background: #fff;
+    border: 2px solid $action-color-warm;
+    color: $action-color-warm;
+    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+div.flash_success,
+div.flash_notice {
+  color: $success-color;
+  border: 3px solid $success-color;
+  &:before {
+    content: '✔';
+    font-size: 25px;
+    padding:10px;
+  }
+}
+
+div.flash_notice:before {
+  content: "i";
+  font-family: monospace;
+  line-height:1;
+  font-weight:bold;
+  font-size:16px;
+  text-transform:lowercase;
+  color:#fff;
+  background-color: $notice-color;
+  border-radius:50%;
+  width:35px;
+  height:35px;
+  padding:10px;
+  margin-right:10px;
+  display:inline-block;
+}
+
+div.flash_alert {
+  color: #333;
+  border: 3px solid $alert-color;
+  &:before {
+    content: '⚠';
+    font-size: 25px;
+    padding:10px;
+  }
+}
+
+div.flash_error {
+  color: $error-color;
+  border: 3px solid $error-color;
+  &:before {
+    content: '⦻';
+    font-size: 25px;
+    padding:10px;
+  }
+}
+
+
+
 
 @media (max-width: 700px) {
   .type-system-rounded .booqmail-form-wrapper  {
@@ -404,5 +531,15 @@ svg.nav-logo {
     input{
       width:100%;
     }
+  }
+}
+
+
+@keyframes show-hide {
+0%,100% {
+  transform: translate(-50%, -200px);
+ }
+10%,90% {
+  transform: translate(-50%, 0);
   }
 }
